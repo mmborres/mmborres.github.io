@@ -254,7 +254,7 @@ function showScore() {
 		else { msg = msg.concat("\nNot bad, but you can do better. Eh?"); }
 
 		if (playLevel>0) {
-			msg = msg.concat("\n\nLevel Unclocked: [" + playLevel + "]");
+			msg = msg.concat("\n\nLevel Unlocked: [" + playLevel + "]");
 		}
 	} else {
 		msg = msg.concat("\nYour turn, mate! Game face on now...");
