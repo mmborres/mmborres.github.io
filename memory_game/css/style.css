@@ -1,0 +1,181 @@
+/* CSS File for Memory Card Game, modified by Mabeth Borres WDI March 2019 */
+
+h1 { /* MEMORY GAME */
+	font-family: "Raleway", sans-serif;
+	color: #0d2c40;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 45px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+p { /* BODY TEXT */
+	font-family: "Droid Serif", serif;
+	line-height: 26px;
+	font-size: 18px;
+}
+
+button {
+	font-family: "Droid Serif", serif;
+	line-height: 26px;
+	font-size: 18px;
+	background-color: #00a6b3;
+  	border: none;
+  	color: white;
+  	padding: 10px;
+}
+
+body {
+	text-align: center;
+	margin: 0;
+}
+
+a { /* Instructions Game */
+	text-decoration: none;
+	font-family: "Raleway", sans-serif;
+	color: #f15b31;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 20px;
+	border-bottom: 2px solid transparent;
+}
+
+h2 { /* Instructions */
+	font-family: "Raleway", sans-serif;
+	color: #0d2c40;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+header {
+	background-color: #f15b31;
+	color: #ffffff;
+	padding: 30px;
+}
+
+nav {
+	background-color: #00a6b3;
+	color: #ffffff;
+	padding: 20px;
+}
+
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+footer {
+	text-transform: uppercase;
+	padding: 20px;
+	background-color: #0d2c40;
+	color: white;
+	font-size: 14px;
+	letter-spacing: .08em;
+	font-weight: 500;
+}
+
+/* Classes */
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+
+a: hover {
+	top: 0;
+	border-color: white;
+}
+
+.copyright {
+	float: left;
+}
+
+.message {
+	float: right;
+}
+
+.name {
+	color: #f15b31;
+	font-weight: 700;
+}
+
+.contactdetails {
+	font-family: "Droid Serif", serif;
+	/*line-height: 26px;*/
+	font-size: 18px;
+	padding: 0px;
+	text-transform: none;
+}
+
+.instruct {
+	text-align: justify;
+	padding-right: 50px;
+	padding-left: 50px;
+	padding-bottom: 20px;
+}
+
+.gameinfo {
+	text-align: justify;
+	padding-right: 50px;
+	padding-left: 50px;
+	padding-bottom: 0px;
+}
+
+.hidden {
+	color: white;
+	background-color: white;
+	outline: none;	
+}
+
+@media screen and (min-width: 40.5em) {
+  .product-img {
+    width: 50%;
+    float: left;
+  }
+}
+
+
+/* Hover Text on Card Image */
+
+/* Parent Container */
+.content_img{
+ position: relative;
+ margin-right: 10px;
+}
+
+/* Child Text Container */
+.content_img div{
+ position: absolute;
+ top: 0;
+ background: #00a6b3;
+ color: white;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: visible;
+ /*-webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;*/
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+ cursor: pointer;
+}
+
+.content_img:hover div{
+ width: 150px;
+ padding: 8px 15px;
+ visibility: visible;
+ opacity: 0.7; 
+}
