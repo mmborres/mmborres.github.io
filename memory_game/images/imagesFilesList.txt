@@ -1,0 +1,16 @@
+List of images/ files:
+
+Cards:
+king-of-hearts.png	
+king-of-diamonds.png	
+queen-of-diamonds.png
+queen-of-hearts.png
+back.png		
+
+
+Icon:
+memcardgame.ico
+
+
+Audio:
+applause.mp3
