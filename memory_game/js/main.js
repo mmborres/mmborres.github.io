@@ -225,7 +225,8 @@ var createBoard = function(){
 	for (var iid = 1; iid < 5; iid++) { //index needed
 	//for (var ccard of cards) { //can use this if index not needed
 		var cardElement = document.createElement('img');
-		cardElement.setAttribute('src', "https://mmborres.github.io/memory_game/images/back.png"); //"images/back.png"); //ccard.cardImage);
+		cardElement.setAttribute('src', "images/back.png"); 
+					 //"https://mmborres.github.io/memory_game/images/back.png"); //"images/back.png"); //ccard.cardImage);
 		var imgCardId = "imgCardId" + iid;
 		cardElement.setAttribute('id', imgCardId);
 		cardElement.setAttribute('data-id', iid);
