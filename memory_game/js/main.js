@@ -151,7 +151,7 @@ var flipCard = function(){ //cardId){
 		this.setAttribute('alt', cards[cardId].altText); //add alt text
 		
 		var cardFlipped = cards[cardId];
-		//console.log("User flipped " + cards[cardId].rank + " of " + cards[cardId].suit); //debug
+		console.log("User flipped " + cards[cardId].rank + " of " + cards[cardId].suit); //debug
 		//console.log(cardFlipped.cardImage); //debug
 
 		cardsInPlay.push(cards[cardId]); //store card object
