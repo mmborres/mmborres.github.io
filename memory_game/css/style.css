@@ -67,7 +67,7 @@ nav {
 div {
   padding-top: 50px;
   padding-right: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   padding-left: 80px;
 }
 
@@ -82,6 +82,12 @@ footer {
 }
 
 /* Classes */
+
+.divbuttons {
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+}
 
 .clearfix:after {
 visibility: hidden;
@@ -130,6 +136,7 @@ a: hover {
 	padding-right: 50px;
 	padding-left: 50px;
 	padding-bottom: 0px;
+	background: white;
 }
 
 .hidden {
@@ -144,6 +151,12 @@ a: hover {
     float: left;
   }
 }
+
+.gamepage {
+	background: white;
+	padding:3px 15px;
+}
+
 
 
 /* Hover Text on Card Image */
