@@ -18,16 +18,18 @@
 		<a href="contact.html">Contact</a>
 	</nav>
 <main>	
-<h2>&hearts; G A M E &hearts;</h2>
-<p class="gameinfo">Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards. Visit the <a href="instructions.html" class="contactdetails">Instructions</a> page first if you need more info on how to play the game. Otherwise, Game On! Good Luck, mate.</p>
+<h2 class="gamepage">&hearts; G A M E &hearts;</h2>
+<p class="gameinfo" id="gameinfo">Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards. Visit the <a href="instructions.html" class="contactdetails">Instructions</a> page first if you need more info on how to play the game. Otherwise, Game On! Good Luck, mate.</p>
 
 <div id="game-board" class="board clearfix"></div>
 
-<p><button onclick="playAgain()">Wanna Score Higher? Play Again!</button>
-	<button class="hidden">hide</button>
-	<button onclick="showScore()">Check Total Score</button>
-	<button class="hidden">hide</button>
-	<button onclick="restartGame()">Restart Game, Back to Zero</button></p>
+<div id="buttons" class="divbuttons">
+	<button onclick="playAgain()" id="button1">Wanna Score Higher? Play Again!</button>
+	<button class="hidden" id="button2">hide</button>
+	<button onclick="showScore()" id="button3">Check Total Score</button>
+	<button class="hidden" id="button4">hide</button>
+	<button onclick="restartGame()" id="button5">Restart Game, Back to Zero</button>
+</div>
 </main>
 
 <footer class="clearfix">
