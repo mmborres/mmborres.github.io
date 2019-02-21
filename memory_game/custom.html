@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- File for Memory Card Game, added by Mabeth Borres WDI March 2019 -->
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="images/memcardgame.ico" rel="shortcut icon"/>
+	<title>&hearts; Memory Card Game &hearts;</title>
+</head>
+<body>
+	<header>
+		<h1>&diams;&hearts; Memory Game &hearts;&diams;</h1>
+	</header>
+	<nav>
+		<a href="about.html">About</a>
+		<a href="instructions.html">Instructions</a>
+		<a href="index.html">Game</a>
+		<a href="custom.html">Custom</a>
+		<a href="contact.html">Contact</a>
+	</nav>
+<main>	
+<h2>&diams; Customize the game &diams;</h2>
+
+<p class="instruct">Playing is very simple - you turn over one card and then try to find a matching card. There are <span class="name">20 levels</span> to unlock as you try to score higher. Score is 1 point for two cards matched. For unmatched cards, it is recorded as 1 wrong move. To unlock a level, you need <span class="name">10 points</span> and increments of that. Make sure to visit the <a href="instructions.html" class="contactdetails">Instructions</a> page first if you need more info on how to play the game.</p>
+
+<p class="instruct">PLEASE NOTE that this action takes you to the Game page and if you are not going to play right away, the default values will be used in the game. You need to visit this page to reset the values again. Unless of course you click on the browser's back and/or forward buttons. Coz it's unavoidable, right?</p>
+
+<p class="instruct">Use Custom Values:</p>
+
+<form id="formcustom" action="index.html" method="get" class="instruct">
+<span class="forminput">Minimum High Score: </span> <input type="text" name="minHiScore" value="10" class="forminput"> <span class="forminput">(Default is 10)</span><br>
+<span class="forminput">Levels in the Game: </span><input type="text" name="gameLevel" value="20" class="forminput"> <span class="forminput">(Default is 20)</span><br><br>
+<input type="submit" value="Ready? Game On!" class="inputbutton">
+</form>
+
+</main>
+
+<footer class="clearfix">
+	<span class="copyright">Copyright@2019 | <span class="name">Mabeth</span>@WDI</span>
+	<span class="message">Created with &hearts; by <span class="name">GA</span></span>
+</footer>
+
+</body>
+</html>

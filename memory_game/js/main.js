@@ -5,9 +5,11 @@
 //initial score values
 var score = 0;
 var tries = 0;
+
+var maxLevel = 20; //20 default
+var minHighScore = 10; //10 default
+
 var playLevel = 0;
-var maxLevel = 20; //20
-var minHighScore = 10; //10
 
 //Card object
 function Card(suit, rank, cardImage){
@@ -111,6 +113,7 @@ var levelUp = function(){
 		level = level * (score/minHighScore);
 		msg = "Congratulations!!! You've just unlocked Level [" + level + "].";
 		
+		//console.log("level [" + level + "], maxLevel [" + maxLevel + "]");
 		if (level <= maxLevel) {
 			var newBackgroundImage = "url('images/level" + level + ".png')";
 			//console.log("newBackgroundImage=" + newBackgroundImage); //debug
@@ -130,6 +133,9 @@ var levelUp = function(){
 
 		var audio = new Audio("images/applause.mp3");
 		
+		//console.log("playLevel [" + playLevel + "], maxLevel [" + maxLevel + "]");
+		//console.log ("playLevel === maxLevel | " + (playLevel === maxLevel));
+
 		if (playLevel === maxLevel) {
 			msg = msg.concat("\nWhat a feat! You are the Winner!")
 			
@@ -259,8 +265,47 @@ var backCard = function(){
 	}
 };
 
+function getCustom(){
+	var x = window.location.href;
+	//console.log("form: " + x); //debug
+
+  	//minHiScore=2&gameLevel=2 //sample
+  	if (x.includes("index.html?")) {
+  		var customvals = x.split("?")[1];
+  		//console.log(customvals); //debug
+
+  		var custvals = [];
+  		if (customvals.includes("&")) {
+  			custvals = customvals.split("&");
+  			//console.log(custvals); //debug
+
+  			if (custvals.length>0) {
+  				var minScore = parseInt(custvals[0].split("=")[1]);
+  				//console.log(minScore); //debug
+
+  				var gameLevel = parseInt(custvals[1].split("=")[1]);
+  				//console.log(gameLevel); //debug
+
+  				if (minScore>0 && minScore!==minHighScore) { //cannot be negative or 0
+  					minHighScore = minScore;
+  				}
+
+  				if (gameLevel>0 && gameLevel<=maxLevel) { //cannot be less 0 or more than 20
+  					maxLevel = gameLevel;
+  				}
+
+   			}
+  		}
+  	}
+
+  	//console.log("Using custom values: minHighScore[" + minHighScore + "], maxLevel[" + maxLevel + "]")
+
+}
 
 var createBoard = function(){
+
+	//setup if custom was called
+	getCustom();
 
 	//random selection of cards combination
 	var rid = Math.floor(Math.random() * 36);     //returns a random integer from 0 to 35

@@ -81,6 +81,18 @@ footer {
 	font-weight: 500;
 }
 
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+
 /* Classes */
 
 .divbuttons {
@@ -118,7 +130,6 @@ a: hover {
 
 .contactdetails {
 	font-family: "Droid Serif", serif;
-	/*line-height: 26px;*/
 	font-size: 18px;
 	padding: 0px;
 	text-transform: none;
@@ -128,6 +139,13 @@ a: hover {
 	text-align: justify;
 	padding-right: 50px;
 	padding-left: 50px;
+	padding-bottom: 20px;
+}
+
+.forminput {
+	font-family: "Droid Serif", serif;
+	font-size: 18px;
+	text-align: justify;
 	padding-bottom: 20px;
 }
 
@@ -157,7 +175,15 @@ a: hover {
 	padding:3px 15px;
 }
 
-
+.inputbutton {
+	font-family: "Droid Serif", serif;
+	line-height: 26px;
+	font-size: 18px;
+	background-color: #00a6b3;
+  	border: none;
+  	color: white;
+  	padding: 10px;
+}
 
 /* Hover Text on Card Image */
 
