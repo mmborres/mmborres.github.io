@@ -6,8 +6,8 @@
 var score = 0;
 var tries = 0;
 var playLevel = 0;
-var maxLevel = 36;
-var minHighScore = 20;
+var maxLevel = 20; //20
+var minHighScore = 10; //10
 
 //Card object
 function Card(suit, rank, cardImage){
@@ -111,18 +111,36 @@ var levelUp = function(){
 		level = level * (score/minHighScore);
 		msg = "Congratulations!!! You've just unlocked Level [" + level + "].";
 		
+		if (level <= maxLevel) {
+			var newBackgroundImage = "url('images/level" + level + ".png')";
+			//console.log("newBackgroundImage=" + newBackgroundImage); //debug
+			document.body.style.backgroundImage = newBackgroundImage;
+		}
+		
+		// add Text only once
+		if (level==1) {
+			var gameinfo = document.getElementById("gameinfo");
+			var oldText = gameinfo.innerHTML;
+			//console.log("gameinfo=" + gameinfo);
+			var addText = "<br><br>If you love this background, score higher to the next level to see the next surprise. ";
+			gameinfo.innerHTML = oldText + addText;
+		}
+		
 		if (playLevel < level) playLevel = level;
 
-		if (playLevel === maxLevel) {
-			msg = msg.concat("\nWhat a feat! You are the Iron Player!")
-		}
-
 		var audio = new Audio("images/applause.mp3");
-
+		
+		if (playLevel === maxLevel) {
+			msg = msg.concat("\nWhat a feat! You are the Winner!")
+			
+			// end game sound 
+			audio = new Audio("images/homerun.mp3"); //done with level20
+		}
+		
 		audio.play(); //applause
 		alert(msg);
 	}
-}
+};
 
 var flipCard = function(){ //cardId){
 
@@ -151,7 +169,7 @@ var flipCard = function(){ //cardId){
 		this.setAttribute('alt', cards[cardId].altText); //add alt text
 		
 		var cardFlipped = cards[cardId];
-		console.log("User flipped " + cards[cardId].rank + " of " + cards[cardId].suit); //debug
+		//console.log("User flipped " + cards[cardId].rank + " of " + cards[cardId].suit); //debug
 		//console.log(cardFlipped.cardImage); //debug
 
 		cardsInPlay.push(cards[cardId]); //store card object
@@ -174,12 +192,38 @@ var flipCard = function(){ //cardId){
 				if (score>=minHighScore) {
 					levelUp();
 				}
+				
+				if (playLevel === maxLevel) { // END GAME
+				    processEndGame();
+				}
 			}
 		
 		}
 	}
 };
 
+function processEndGame() {
+	resetBoard();
+	
+	var cardElement = document.createElement('img');
+	cardElement.setAttribute('src', "images/winner.png");
+	
+	var divCards = document.getElementById('game-board');
+	divCards.appendChild(cardElement);
+	
+	//leave reset button
+	
+	var pbuttons = document.getElementById("buttons"); //parent
+	
+	if (pbuttons.hasChildNodes) {
+		for (var c=1; c<5; c++) //except 5
+		{
+			var idb = "button" + c;
+			var nd = document.getElementById(idb);
+			pbuttons.removeChild(nd);
+		}
+	}
+}
 
 function sleep( millisecondsToWait ) //allow to delay flipping card to back face
 {
@@ -226,7 +270,7 @@ var createBoard = function(){
 	//for (var ccard of cards) { //can use this if index not needed
 		var cardElement = document.createElement('img');
 		cardElement.setAttribute('src', "images/back.png"); 
-					 //"https://mmborres.github.io/memory_game/images/back.png"); //"images/back.png"); //ccard.cardImage);
+		
 		var imgCardId = "imgCardId" + iid;
 		cardElement.setAttribute('id', imgCardId);
 		cardElement.setAttribute('data-id', iid);
@@ -263,8 +307,12 @@ function showScore() {
 	alert(msg);
 }
 
+function playAgain() { //without reloading to allw to accumulate a higher score
+	resetBoard(); //clear board and cards storage
+	createBoard(); //setup board
+}
 
-function playAgain() { //without reloading to allaw to accumulate a higher score
+function resetBoard() { //reset board, cards storage
 
 	var images = document.body.getElementsByTagName("img");
 	//console.log("images" + images); //debug
@@ -304,8 +352,6 @@ function playAgain() { //without reloading to allaw to accumulate a higher score
 	//console.log(cards); //debug
 	//console.log(cardsInPlay); //debug
 	//console.log(cardIds); //debug
-	
-	createBoard();
 }
 
 function restartGame() {
