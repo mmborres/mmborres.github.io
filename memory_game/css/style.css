@@ -233,7 +233,7 @@ a: hover {
   	padding-right: 15px;
   	padding-left: 15px;
   	border-radius: 15px;
-  	float: right;
+  	padding-bottom: 10px;
 }
 
 .inputbutton:focus { 
