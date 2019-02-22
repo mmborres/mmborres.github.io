@@ -232,6 +232,8 @@ function processEndGame() {
 			pbuttons.removeChild(nd);
 		}
 	}
+
+	document.getElementById("button5").innerHTML = "Restart Game?";
 }
 
 function sleep( millisecondsToWait ) //allow to delay flipping card to back face
