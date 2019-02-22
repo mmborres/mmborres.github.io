@@ -2,10 +2,10 @@
 <!-- File for Memory Card Game, added by Mabeth Borres WDI March 2019 -->
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<link href="images/memcardgame.ico" rel="shortcut icon"/>
+	<link href="images/memcardgame.ico" rel="shortcut icon" type="image/ico">
 	<title>&hearts; Memory Card Game &hearts;</title>
 </head>
 <body>
@@ -29,8 +29,8 @@
 <p class="instruct">Use Custom Values:</p>
 
 <form id="formcustom" action="index.html" method="get" class="instruct">
-<span class="forminput">Minimum High Score: </span> <input type="text" name="minHiScore" value="10" class="forminput"> <span class="forminput">(Default is 10)</span><br>
-<span class="forminput">Levels in the Game: </span><input type="text" name="gameLevel" value="20" class="forminput"> <span class="forminput">(Default is 20)</span><br><br>
+<span class="forminput">Minimum High Score: </span> <input type="text" name="minHiScore" value="10" class="forminput" id="minHiScore" onmouseout="checkValue()" > <span class="forminput"><br>(Values: 1 to any positive number | Default: 10)</span><br>
+<span class="forminput">Levels in the Game: </span><input type="text" name="gameLevel" value="20" class="forminput" id="gameLevel" onmouseout="checkValue()"> <span class="forminput"><br>(Values: 1 to 20 | Default: 20, also the Max value)</span><br><br>
 <input type="submit" value="Ready? Game On!" class="inputbutton">
 </form>
 
@@ -40,6 +40,32 @@
 	<span class="copyright">Copyright@2019 | <span class="name">Mabeth</span>@WDI</span>
 	<span class="message">Created with &hearts; by <span class="name">GA</span></span>
 </footer>
+<script>
+	function checkValue() {
+		var minHiScore = document.getElementById("minHiScore").value;
+		var gameLevel = document.getElementById("gameLevel").value;
+		var msg = "";
+		//console.log("minHiScore = " + minHiScore + ", gameLevel = " + gameLevel);
+		if (minHiScore<1) {
+			msg = msg.concat("Minimum High Score must be a positive number.\n");
+			document.getElementById("minHiScore").value = 10;
+		}
+		if (gameLevel<1 || gameLevel>20) {
+			//console.log("gameLevel<1 = " + (gameLevel<1)); //debug
+			//console.log("gameLevel>20 = " + (gameLevel>20)); //debug
+			if (gameLevel<1) msg = msg.concat("Number of Levels in the Game must be a positive number.\n");
+			if (gameLevel>20) 
+				msg = msg.concat("Number of Levels in the Game cannot be greater than 20, the Maximum level.\n");
+			
+			//console.log(msg); //debug
+			document.getElementById("gameLevel").value = 20;
+		}
 
+		if (msg.length>0) {
+			msg = msg.concat("Resetting values to default values.\n");
+			alert(msg);
+		}
+	}
+</script>
 </body>
 </html>

@@ -96,6 +96,9 @@ var checkForMatch = function(){
 			score++; //increase score
 			//console.log("Score=" + score); //debug
 			alert("You found a match! That's 1 point.");
+
+			//realtime
+			document.getElementById("button3").innerHTML = "Check Status, Score[" + score + "]";
 		} else {
 			tries++; //unmatched turn
 			alert("Sorry, TRY Again. TIP: Remember the cards' position.");
@@ -343,11 +346,14 @@ function showScore() {
 		else { msg = msg.concat("\nNot bad, but you can do better. Eh?"); }
 
 		if (playLevel>0) {
-			msg = msg.concat("\n\nLevel Unlocked: [" + playLevel + "]");
+			msg = msg.concat("\n\nLevel Unlocked [" + playLevel + "]");
 		}
 	} else {
 		msg = msg.concat("\nYour turn, mate! Game face on now...");
 	}
+
+	var points = (playLevel+1)*minHighScore - score;
+	msg = msg.concat("\n\nTIP: Score " + points + " point" + (points>1 ? "s" : "") + " to unlock Level " + (playLevel+1) + ".");
 
 	alert(msg);
 }

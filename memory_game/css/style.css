@@ -14,6 +14,8 @@ p { /* BODY TEXT */
 	font-family: "Droid Serif", serif;
 	line-height: 26px;
 	font-size: 18px;
+	/*margin: auto;*/
+	/*padding-top: 10px;*/
 }
 
 button {
@@ -24,11 +26,23 @@ button {
   	border: none;
   	color: white;
   	padding: 10px;
+  	border-radius: 15px;
+  	padding-right: 14px;
+  	padding-left: 14px;
+}
+
+button:active {
+	outline: none;
+	border: none;
+}
+
+button:focus { 
+	outline: none; 
 }
 
 body {
 	text-align: center;
-	margin: 0;
+	margin: auto;
 }
 
 a { /* Instructions Game */
@@ -41,6 +55,7 @@ a { /* Instructions Game */
 	text-transform: uppercase;
 	padding: 20px;
 	border-bottom: 2px solid transparent;
+	/*margin: auto;*/
 }
 
 h2 { /* Instructions */
@@ -50,12 +65,19 @@ h2 { /* Instructions */
 	font-weight: 600;
 	font-size: 20px;
 	text-transform: uppercase;
+	/*margin: 0;*/
 }
 
 header {
 	background-color: #f15b31;
 	color: #ffffff;
 	padding: 30px;
+	/*margin: auto;*/
+}
+
+main {
+  width: 850px;
+  margin: 35px auto;
 }
 
 nav {
@@ -66,9 +88,20 @@ nav {
 
 div {
   padding-top: 50px;
-  padding-right: 30px;
   padding-bottom: 20px;
-  padding-left: 80px;
+  /*padding-right: 30px;
+  padding-left: 80px;*/
+  width: 760px;
+  margin: auto;
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+  display: flex;
+  align-items: center;
+}
+
+img {
+	/*flex: 33.33%;*/
+ 	padding: 3px;
 }
 
 footer {
@@ -90,24 +123,34 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  background-color: lightblue;
+  background-color: lightblue; 
 }
 
 /* Classes */
 
 .divbuttons {
-  padding-right: 30px;
-  padding-bottom: 20px;
-  padding-left: 80px;
+	/*width: 850px;*/
+ 	padding-bottom: 0px;
+ 	/*padding-left: 10px;
+  	padding-right: 10px;*/
+  	padding: 0px;
+  	display: flex;
+  	margin: auto;
+  	width: 100%;
+}
+
+.gameboard {
+	/*width: 760px;*/
+	width: 85%;
 }
 
 .clearfix:after {
-visibility: hidden;
-display: block;
-content: " ";
-clear: both;
-height: 0;
-font-size: 0;
+	visibility: hidden;
+	display: block;
+	content: " ";
+	clear: both;
+	height: 0;
+	font-size: 0;
 }
 
 a: hover {
@@ -131,15 +174,17 @@ a: hover {
 .contactdetails {
 	font-family: "Droid Serif", serif;
 	font-size: 18px;
-	padding: 0px;
 	text-transform: none;
+	/*padding-left: 0;
+	padding-right: 0;*/
+	padding: 0px;
 }
 
 .instruct {
 	text-align: justify;
 	padding-right: 50px;
 	padding-left: 50px;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
 }
 
 .forminput {
@@ -151,8 +196,8 @@ a: hover {
 
 .gameinfo {
 	text-align: justify;
-	padding-right: 50px;
-	padding-left: 50px;
+	/*padding-right: 50px;
+	padding-left: 50px;*/
 	padding-bottom: 0px;
 	background: white;
 }
@@ -161,14 +206,16 @@ a: hover {
 	color: white;
 	background-color: white;
 	outline: none;	
+	border: none;
+	padding: 0;
 }
 
-@media screen and (min-width: 40.5em) {
+/*@media screen and (min-width: 40.5em) {
   .product-img {
     width: 50%;
     float: left;
   }
-}
+}*/
 
 .gamepage {
 	background: white;
@@ -183,14 +230,29 @@ a: hover {
   	border: none;
   	color: white;
   	padding: 10px;
+  	padding-right: 15px;
+  	padding-left: 15px;
+  	border-radius: 15px;
+  	float: right;
+}
+
+.inputbutton:focus { 
+	outline: none; 
 }
 
 /* Hover Text on Card Image */
 
 /* Parent Container */
-.content_img{
+.content_img{ /*row*/
  position: relative;
- margin-right: 10px;
+ display: flex;
+ margin: auto;
+ padding-bottom: 0px;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 3px;
 }
 
 /* Child Text Container */
