@@ -4,6 +4,6 @@ WDI Pre-work at GA by Mabeth Borres
 
 2 Versions:
 
-Points-based: https://mmborres.github.io/memory_game/
+1) Points-based: https://mmborres.github.io/memory_game/
 
-Difficulty levels: https://mmborres.github.io/memgame_difficulty/
+2) Difficulty levels: https://mmborres.github.io/memgame_difficulty/
