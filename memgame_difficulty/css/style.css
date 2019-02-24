@@ -55,7 +55,6 @@ a { /* Instructions Game */
 	text-transform: uppercase;
 	padding: 20px;
 	border-bottom: 2px solid transparent;
-	/*margin: auto;*/
 }
 
 h2 { /* Instructions */
@@ -65,19 +64,17 @@ h2 { /* Instructions */
 	font-weight: 600;
 	font-size: 20px;
 	text-transform: uppercase;
-	/*margin: 0;*/
 }
 
 header {
 	background-color: #f15b31;
 	color: #ffffff;
 	padding: 30px;
-	/*margin: auto;*/
 }
 
 main {
-  width: 850px;
-  margin: 35px auto;
+ 	width: 850px;
+  	margin: 35px auto;
 }
 
 nav {
@@ -87,21 +84,18 @@ nav {
 }
 
 div {
-  padding-top: 0px;
-  padding-bottom: 10px;
-  /*padding-right: 30px;
-  padding-left: 80px;*/
-  width: 760px;
-  margin: auto;
-  display: -webkit-flex; /* Safari */
-  -webkit-align-items: center; /* Safari 7.0+ */
-  display: flex;
-  align-items: center;
+  	padding-top: 0px;
+  	padding-bottom: 10px;
+  	width: 760px;
+  	margin: auto;
+  	display: -webkit-flex; /* Safari */
+  	-webkit-align-items: center; /* Safari 7.0+ */
+  	display: flex;
+  	align-items: center;
 }
 
 img {
-	/*flex: 33.33%;*/
- 	padding: 3px;
+	padding: 3px;
 }
 
 footer {
@@ -115,32 +109,28 @@ footer {
 }
 
 input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid #555;
-  outline: none;
+  	padding: 12px 20px;
+  	margin: 8px 0;
+  	box-sizing: border-box;
+  	border: 1px solid #555;
+  	outline: none;
 }
 
 input[type=text]:focus {
-  background-color: lightblue; 
+  	background-color: lightblue; 
 }
 
 /* Classes */
 
 .divbuttons {
-	/*width: 850px;*/
- 	padding-bottom: 0px;
- 	/*padding-left: 10px;
-  	padding-right: 10px;*/
-  	padding: 0px;
+	padding-bottom: 0px;
+ 	padding: 0px;
   	display: flex;
   	margin: auto;
   	width: 40%;
 }
 
 .gameboard {
-	/*width: 760px;*/
 	width: 85%;
 }
 
@@ -175,8 +165,6 @@ a: hover {
 	font-family: "Droid Serif", serif;
 	font-size: 18px;
 	text-transform: none;
-	/*padding-left: 0;
-	padding-right: 0;*/
 	padding: 0px;
 }
 
@@ -196,8 +184,6 @@ a: hover {
 
 .gameinfo {
 	text-align: justify;
-	/*padding-right: 50px;
-	padding-left: 50px;*/
 	padding-bottom: 0px;
 	background: white;
 }
@@ -209,13 +195,6 @@ a: hover {
 	border: none;
 	padding: 0;
 }
-
-/*@media screen and (min-width: 40.5em) {
-  .product-img {
-    width: 50%;
-    float: left;
-  }
-}*/
 
 .gamepage {
 	background: white;
@@ -244,39 +223,37 @@ a: hover {
 
 /* Parent Container */
 .content_img{ /*row*/
- position: relative;
- display: flex;
- margin: auto;
- padding-bottom: 0px;
+ 	position: relative;
+ 	display: flex;
+ 	margin: auto;
+ 	padding-bottom: 0px;
 }
 
 .column {
-  flex: 33.33%;
-  padding: 3px;
+  	flex: 33.33%;
+  	padding: 3px;
 }
 
 /* Child Text Container */
 .content_img div{
- position: absolute;
- top: 0;
- background: #00a6b3;
- color: white;
- margin-bottom: 5px;
- font-family: sans-serif;
- opacity: 0;
- visibility: visible;
- /*-webkit-transition: visibility 0s, opacity 0.5s linear; 
- transition: visibility 0s, opacity 0.5s linear;*/
-}
+ 	position: absolute;
+ 	top: 0;
+ 	background: #00a6b3;
+ 	color: white;
+ 	margin-bottom: 5px;
+ 	font-family: sans-serif;
+ 	opacity: 0;
+ 	visibility: visible;
+ }
 
 /* Hover on Parent Container */
 .content_img:hover{
- cursor: pointer;
+ 	cursor: pointer;
 }
 
 .content_img:hover div{
- width: 150px;
- padding: 8px 15px;
- visibility: visible;
- opacity: 0.7; 
+ 	width: 150px;
+ 	padding: 8px 15px;
+ 	visibility: visible;
+ 	opacity: 0.7; 
 }

@@ -7,7 +7,6 @@ var score = 0;
 var tries = 0;
 
 var maxLevel = 5; //5 default
-/*var minHighScore = 10; //10 default*/
 
 var playLevel = 1;
 
@@ -324,7 +323,8 @@ function getCustom(){
   				//var minScore = parseInt(custvals[0].split("=")[1]);
   				//console.log(minScore); //debug
 
-  				var gameLevel = parseInt(customvals.split("=")[1]);
+  				if (customvals.includes("=")) {
+  					var gameLevel = parseInt(customvals.split("=")[1]);
   				//console.log(gameLevel); //debug
 
   				//if (minScore>0 && minScore!==minHighScore) { //cannot be negative or 0
@@ -334,6 +334,7 @@ function getCustom(){
   				//if (gameLevel>0 && gameLevel<=maxLevel) { //cannot be less 0 or more than 20
   					maxLevel = gameLevel;
   				//}
+  				}
 
    			//}
   		//}
