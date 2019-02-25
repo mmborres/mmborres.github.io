@@ -14,6 +14,8 @@ var combinations = 36;
 
 var cardsrow = 4;
 
+var showAlerts = true; //default
+
 //Card object
 function Card(suit, rank, cardImage){
 	this.suit = suit;
@@ -99,13 +101,13 @@ var checkForMatch = function(){
 	if( cardsInPlay[cid]===cardsInPlay[cid-1]  ) {
 			score++; //increase score
 			//console.log("Score=" + score); //debug
-			alert("You found a match!");
+			if (showAlerts) alert("You found a match!");
 
 			//realtime
 			//document.getElementById("button3").innerHTML = "Check Status, Score[" + score + "]";
 		} else {
 			tries++; //unmatched turn
-			alert("Sorry, TRY Again. TIP: Remember the cards' position.");
+			if (showAlerts) alert("Sorry, TRY Again. TIP: Remember the cards' position.");
 			return false;
 		}
 
@@ -151,7 +153,7 @@ var levelUp = function(){
 		}
 		
 		audio.play(); //applause
-		alert(msg);
+		if (showAlerts) alert(msg);
 
 		playLevel++;
 
@@ -544,4 +546,15 @@ function resetBoard() { //reset board, cards storage
 function restartGame() {
 	location.reload(); //restart game, score back to zero
 }
+
+function updateAlerts() {
+	//showAlerts true default
+	if (document.getElementById("alertYes").checked === true) {
+  		showAlerts = true;
+	}
+	if (document.getElementById("alertNo").checked === true) {
+		showAlerts = false;
+  }
+}
+
 

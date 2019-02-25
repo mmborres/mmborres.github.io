@@ -11,6 +11,8 @@ var minHighScore = 10; //10 default
 
 var playLevel = 0;
 
+var showAlerts = true; //default
+
 //Card object
 function Card(suit, rank, cardImage){
 	this.suit = suit;
@@ -95,13 +97,13 @@ var checkForMatch = function(){
 	if(cardsInPlay[0]===cardsInPlay[1] || (cardsInPlay.length===4 && (cardsInPlay[2]===cardsInPlay[3])) ) {
 			score++; //increase score
 			//console.log("Score=" + score); //debug
-			alert("You found a match! That's 1 point.");
+			if (showAlerts) alert("You found a match! That's 1 point.");
 
 			//realtime
 			document.getElementById("button3").innerHTML = "Check Status, Score[" + score + "]";
 		} else {
 			tries++; //unmatched turn
-			alert("Sorry, TRY Again. TIP: Remember the cards' position.");
+			if (showAlerts) alert("Sorry, TRY Again. TIP: Remember the cards' position.");
 			return false;
 		}
 
@@ -147,7 +149,7 @@ var levelUp = function(){
 		}
 		
 		audio.play(); //applause
-		alert(msg);
+		if (showAlerts) alert(msg);
 	}
 };
 
@@ -409,5 +411,15 @@ function resetBoard() { //reset board, cards storage
 
 function restartGame() {
 	location.reload(); //restart game, score back to zero
+}
+
+function updateAlerts() {
+	//showAlerts true default
+	if (document.getElementById("alertYes").checked === true) {
+  		showAlerts = true;
+	}
+	if (document.getElementById("alertNo").checked === true) {
+		showAlerts = false;
+  	}
 }
 

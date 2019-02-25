@@ -156,6 +156,10 @@ a: hover {
 	float: right;
 }
 
+.afooter {
+	font-size: 16px;
+}
+
 .name {
 	color: #f15b31;
 	font-weight: 700;

@@ -20,7 +20,13 @@
 	</nav>
 <main>	
 <h2 class="gamepage">&hearts; G A M E &hearts;</h2>
-<p class="gameinfo" id="gameinfo">Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards. Visit the <a href="instructions.html" class="contactdetails">Instructions</a> page first if you need more info on how to play the game. Otherwise, Game On! Good Luck, mate.</p>
+<p class="gameinfo" id="gameinfo">Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards. Visit the <a href="instructions.html" class="contactdetails">Instructions</a> page first if you need more info on how to play the game. Or, you can visit the <a href="custom.html" class="contactdetails">Custom</a> page if you want to customise the game. Otherwise, Game On! Good Luck, mate. </p>
+
+<form class="gameinfo">
+	<span class="forminput">Show Alert Messages?</span>
+		<input type="radio" name="alert" id="alertYes" onclick="updateAlerts()" checked="checked"><span class="forminput">Yes</span>
+		<input type="radio" name="alert" id="alertNo" onclick="updateAlerts()"><span class="forminput">No</span>
+</form><br>
 
 <p id="game-board" class="gameboard"></p>
 
@@ -36,6 +42,7 @@
 
 <footer class="clearfix">
 	<span class="copyright">Copyright@2019 | <span class="name">Mabeth</span>@WDI</span>
+	<a href="../index.html" class="afooter">Back to Projects</a>
 	<span class="message">Created with &hearts; by <span class="name">GA</span></span>
 </footer>
 <script src="js/main.js"></script>
