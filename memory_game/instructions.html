@@ -24,7 +24,16 @@
 
 <p class="instruct">Playing is very simple - you turn over one card and then try to find a matching card. There are <span class="name">20 levels</span> to unlock as you try to score higher. Score is 1 point for two cards matched. For unmatched cards, it is recorded as 1 wrong move. To unlock a level, you need <span class="name">10 points</span> and increments of that. Or, you can visit the <a href="custom.html" class="contactdetails">Custom</a> page if you want to customise these values. Yeah?</p>
 
-<p class="instruct">Buttons Usage - What are these buttons for?</p>
+<p class="instruct"><u><b>Buttons Usage</b></u> - What are these buttons for?</p>
+
+<form class="instruct">
+	<span class="forminput">Show Alert Messages?</span>
+		<input type="radio" name="alert" id="alertYes" onclick="updateAlerts()" checked="checked"><span class="forminput">Yes</span>
+		<input type="radio" name="alert" id="alertNo" onclick="updateAlerts()"><span class="forminput">No</span>
+				
+		<button class="hidden" id="button1">hi</button>
+		<span class="forminput" id="alertText">Meaning, alert messages <b>WILL</b> be displayed.</span>
+</form> 
 
 <p class="instruct"><button>Wanna Score Higher? Play Again!</button> This button allows you to play the game again without resetting your score to zero. If you don't like the round and want to reshuffle, this is it too. Cool, isn't it?</p>
 
@@ -42,5 +51,17 @@
 	<span class="message">Created with &hearts; by <span class="name">GA</span></span>
 </footer>
 
+<script>
+function updateAlerts() {
+	//console.log(document.getElementById("alertText").innerHTML);
+	//showAlerts true default
+	if (document.getElementById("alertYes").checked === true) {
+  		document.getElementById("alertText").innerHTML = "Meaning, alert messages <b>WILL</b> be displayed.";		
+	}
+	if (document.getElementById("alertNo").checked === true) {
+		document.getElementById("alertText").innerHTML = "Meaning, alert messages <b>WILL NOT</b> be displayed.";
+  	}
+}
+</script>
 </body>
 </html>
