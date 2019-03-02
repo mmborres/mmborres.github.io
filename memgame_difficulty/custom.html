@@ -27,9 +27,9 @@
 
 <p class="instruct">Use Custom Values:</p>
 
-<form id="formcustom" action="index.html" method="get" class="instruct">
+<form id="formcustom" action="index.html" method="get" class="instruct" onsubmit="return checkValue()">
 <!--span class="forminput">Minimum High Score: </span> <input type="text" name="minHiScore" value="10" class="forminput" id="minHiScore" onmouseout="checkValue()" > <span class="forminput"><br>(Values: 1 to any positive number | Default: 10)</span><br-->
-<span class="forminput">Levels in the Game: </span><input type="text" name="gameLevel" value="5" class="forminput" id="gameLevel" onmouseout="checkValue()"> <span class="forminput"><br>(Values: 1 to 5 | Default: 5, also the Max value)</span><br><br>
+<span class="forminput">Levels in the Game: </span><input type="text" name="gameLevel" value="5" class="forminput" id="gameLevel"> <span class="forminput"><br>(Values: 1 to 5 | Default: 5, also the Max value)</span><br><br>
 <input type="submit" value="Ready? Game On!" class="inputbutton">
 </form>
 
@@ -64,6 +64,7 @@
 		if (msg.length>0) {
 			msg = msg.concat("Resetting values to default values.\n");
 			alert(msg);
+			return false;
 		}
 	}
 </script>
