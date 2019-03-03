@@ -56,10 +56,12 @@ function updateAlerts() {
 	//console.log(document.getElementById("alertText").innerHTML);
 	//showAlerts true default
 	if (document.getElementById("alertYes").checked === true) {
-  		document.getElementById("alertText").innerHTML = "Meaning, alert messages <b>WILL</b> be displayed.";		
+  		document.getElementById("alertText").innerHTML = "Meaning, alert messages <b>WILL</b> be displayed.";	
+		document.getElementById("alertText").value = "Meaning, alert messages <b>WILL</b> be displayed.";
 	}
 	if (document.getElementById("alertNo").checked === true) {
 		document.getElementById("alertText").innerHTML = "Meaning, alert messages <b>WILL NOT</b> be displayed.";
+		document.getElementById("alertText").value = "Meaning, alert messages <b>WILL NOT</b> be displayed.";
   	}
 }
 </script>
