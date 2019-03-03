@@ -28,8 +28,8 @@
 <p class="instruct">Use Custom Values:</p>
 
 <form id="formcustom" action="index.html" method="get" class="instruct" onsubmit="return checkValue()">
-<span class="forminput">Minimum High Score: </span> <input type="text" name="minHiScore" value="10" class="forminput" id="minHiScore"> <span class="forminput"><br>(Values: 1 to any positive number | Default: 10)</span><br>
-<span class="forminput">Levels in the Game: </span><input type="text" name="gameLevel" value="20" class="forminput" id="gameLevel"> <span class="forminput"><br>(Values: 1 to 20 | Default: 20, also the Max value)</span><br><br>
+<span class="forminput">Minimum High Score: </span> <input type="text" name="minHiScore" value="" class="forminput" id="minHiScore"> <span class="forminput"><br>(Values: 1 to any positive number | Default: 10)</span><br>
+<span class="forminput">Levels in the Game: </span><input type="text" name="gameLevel" value="" class="forminput" id="gameLevel"> <span class="forminput"><br>(Values: 1 to 20 | Default: 20, also the Max value)</span><br><br>
 <input type="submit" value="Ready? Game On!" class="inputbutton">
 </form>
 
@@ -46,23 +46,60 @@
 		var gameLevel = document.getElementById("gameLevel").value;
 		var msg = "";
 		//console.log("minHiScore = " + minHiScore + ", gameLevel = " + gameLevel);
-		if (minHiScore<1) {
-			msg = msg.concat("Minimum High Score must be a positive number.\n");
-			document.getElementById("minHiScore").value = 10;
+		var defaultmsg1 = "Minimum High Score must be a positive number."
+		
+		////// min High score
+		
+		if ( minHiScore==="" ) {
+			msg = msg.concat(defaultmsg1);
+			alert (msg); //cannot be empty
+			return false;
 		}
+		
+		if (minHiScore<1) {
+			msg = msg.concat(defaultmsg1);
+			//document.getElementById("minHiScore").value = 10;
+		} else if (minHiScore>=1) {
+			//accepted value
+		} else {
+			//not a number
+			msg = msg.concat(defaultmsg1);
+		}
+		
+		if (msg.length>0) {
+			//msg = msg.concat("Resetting values to default values.\n");
+			alert(msg);
+			return false;
+		}
+		
+		////// game level
+		
+		var defaultmsg2 = "Number of Levels in the Game must be a positive number."
+		msg = ""; // reset for game level
+		
+		if ( gameLevel==="" ) {
+			msg = msg.concat(defaultmsg2);
+			alert (msg); //cannot be empty
+			return false;
+		}
+		
 		if (gameLevel<1 || gameLevel>20) {
 			//console.log("gameLevel<1 = " + (gameLevel<1)); //debug
 			//console.log("gameLevel>20 = " + (gameLevel>20)); //debug
-			if (gameLevel<1) msg = msg.concat("Number of Levels in the Game must be a positive number.\n");
-			if (gameLevel>20) 
-				msg = msg.concat("Number of Levels in the Game cannot be greater than 20, the Maximum level.\n");
+			if (gameLevel<1) msg = msg.concat(defaultmsg2);
+			if (gameLevel>20) msg = msg.concat("Number of Levels in the Game cannot be greater than 20, the Maximum level.\n");
 			
 			//console.log(msg); //debug
-			document.getElementById("gameLevel").value = 20;
+			//document.getElementById("gameLevel").value = 20;
+		} else if ( gameLevel>=1 && gameLevel<=20 ) {
+			// accepted
+		} else {
+			//not a number
+			msg = msg.concat(defaultmsg2);
 		}
 
 		if (msg.length>0) {
-			msg = msg.concat("Resetting values to default values.\n");
+			//msg = msg.concat("Resetting values to default values.\n");
 			alert(msg);
 			return false;
 		}
