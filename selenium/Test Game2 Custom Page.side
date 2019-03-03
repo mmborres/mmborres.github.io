@@ -1,0 +1,564 @@
+{
+  "id": "da7ed634-d3ac-4b65-89b8-00cf38040093",
+  "version": "2.0",
+  "name": "Test Game2 Custom Page",
+  "url": "https://mmborres.github.io",
+  "tests": [{
+    "id": "47a563e2-3c16-4b92-91b5-94eb6bfebc69",
+    "name": "Negative Test - Empty Value",
+    "commands": [{
+      "id": "fa79d518-ed99-4cd3-90f8-ccaeb272aa3b",
+      "comment": "",
+      "command": "open",
+      "target": "/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1892453d-7860-457c-ab94-6fd83297faed",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52388e5b-589c-4d07-8828-008cfda31ad0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(5) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53ac4abc-58fb-42be-a097-9593a72b8ae7",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fc89bee-2f94-49a7-802c-9b2f5dedb627",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24240255-d951-4db4-a56d-46c0cc893e12",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a4677d14-50b0-4a22-b19d-230dee4faf24",
+    "name": "Negative Test - Zero Value",
+    "commands": [{
+      "id": "95fe22fd-7bda-4183-82e9-e16d1ff6de43",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "337f7afc-1456-4e12-8ea7-ef36689fd5f6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8f23ec0-8bde-4312-9739-8a10e0ed4542",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(5) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6320c623-0696-422c-8435-142c7da17632",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84c18413-5bed-461c-b78d-dc6178898a33",
+      "comment": "",
+      "command": "click",
+      "target": "id=formcustom",
+      "targets": [
+        ["id=formcustom", "id"],
+        ["css=#formcustom", "css:finder"],
+        ["xpath=//form[@id='formcustom']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b0bf5cd-617d-443f-aa5e-a4ad0178234c",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "daf2943c-2b00-487c-87b6-e0f691c8b9f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "ecc6adc8-b6b7-43dd-9374-81f5acf9fc53",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c319708-799e-4dda-b81d-0fbe03e9d015",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "99322e94-6319-4385-96cf-e94f05856dd7",
+    "name": "Negative Test - Non-integer Value",
+    "commands": [{
+      "id": "3cc691e1-b854-4962-aa85-4b0157e0942e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad3bada2-d0d6-42b2-afe1-b0b9ed306543",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6618261-79a4-443b-a397-6882450b07c6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(5) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ae04d45-7747-4e60-8348-317f0c7c651d",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e1e522f-9850-4be7-b699-6aff44ecd350",
+      "comment": "",
+      "command": "click",
+      "target": "id=formcustom",
+      "targets": [
+        ["id=formcustom", "id"],
+        ["css=#formcustom", "css:finder"],
+        ["xpath=//form[@id='formcustom']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97e8b9f7-865b-4753-ba92-b0af3013af36",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8be54d90-e47f-4229-bde5-74949f882f33",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "B"
+    }, {
+      "id": "22d3395a-2576-4e94-8c75-22eda6f4b055",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7f2026b-b0cf-45d4-8aa4-fb7a0644615d",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0cf3f489-b0a0-443a-9cba-2c4bd505ff9b",
+    "name": "Negative Test - Negative Value",
+    "commands": [{
+      "id": "933b6aaf-e031-4fab-9537-c22a1d48302d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67f09340-78ce-46ba-a461-48469821be8a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ba7d1ad-f8cc-4142-a573-6e035a5dfbc7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(5) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "900b5b65-51ec-4706-b002-5738c6ca679a",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b96ae703-b260-43ea-8fa5-aa5aeff45248",
+      "comment": "",
+      "command": "click",
+      "target": "id=formcustom",
+      "targets": [
+        ["id=formcustom", "id"],
+        ["css=#formcustom", "css:finder"],
+        ["xpath=//form[@id='formcustom']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8658079c-21df-4ae4-9992-d779e50b41fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80373e24-e7bc-41be-afea-71503b4ed187",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-9"
+    }, {
+      "id": "92d3b884-a605-4609-a47d-12a63a52c5ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22581591-4405-488c-9213-cee967f2f070",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ecde6fd1-fc28-4e26-aa81-45552a53a46d",
+    "name": "Negative Test - More than Max Value",
+    "commands": [{
+      "id": "6f855105-de45-4d94-a20e-c9e1b77d9edc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d717206a-dd93-4d03-a1eb-50529dce835c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf5d6854-076a-418f-beb8-dd0e70d3ecd9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(5) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "797c254b-c103-46f4-bb87-545ef08bd202",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17b21b34-954f-4c39-8f86-d854421046bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1b2a73d-8d22-4dae-aca0-4c0c47e7936d",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "8"
+    }, {
+      "id": "4a2b1957-9859-4dbd-9e0b-ba4bbdecae89",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae284f6d-47c4-47bc-8c37-70dd81a3553d",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game cannot be greater than 5, the Maximum level.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b4a51b27-99c5-481f-9b73-0baeff6282b0",
+    "name": "Positive Test - Within Range",
+    "commands": [{
+      "id": "7d1b943b-08cd-464b-b0b3-90be26093a08",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbd6a7bc-b665-4f06-90d5-8068ac7fad98",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b465903-2011-4264-8256-c8a9c393132d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(5) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bd20798-52fa-486b-8c70-2ce95d5aca57",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "427f2a30-0964-42bd-893b-a7f650de298e",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6578c268-c84d-47f0-adec-474eda96f60e",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "b3e9e1f5-f1ca-46aa-86c3-c06c3d2d05a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9c380d74-0dc2-40cf-97c5-46d6f36224bd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["47a563e2-3c16-4b92-91b5-94eb6bfebc69"]
+  }],
+  "urls": ["https://mmborres.github.io/"],
+  "plugins": []
+}
