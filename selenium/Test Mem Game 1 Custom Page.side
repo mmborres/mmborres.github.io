@@ -1,0 +1,990 @@
+{
+  "id": "bd9177b5-d45b-471f-a09d-79b1b9ebdce5",
+  "version": "2.0",
+  "name": "Test Mem Game 1 Custom Page",
+  "url": "https://mmborres.github.io/index.html",
+  "tests": [{
+    "id": "3146dbe1-6f47-4bc0-8176-8f8a387d9fe2",
+    "name": "1Min Hi Score Negative Test - Zero Value",
+    "commands": [{
+      "id": "e941ca23-b052-4504-805e-b58f9539b1c4",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9669ef9-1f5b-41f8-81a8-b0b4b9cd41b4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1397x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84803fa1-c7d9-4832-bc09-49907dfc4eb8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c99ae66-3393-41a4-abb7-2abb38e6101d",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d445741-b5d4-4d0b-8ea7-13464dd24d44",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "098d569b-147c-4141-b8f0-22511f9819ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "904d6e8c-d01e-47bc-9948-f2312a077ece",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a81bff9f-a8a3-4569-8873-da1b62ebc1e1",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Minimum High Score must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9c361d2b-c0bb-4339-a8f0-79e06710a22f",
+    "name": "1Min Hi Score Negative Test - Non-Integer Value",
+    "commands": [{
+      "id": "c7483cf1-2596-4e16-8c70-ae809d6eda26",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "462d230e-569d-478e-a12b-2fcc03da21de",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1397x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7904f38-2d99-4f5b-9ce1-13c3dc2e8dbb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "675daafd-3857-4795-a1dd-f5f1bc815895",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7dea3f5-e495-45f4-bcf8-b9fc7b2d45eb",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b611d5a-9d32-4046-b007-a3fce486ab94",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "AA"
+    }, {
+      "id": "4d83813e-9522-4671-9a9f-aae08f08f5fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c90b4fe6-732d-4820-95e3-05c15a9ad643",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Minimum High Score must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "419d5117-a9ab-445f-bed9-c018c9a0c8f0",
+    "name": "1Min Hi Score Negative Test - Negative Value",
+    "commands": [{
+      "id": "12085db5-559f-4058-90ef-b3fab6038ee5",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80704d3c-d03e-4a0a-a6f6-ae137d930c90",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1397x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b807f5c1-a0cc-4aec-983b-24fca38e3c19",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9243e173-e715-48b8-b3a0-f5dad5c7c206",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f6966a1-281b-42f8-a8b5-94c2766127ad",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5558db4-3333-4464-b213-1735de28c3e6",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-5"
+    }, {
+      "id": "589440b6-7918-4c1b-9699-953f8c9c95bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cccf14f8-8818-41bb-b2fd-afbd1ae1707d",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Minimum High Score must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "68d5b815-0558-401b-969a-5dcd7334a6a1",
+    "name": "1Min Hi Score Positive Test",
+    "commands": [{
+      "id": "471e62b2-722c-4b15-8217-624f3574545e",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "102a7a61-21a7-46c3-85cb-991a66acfd1e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c894905-9a27-4a67-ad43-abfede30831c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d25e3001-62cb-4dd2-89a1-3194fe1b5ac7",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "925d8804-dace-4816-b953-d6a7328d6e92",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce50a855-043c-4efc-93e0-fea71c03e565",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "f55cb44a-c1e8-4304-a202-c5c8614d87a0",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88853e2f-e64a-4ea6-80f0-49ab40892c9a",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "b6c020ea-c433-43cb-be93-4817396c1ad9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ed2545de-043c-44f9-ab53-7b174469df68",
+    "name": "2Game Level Negative Test - Zero Value",
+    "commands": [{
+      "id": "0b5f0cf7-88ea-40e8-9d6f-0e47128a91ed",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "076061a0-5b58-4cd7-b348-285c1db12a8b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39f0d3a4-3c12-4d01-9fec-9f1810fa88c1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "abffe593-d026-4d6a-a4c2-1ea592270d1f",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "399bacec-0f98-458f-a792-ebd3b3bc013a",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01b33a4d-345f-4a67-bbd1-3b2f422ccd6d",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "a69876e0-8d59-4bb8-b06c-ee2196a35ac3",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7752f66-1431-49f2-8d2e-e8efec65598c",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "7909ec3e-a29c-4fda-830e-3a759e70664c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "058a6d05-1bed-44b3-ae2e-da1d5b1ab677",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e3b7df41-be28-4fbb-932b-b6e09ed3a3c0",
+    "name": "2Game Level Negative Test - Negative Value",
+    "commands": [{
+      "id": "422460b4-1887-411e-8001-2e7976580b4c",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee2ca72d-d550-4bbe-97ad-672c70283f1a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70d1118f-246f-4420-bac1-6dcc99614053",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d23a262-7e53-4541-bcc4-7eca99dd5a6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b3a9b0d-7cae-405d-81b7-8da9febefbdc",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "deef427b-d26a-45cb-a1cb-3e85ef5ac356",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "9edb01e9-ec61-47eb-af15-cdcae0199d47",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d37cfe5-d12c-438b-bb73-4f97b9ba97ac",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "-3"
+    }, {
+      "id": "426173b9-9f53-4d7c-a644-560f0c5b0ab9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "660fb3fd-8817-4973-9e52-14d6c57da784",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fdf4fc0e-27f3-4d1b-80ff-0a0dda678072",
+    "name": "2Game Level Negative Test - Non-Integer Value",
+    "commands": [{
+      "id": "08e9c203-e448-44ab-af38-37df538e3fe6",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e953d463-cd8e-439c-a6c2-8ee37ad0e8ad",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c169ffb-e7f7-4ff8-8505-fa2137bc80e3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "637e91b8-6451-431b-80f5-846cab130ffd",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da836a79-3c36-4c1a-98a7-51a3266e03df",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "352459f9-82a3-4066-be4f-402be64da2d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "ce004655-67dc-4b98-8670-de0e971c0ead",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb5ad93d-8d32-498d-a062-588a9fd2bddb",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "X"
+    }, {
+      "id": "b90d570a-2eab-4d0d-a604-a054413cb050",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48839254-a3fd-4a88-b27a-8d1621a27dd6",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6b964a26-97ac-4571-89cb-66e8b4c7a68c",
+    "name": "2Game Level Negative Test - More than Max Value",
+    "commands": [{
+      "id": "0cc12f60-50ce-433f-90da-151fb62be9ab",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36a92aa9-c1d4-43c2-a35a-d061ec207589",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23b13c90-c2df-4f6e-b437-726d2f051b85",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e0883d6-b2e6-4b67-9536-48ec4a1496f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7db4b05f-d2f2-4c93-9917-cd5d548ca43d",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ac6b54a-3517-45e9-a176-316d6cc3a03e",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "27f7cf69-f46a-4670-9158-fced08e3748c",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34e98cb4-e9e9-491e-8a62-bf8d9ddca29d",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "45"
+    }, {
+      "id": "8ed110f0-2a6b-4baa-aff9-cb59778e9804",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55ecd96e-2615-40e7-bc1a-c8925d5a6782",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game cannot be greater than 20, the Maximum level.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6b9d6c41-7b01-4ec6-bc39-999f2421ed23",
+    "name": "2Game Level Positive Test",
+    "commands": [{
+      "id": "5502b0d9-c8d8-40e6-928e-b42e1729e0e8",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c3a7a04-1717-42ce-8f7c-63859948e7ee",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1423cdc4-b833-4690-9bd4-dca65c1c324f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "20ec158b-7f08-4d3d-8f4c-7a831da1453b",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81452c82-a07e-4e87-97c2-2191fefda5b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c59534d8-3e8a-44f7-827d-d8a814f6c319",
+      "comment": "",
+      "command": "type",
+      "target": "id=minHiScore",
+      "targets": [
+        ["id=minHiScore", "id"],
+        ["name=minHiScore", "name"],
+        ["css=#minHiScore", "css:finder"],
+        ["xpath=//input[@id='minHiScore']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "13e9ef1d-6d82-4867-9d8d-b26f841b6e70",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1faa496b-4c50-40d6-a890-1a62529dab82",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "15"
+    }, {
+      "id": "2619f244-6c57-48f0-96d3-890530fbe5b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "44bbe7bf-8f1f-486c-9b7b-da0e1c61cf1b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3146dbe1-6f47-4bc0-8176-8f8a387d9fe2"]
+  }],
+  "urls": ["https://mmborres.github.io/index.html"],
+  "plugins": []
+}
