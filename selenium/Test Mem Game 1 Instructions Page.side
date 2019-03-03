@@ -1,0 +1,106 @@
+{
+  "id": "5d2a124f-8098-494d-9b9e-cb9b77da9619",
+  "version": "2.0",
+  "name": "Test Mem Game 1 Instructions Page",
+  "url": "https://mmborres.github.io/",
+  "tests": [{
+    "id": "9e3bf169-4ead-4ce8-a71f-eff5751fd33b",
+    "name": "Test Radio Buttons",
+    "commands": [{
+      "id": "47c8e885-4a75-4100-b110-b14de53d2870",
+      "comment": "",
+      "command": "open",
+      "target": "/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dad2b16-22ff-4619-9957-203a554d7c00",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1371x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6a59683-d809-4f99-ab2f-d182faf3f0b6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "786f3fb0-6d99-45ca-a5af-845faeeccadd",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(2)",
+      "targets": [
+        ["css=nav > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Instructions')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'instructions.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac22c7fe-e4e7-430b-b9c0-296888219998",
+      "comment": "",
+      "command": "click",
+      "target": "id=alertNo",
+      "targets": [
+        ["id=alertNo", "id"],
+        ["css=#alertNo", "css:finder"],
+        ["xpath=//input[@id='alertNo']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Meaning, alert messages WILL NOT be displayed."
+    }, {
+      "id": "049a01ad-80b1-42e2-a55a-50ad839cfb04",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"alertText\"]",
+      "targets": [],
+      "value": "Meaning, alert messages WILL NOT be displayed."
+    }, {
+      "id": "2f3ab541-662b-4065-866f-c6252d8e6a4e",
+      "comment": "",
+      "command": "click",
+      "target": "id=alertYes",
+      "targets": [
+        ["id=alertYes", "id"],
+        ["name=alert", "name"],
+        ["css=#alertYes", "css:finder"],
+        ["xpath=//input[@id='alertYes']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Meaning, alert messages WILL be displayed."
+    }, {
+      "id": "a19a4ed8-ceb0-4e20-9e15-389b3675d97d",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"alertText\"]",
+      "targets": [
+        ["id=alertYes", "id"],
+        ["name=alert", "name"],
+        ["css=#alertYes", "css:finder"],
+        ["xpath=//input[@id='alertYes']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Meaning, alert messages WILL be displayed."
+    }]
+  }],
+  "suites": [{
+    "id": "4c7e405a-f6b4-433a-86f5-faa5bb9c3851",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9e3bf169-4ead-4ce8-a71f-eff5751fd33b"]
+  }],
+  "urls": ["https://mmborres.github.io/", "file:///C:/Users/alber/Documents/GitHub/mmborres.github.io/index.html", "file:///C:/Users/alber/Documents/GitHub/mmborres.github.io/"],
+  "plugins": []
+}
