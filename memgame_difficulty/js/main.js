@@ -311,38 +311,27 @@ function getCustom(){
 	var x = window.location.href;
 	//console.log("form: " + x); //debug
 
-  	//minHiScore=2&gameLevel=2 //sample
   	if (x.includes("index.html?")) {
   		var customvals = x.split("?")[1];
   		//console.log(customvals); //debug
 
-  		//var custvals = [];
-  		//if (customvals.includes("&")) {
-  			//custvals = customvals.split("&");
-  			//console.log(custvals); //debug
-
-  			//if (custvals.length>0) {
-  				//var minScore = parseInt(custvals[0].split("=")[1]);
-  				//console.log(minScore); //debug
-
   				if (customvals.includes("=")) {
   					var gameLevel = parseInt(customvals.split("=")[1]);
-  				//console.log(gameLevel); //debug
+					//console.log(gameLevel); //debug
 
-  				//if (minScore>0 && minScore!==minHighScore) { //cannot be negative or 0
-  				//	minHighScore = minScore;
-  				//}
+					if ( gameLevel<1 || gameLevel>5) {
+						// invalid values
+						// do nothing
+					} else if ( gameLevel>=1 && gameLevel<=5 ) {
+						// accepted
+						maxLevel = gameLevel;
+					} else {
+						//not a number
+						// do nothing
+					}
 
-  				//if (gameLevel>0 && gameLevel<=maxLevel) { //cannot be less 0 or more than 20
-  					maxLevel = gameLevel;
-  				//}
   				}
-
-   			//}
-  		//}
   	}
-
-  	//console.log("Using custom values: minHighScore[" + minHighScore + "], maxLevel[" + maxLevel + "]")
 
 }
 
