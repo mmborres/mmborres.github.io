@@ -1,0 +1,184 @@
+{
+  "id": "aa45bfab-115e-48b7-ab9a-37497dbfe932",
+  "version": "2.0",
+  "name": "Test Mem Game 2 Contact Page",
+  "url": "https://mmborres.github.io",
+  "tests": [{
+    "id": "4d3b0de4-bbb0-41f4-af49-0065f8cc9314",
+    "name": "Select GA Link",
+    "commands": [{
+      "id": "4420226a-c1b3-4262-8d8a-41cd04bb79eb",
+      "comment": "",
+      "command": "open",
+      "target": "/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebbf681f-6f81-47a9-9a92-f8c839b695d6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1371x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af2b0313-e894-4a6c-94de-b26618c12c0f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "365c9ad5-2d8d-42b2-aa61-5dfc6e6f94b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(5)",
+      "targets": [
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'contact.html')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "142bf018-ce4b-4e91-afdb-fbbc8e788479",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=GA",
+      "targets": [
+        ["linkText=GA", "linkText"],
+        ["css=.contactdetails:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'GA')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://generalassemb.ly/locations/sydney')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'GA')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3946",
+      "windowTimeout": 2000
+    }, {
+      "id": "a2944920-8fac-4eaf-9639-d1983669e6d7",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win3946}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "937021c6-53d1-4c12-b288-589287f5e668",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Find Your Course",
+      "targets": [
+        ["linkText=Find Your Course", "linkText"],
+        ["css=.highlight > .navi_menu_item_link", "css:finder"],
+        ["xpath=//a[contains(text(),'Find Your Course')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://generalassemb.ly/findyourcourse')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find Your Course')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "998ad50c-ff9a-4b4e-9eb3-45e7ef544921",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Find Your Course",
+      "targets": [
+        ["linkText=Find Your Course", "linkText"],
+        ["css=.highlight > .navi_menu_item_link", "css:finder"],
+        ["xpath=//a[contains(text(),'Find Your Course')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://generalassemb.ly/findyourcourse')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find Your Course')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aa39c2c-0692-4ae9-a6e7-4639d0277a96",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=NEW in 2019: Software Engineering Immersive! Apply now.",
+      "targets": [
+        ["linkText=NEW in 2019: Software Engineering Immersive! Apply now.", "linkText"],
+        ["css=.navi_announcements > a", "css:finder"],
+        ["xpath=//a[contains(@href, 'https://generalassemb.ly/education/software-engineering-immersive')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'NEW in 2019: Software Engineering Immersive! Apply now.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "85cc0dbc-56c8-48fd-adb5-189c16fcde33",
+    "name": "Open Email",
+    "commands": [{
+      "id": "7bd3924a-24df-499f-9932-a7243c6764a1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4acc8cd-f399-445d-833d-aa7ba60d9d45",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1371x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1ac9e42-a523-424b-ba34-d84298fa47b1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d8018bc-348f-4d97-ba94-7a9eaf58b937",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(5)",
+      "targets": [
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'contact.html')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "459b6f1f-ce9b-4f65-b594-32b0f6bfef33",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mabeth Borres",
+      "targets": [
+        ["linkText=Mabeth Borres", "linkText"],
+        ["css=.contactdetails > .contactdetails:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Mabeth Borres')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'mailto:mmborres@gmail.com?Subject=Memory%20Card%20Game')]", "xpath:href"],
+        ["xpath=//p/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Mabeth Borres')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "68739ba0-e87a-418c-b69a-3b177efcef24",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4d3b0de4-bbb0-41f4-af49-0065f8cc9314"]
+  }],
+  "urls": ["https://mmborres.github.io/"],
+  "plugins": []
+}
