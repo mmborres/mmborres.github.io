@@ -64,6 +64,13 @@
       "windowHandleName": "win3946",
       "windowTimeout": 2000
     }, {
+      "id": "3819b07c-e530-4cf3-96fc-f2e6a29cbbb2",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "a2944920-8fac-4eaf-9639-d1983669e6d7",
       "comment": "",
       "command": "selectWindow",
@@ -110,6 +117,27 @@
         ["xpath=//div/a", "xpath:position"],
         ["xpath=//a[contains(.,'NEW in 2019: Software Engineering Immersive! Apply now.')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "a979dc4e-9370-4136-85c6-1cb9f5a33364",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f73b6e8-4e1c-4732-94da-aa8fe76c4661",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87bb73ca-0000-4ef6-90e3-3027a9a5524f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }, {

@@ -91,6 +91,13 @@
         ["xpath=//input", "xpath:position"]
       ],
       "value": "Meaning, alert messages WILL be displayed."
+    }, {
+      "id": "29c8472a-785b-42af-9997-95aa4bbd1d9c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }],
   "suites": [{

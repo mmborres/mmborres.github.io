@@ -65,6 +65,13 @@
       "target": "Number of Levels in the Game must be a positive number.",
       "targets": [],
       "value": ""
+    }, {
+      "id": "82ee9e56-cb4e-4ee2-b9c7-84d9cf822968",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "a4677d14-50b0-4a22-b19d-230dee4faf24",
@@ -166,6 +173,13 @@
       "comment": "",
       "command": "assertAlert",
       "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dfcabc67-17d3-45be-af46-9ddf3e982a94",
+      "comment": "",
+      "command": "close",
+      "target": "",
       "targets": [],
       "value": ""
     }]
@@ -271,6 +285,13 @@
       "target": "Number of Levels in the Game must be a positive number.",
       "targets": [],
       "value": ""
+    }, {
+      "id": "d89ef274-fa16-401f-bc95-f1685e533c33",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "0cf3f489-b0a0-443a-9cba-2c4bd505ff9b",
@@ -374,6 +395,13 @@
       "target": "Number of Levels in the Game must be a positive number.",
       "targets": [],
       "value": ""
+    }, {
+      "id": "e6269b12-cf80-487d-b467-c4c95145b072",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "ecde6fd1-fc28-4e26-aa81-45552a53a46d",
@@ -465,6 +493,13 @@
       "target": "Number of Levels in the Game cannot be greater than 5, the Maximum level.",
       "targets": [],
       "value": ""
+    }, {
+      "id": "7a84e92f-e113-4f0f-a69f-88ea2cd38e81",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "b4a51b27-99c5-481f-9b73-0baeff6282b0",
@@ -548,6 +583,13 @@
         ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
         ["xpath=//input[2]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "00cdf83b-069e-4374-8fed-cd03f200b8de",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],

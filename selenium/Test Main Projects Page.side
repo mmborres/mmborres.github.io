@@ -1,0 +1,289 @@
+{
+  "id": "069d7e50-1d59-4561-bf43-c2b6a6d3800e",
+  "version": "2.0",
+  "name": "Test Main Projects Page",
+  "url": "https://mmborres.github.io/index.html",
+  "tests": [{
+    "id": "96ac6c64-bd20-4b35-acda-da9aa3644371",
+    "name": "Test Game 1 Link",
+    "commands": [{
+      "id": "b36d8384-63ba-4905-b4c8-f830e33be8f2",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a553a7d-900b-43dd-b73b-9cecbb02782c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "930x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a76eeb2-6511-445e-a077-52a424872270",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51421ce0-9fdf-4382-ba0e-88771202295e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.afooter",
+      "targets": [
+        ["css=.afooter", "css:finder"],
+        ["xpath=//a[contains(text(),'Back to Projects')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '../index.html')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "943cdd2b-9647-45c4-9337-fb80b304df3c",
+    "name": "Test Game 2 Link",
+    "commands": [{
+      "id": "255519c0-a6c3-4833-8157-acb62e390fb6",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72709cd8-40bf-47c1-bd72-78074d250c21",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "930x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96a08bf4-5380-4b7f-992a-7b041480444e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1dd0be61-72b8-4ee8-b309-87e6c13498bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.afooter",
+      "targets": [
+        ["css=.afooter", "css:finder"],
+        ["xpath=//a[contains(text(),'Back to Projects')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '../index.html')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5ef532ef-b5e9-4fac-88b6-f3401c006703",
+    "name": "Test GA Link",
+    "commands": [{
+      "id": "679a7328-99e4-4dde-9d95-4ab109d983b3",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c9e20d5-c9d1-44dd-95a6-8795d9104936",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "930x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13cac0bb-bf6b-4c2e-b726-7a2aeaab5b7b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=GA",
+      "targets": [
+        ["linkText=GA", "linkText"],
+        ["css=.gameinfo:nth-child(2) > .contactdetails:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'GA')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://generalassemb.ly/locations/sydney')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'GA')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3443",
+      "windowTimeout": 2000
+    }, {
+      "id": "7a2beb74-fddc-4462-b87f-e679a036bae3",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win3443}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ada628c4-73a3-468c-bd28-ebc7b85fceb5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "36575239-c680-4e5c-a132-fab942d4e01b",
+    "name": "Test Selenium Link",
+    "commands": [{
+      "id": "09c031fa-9d2d-4e69-902f-a667e7c05e99",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12d5bf75-68d9-467c-95de-c00122288d7a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "930x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e734c0a2-5cd5-47d2-b784-470fb4ca5374",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Selenium",
+      "targets": [
+        ["linkText=Selenium", "linkText"],
+        ["css=.gameinfo:nth-child(6) > .contactdetails:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Selenium')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.seleniumhq.org/')]", "xpath:href"],
+        ["xpath=//p[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Selenium')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3281",
+      "windowTimeout": 2000
+    }, {
+      "id": "9cdb25ab-25c9-47a4-8125-a95b456bf7c6",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win3281}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ea9ca119-19f7-4622-82f6-ecdbc36d78c3",
+    "name": "Test Selenium Tests Link",
+    "commands": [{
+      "id": "3703fef3-1c07-4588-b3fd-e01453614226",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42c1b700-4b03-4af5-9edb-c8de0ee9b396",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "930x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a75f1de4-a3dc-46d5-8f09-2b3e2738e6af",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Selenium Tests",
+      "targets": [
+        ["linkText=Memory Game Selenium Tests", "linkText"],
+        ["css=.gameinfo:nth-child(6) > .contactdetails:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Selenium Tests')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'selenium/index.html')]", "xpath:href"],
+        ["xpath=//p[5]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Selenium Tests')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9325dfa-84fb-4b2f-8874-4b1f769400cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.afooter",
+      "targets": [
+        ["css=.afooter", "css:finder"],
+        ["xpath=//a[contains(text(),'Back to Projects')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '../index.html')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d7bd7802-5640-4ce9-b26b-bccdfb9bf6f7",
+    "name": "Test Contact Link",
+    "commands": [{
+      "id": "15a8d395-6376-4ded-be9f-64e538114f2d",
+      "comment": "",
+      "command": "open",
+      "target": "https://mmborres.github.io/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02b7fb61-2a5e-47f5-b7d9-e3dac8da5eaf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "930x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9026910-8a83-4420-b023-52932d1487ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(2)",
+      "targets": [
+        ["css=nav > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'contact.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a314eae4-e8ac-4c61-9d32-7100e81fd675",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(1)",
+      "targets": [
+        ["css=nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pre-work Projects and more')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d2b082c-40bd-4b7d-a099-a6d4b7f40da5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ebebdebc-4733-4c9b-9375-dd676b9ff8ba",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["96ac6c64-bd20-4b35-acda-da9aa3644371"]
+  }],
+  "urls": ["https://mmborres.github.io/index.html"],
+  "plugins": []
+}

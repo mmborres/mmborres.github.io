@@ -93,6 +93,13 @@
       "target": "Minimum High Score must be a positive number.",
       "targets": [],
       "value": ""
+    }, {
+      "id": "9889f161-4fc2-4a27-8e27-14b4d515a3e7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "9c361d2b-c0bb-4339-a8f0-79e06710a22f",
@@ -184,6 +191,13 @@
       "target": "Minimum High Score must be a positive number.",
       "targets": [],
       "value": ""
+    }, {
+      "id": "f3290b04-5d9b-4e4a-8f48-0e1678a1b5f5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "419d5117-a9ab-445f-bed9-c018c9a0c8f0",
@@ -273,6 +287,13 @@
       "comment": "",
       "command": "assertAlert",
       "target": "Minimum High Score must be a positive number.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "416f7eb6-17a5-42b3-999d-8952054406c2",
+      "comment": "",
+      "command": "close",
+      "target": "",
       "targets": [],
       "value": ""
     }]
@@ -386,6 +407,13 @@
         ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
         ["xpath=//input[3]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "3ee22d99-f697-43c7-a691-e618cf17f6a9",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -504,6 +532,13 @@
       "comment": "",
       "command": "assertAlert",
       "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fac677eb-93e6-4c12-8c33-790690353e33",
+      "comment": "",
+      "command": "close",
+      "target": "",
       "targets": [],
       "value": ""
     }]
@@ -625,6 +660,13 @@
       "target": "Number of Levels in the Game must be a positive number.",
       "targets": [],
       "value": ""
+    }, {
+      "id": "8e2ed9c1-0ecd-4672-b100-036e43c2606a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "fdf4fc0e-27f3-4d1b-80ff-0a0dda678072",
@@ -742,6 +784,13 @@
       "comment": "",
       "command": "assertAlert",
       "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "864783c5-9cb1-41d1-a569-2a91e4daf39f",
+      "comment": "",
+      "command": "close",
+      "target": "",
       "targets": [],
       "value": ""
     }]
@@ -863,6 +912,13 @@
       "target": "Number of Levels in the Game cannot be greater than 20, the Maximum level.",
       "targets": [],
       "value": ""
+    }, {
+      "id": "aefea0bd-2c48-486c-9e49-c50878d7c461",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "6b9d6c41-7b01-4ec6-bc39-999f2421ed23",
@@ -974,6 +1030,13 @@
         ["xpath=//form[@id='formcustom']/input[3]", "xpath:idRelative"],
         ["xpath=//input[3]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "05dcd072-f7c0-4e2b-9b7c-c14fd5a50f11",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],
