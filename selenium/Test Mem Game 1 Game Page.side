@@ -1,0 +1,265 @@
+{
+  "id": "56b4e5e9-39f2-477d-a31e-5e467b1b1776",
+  "version": "2.0",
+  "name": "Test Mem Game 1 Game Page",
+  "url": "https://mmborres.github.io",
+  "tests": [{
+    "id": "9cd23741-4c47-4312-a914-dca604b738bf",
+    "name": "Navigation Test",
+    "commands": [{
+      "id": "5c7a650d-8efb-49cd-a413-a5109860303c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e15ec3e-ce5a-4f80-bb5e-3ba76c7ea8a9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "930x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82e4ef88-58f3-442c-88fc-c1955944f593",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Score Top-Up",
+      "targets": [
+        ["linkText=Memory Game Score Top-Up", "linkText"],
+        ["css=.gameinfo:nth-child(4) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Score Top-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memory_game/index.html')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Score Top-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8f8676f-6b20-4ff3-8c76-4422a5ede7cd",
+      "comment": "",
+      "command": "click",
+      "target": "id=button1",
+      "targets": [
+        ["id=button1", "id"],
+        ["css=#button1", "css:finder"],
+        ["xpath=//button[@id='button1']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Wanna Score Higher? Play Again!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c34ea080-003a-4b6e-a37f-b878142f8814",
+      "comment": "",
+      "command": "click",
+      "target": "id=button5",
+      "targets": [
+        ["id=button5", "id"],
+        ["css=#button5", "css:finder"],
+        ["xpath=//button[@id='button5']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Restart Game, Back to Zero')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5141a1e8-d161-4b51-9e82-f4d259e5dde5",
+      "comment": "",
+      "command": "click",
+      "target": "id=button3",
+      "targets": [
+        ["id=button3", "id"],
+        ["css=#button3", "css:finder"],
+        ["xpath=//button[@id='button3']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Check Status, Score[0]')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5fac91c-c652-4176-8943-9e4463ae1af9",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Score is [0] with [0] wrong move.\nYour turn, mate! Game face on now...\n\nTIP: Score 10 points to unlock Level 1.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c54d9257-305d-4fb5-87c8-1920cf3f6dec",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Instructions",
+      "targets": [
+        ["linkText=Instructions", "linkText"],
+        ["css=.contactdetails:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Instructions')])[2]", "xpath:link"],
+        ["xpath=//p[@id='gameinfo']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'instructions.html')])[2]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a65edcff-027a-41b5-aff0-ff40ca46847b",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(3)",
+      "targets": [
+        ["css=nav > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Game')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4415e363-d326-4fab-bd39-607fb2d4f8ee",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Custom",
+      "targets": [
+        ["linkText=Custom", "linkText"],
+        ["css=.contactdetails:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Custom')])[2]", "xpath:link"],
+        ["xpath=//p[@id='gameinfo']/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'custom.html')])[2]", "xpath:href"],
+        ["xpath=//p/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fd32743-e7ba-4e0e-b22f-5d611880c349",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(3)",
+      "targets": [
+        ["css=nav > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Game')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fb7e256-e14f-46e8-a1be-8c89c84cc4f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(1)",
+      "targets": [
+        ["css=nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'about.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87ff0a32-ab7a-4a35-953c-9e594192b401",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(3)",
+      "targets": [
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Game')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e7b6df8-1e60-4cb7-94fb-75d1168c9b79",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(2)",
+      "targets": [
+        ["css=nav > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Instructions')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'instructions.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82b667ac-5c16-4a60-b86f-e59e1bc3ebf6",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(3)",
+      "targets": [
+        ["css=nav > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Game')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fcbc7f9-cb19-4a45-8b02-32c3f6a6b7dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb12945f-9a53-4e8d-8570-c0c15c97d382",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav > a:nth-child(3)",
+      "targets": [
+        ["css=nav > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Game')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c58455c-5582-4b8c-bd5b-ee1e804f4361",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(5)",
+      "targets": [
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'contact.html')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d23e7fe5-dde0-4121-826f-efe9c0c01fe5",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(3)",
+      "targets": [
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Game')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'index.html')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d58d7ccd-f123-4324-b53b-b00ee35bd822",
+      "comment": "",
+      "command": "click",
+      "target": "css=.afooter",
+      "targets": [
+        ["css=.afooter", "css:finder"],
+        ["xpath=//a[contains(text(),'Back to Projects')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '../index.html')]", "xpath:href"],
+        ["xpath=//footer/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25c77d41-85c5-4838-bfd7-9c46828f14f8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "08eb9368-ae23-4f47-bfea-8a8321437e7d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9cd23741-4c47-4312-a914-dca604b738bf"]
+  }],
+  "urls": ["https://mmborres.github.io/"],
+  "plugins": []
+}
