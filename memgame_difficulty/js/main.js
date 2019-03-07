@@ -4,7 +4,7 @@
 
 //initial score values
 var score = 0;
-var tries = 0;
+var wrongMoves = 0;
 
 var maxLevel = 5; //5 default
 
@@ -103,10 +103,8 @@ var checkForMatch = function(){
 			//console.log("Score=" + score); //debug
 			if (showAlerts) alert("You found a match!");
 
-			//realtime
-			//document.getElementById("button3").innerHTML = "Check Status, Score[" + score + "]";
 		} else {
-			tries++; //unmatched turn
+			wrongMoves++; //unmatched turn
 			if (showAlerts) alert("Sorry, TRY Again. TIP: Remember the cards' position.");
 			return false;
 		}
@@ -129,42 +127,31 @@ var levelUp = function(){
 			document.body.style.backgroundImage = newBackgroundImage;
 		}
 		
-		// add Text only once
-		/*if (level==1) {
-			var gameinfo = document.getElementById("gameinfo");
-			var oldText = gameinfo.innerHTML;
-			//console.log("gameinfo=" + gameinfo);
-			var addText = "<br><br>If you love this background, score higher to the next level to see the next surprise. ";
-			gameinfo.innerHTML = oldText + addText;
-		}*/
+	var audio = new Audio("images/applause.mp3");
 		
-		//if (playLevel < level) playLevel = level;
+	//console.log("playLevel [" + playLevel + "], maxLevel [" + maxLevel + "]");
+	//console.log ("playLevel === maxLevel | " + (playLevel === maxLevel));
 
-		var audio = new Audio("images/applause.mp3");
-		
-		//console.log("playLevel [" + playLevel + "], maxLevel [" + maxLevel + "]");
-		//console.log ("playLevel === maxLevel | " + (playLevel === maxLevel));
-
-		if (playLevel === maxLevel) {
-			msg = msg.concat("\nWhat a feat! You are the Winner!")
+	if (playLevel === maxLevel) {
+		msg = msg.concat("\nWhat a feat! You are the Winner!")
 			
-			// end game sound 
-			audio = new Audio("images/homerun.mp3"); //done with level20
-		}
+		// end game sound 
+		audio = new Audio("images/homerun.mp3"); //done with level20
+	}
 		
-		audio.play(); //applause
-		if (showAlerts) alert(msg);
+	audio.play(); //applause
+	if (showAlerts) alert(msg);
 
-		playLevel++;
+	playLevel++;
 
-		if (playLevel<=maxLevel) {
-			resetBoard();
-			createBoard();
-		}
-	//}
+	if (playLevel<=maxLevel) {
+		resetBoard();
+		createBoard();
+	}
+	
 };
 
-var flipCard = function(){ //cardId){
+var flipCard = function(){ 
 
 	cardId = this.getAttribute('data-id') - 1;
 
@@ -198,9 +185,7 @@ var flipCard = function(){ //cardId){
 		cardIds.push(this.getAttribute('data-id')); //store card ids to check no-repeats
 		//console.log(cardIds); //debug
 
-		if ( cardsInPlay.length%2===0 ) { //allow 2 or 4 cards, be generous
-			//tries++; //incriease tries //if scored turn count as try
-			//console.log("Tries=" + tries); //debug
+		if ( cardsInPlay.length%2===0 ) { //allow cards IN PAIRS
 
 			matched = checkForMatch();
 			if (!matched) {
@@ -210,20 +195,11 @@ var flipCard = function(){ //cardId){
 				
 			} else {
 				//MATCHED
-				//check score if eligible for level unlock
-				//if (score>=minHighScore) {
-					//levelUp();
-				//}
-
-				//console.log("score = " + score);
-				//console.log("tries = " + tries);
-				//console.log("cardsInPlay = " + cardsInPlay.length);
 
 				if (cardsInPlay.length === ((playLevel+1)*cardsrow) ) {
 					//console.log("next level");
 					levelUp();
 				}
-
 				
 				if (playLevel > maxLevel) { // END GAME
 				    processEndGame();
@@ -289,8 +265,7 @@ var backCard = function(){
 
 		//flip remaining card to back face
 		//get all images in the document
-		var images = //document.body.getElementsByTagName("img");
-			document.body.getElementsByClassName("boardimgs");
+		var images = document.body.getElementsByClassName("boardimgs");
 		//console.log("cards in play = " + cardsInPlay);
 		//console.log(images);
 		//console.log("cardIds = " + cardIds);
@@ -320,24 +295,16 @@ function getCustom(){
   		var customvals = x.split("?")[1];
   		//console.log(customvals); //debug
 
-  				if (customvals.includes("=")) {
-  					var gameLevel = parseInt(customvals.split("=")[1]);
-					//console.log(gameLevel); //debug
+  		if (customvals.includes("=")) {
+  			var gameLevel = parseInt(customvals.split("=")[1]);
+			//console.log(gameLevel); //debug
 
-					if ( gameLevel<1 || gameLevel>5) {
-						// invalid values
-						// do nothing
-					} else if ( gameLevel>=1 && gameLevel<=5 ) {
-						// accepted
-						maxLevel = gameLevel;
-					} else {
-						//not a number
-						// do nothing
-					}
-
-  				}
+			if ( gameLevel>=1 && gameLevel<=5 ) {
+				// accepted
+				maxLevel = gameLevel;
+			} 
+		}
   	}
-
 }
 
 var createBoard = function(){
@@ -452,42 +419,20 @@ var createBoard = function(){
 
 createBoard();
 
-function showScore() {
-	/*var msg = "Score is [" + score + "] with [" + tries + "] wrong move" + (tries>1 ? "s." : ".") ;
-
-	if (score>0) {
-		if (score>tries) { msg = msg.concat("\nGood Job! Now, go score some more..."); }
-		else if (tries>score) { msg = msg.concat("\nWhat happened, mate? Level up!"); }
-		else { msg = msg.concat("\nNot bad, but you can do better. Eh?"); }
-
-		if (playLevel>0) {
-			msg = msg.concat("\n\nLevel Unlocked [" + playLevel + "]");
-		}
-	} else {
-		msg = msg.concat("\nYour turn, mate! Game face on now...");
-	}
-
-	var points = (playLevel+1)*minHighScore - score;
-	msg = msg.concat("\n\nTIP: Score " + points + " point" + (points>1 ? "s" : "") + " to unlock Level " + (playLevel+1) + ".");
-
-	alert(msg);*/
-}
-
-function playAgain() { //without reloading to allw to accumulate a higher score
+function playAgain() { //without reloading 
 	resetBoard(); //clear board and cards storage
 	createBoard(); //setup board
 }
 
 function resetBoard() { //reset board, cards storage
 
-	var images = //document.body.getElementsByTagName("img");
-		document.body.getElementsByClassName("boardimgs");
+	var images = document.body.getElementsByClassName("boardimgs");
 	//console.log("images" + images); //debug
 
 	var len = images.length;
 	//clear the card images display to allow for new combination
-	if (images.length>0) {
-		var pNode = images[0].parentNode;
+	if (len>0) {
+		//var pNode = images[0].parentNode;
 
 		for (var iid = 1; iid <= len; iid++) {
 			var imgCardId = "imgCardId" + iid;
@@ -538,7 +483,7 @@ function resetBoard() { //reset board, cards storage
 }
 
 function restartGame() {
-	location.reload(); //restart game, score back to zero
+	location.reload(); //restart game, everything
 }
 
 function updateAlerts() {

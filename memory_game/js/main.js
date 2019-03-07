@@ -100,7 +100,7 @@ var checkForMatch = function(){
 			if (showAlerts) alert("You found a match! That's 1 point.");
 
 			//realtime
-			document.getElementById("button3").innerHTML = "Check Status, Score[" + score + "]";
+			document.getElementById("checkstatusbutton").innerHTML = "Check Status, Score[" + score + "]";
 		} else {
 			tries++; //unmatched turn
 			if (showAlerts) alert("Sorry, TRY Again. TIP: Remember the cards' position.");
@@ -222,20 +222,34 @@ function processEndGame() {
 	var divCards = document.getElementById('game-board');
 	divCards.appendChild(cardElement);
 	
-	//leave reset button
-	
 	var pbuttons = document.getElementById("buttons"); //parent
 	
 	if (pbuttons.hasChildNodes) {
-		for (var c=1; c<5; c++) //except 5
-		{
-			var idb = "button" + c;
-			var nd = document.getElementById(idb);
-			pbuttons.removeChild(nd);
+				
+		var nd = document.getElementById('replaybutton'); //only replay button
+		if (nd !== null) {
+			var bt = document.createElement('button');
+			bt.setAttribute('class', "hidden");
+			bt.setAttribute('id', "buttonA");
+			bt.innerHTML = "hiddenhiddenhide";
+			pbuttons.replaceChild(bt, nd);
 		}
+		
+		var nnd = document.getElementById('checkstatusbutton'); //only check status button
+		if (nnd !== null) {
+			var bt = document.createElement('button');
+			bt.setAttribute('class', "hidden");
+			bt.innerHTML = "hiddenhiddenhide";
+			bt.setAttribute('id', "buttonB");
+			pbuttons.replaceChild(bt, nnd);
+		}		
+		
+		
+		var rs = document.getElementById("restartbutton");
+		if (rs !== null) rs.innerHTML = "Restart Game?"; 
 	}
 
-	document.getElementById("button5").innerHTML = "Restart Game?";
+	
 }
 
 function sleep( millisecondsToWait ) //allow to delay flipping card to back face
