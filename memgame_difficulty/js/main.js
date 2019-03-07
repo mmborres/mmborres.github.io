@@ -255,15 +255,20 @@ function processEndGame() {
 	var pbuttons = document.getElementById("buttons"); //parent
 	
 	if (pbuttons.hasChildNodes) {
-		for (var c=1; c<5; c++) //except 5
-		{
-			var idb = "button" + c;
-			var nd = document.getElementById(idb);
-			pbuttons.removeChild(nd);
+		
+		var nd = document.getElementById('shufflebutton'); //only shuffle button
+		if (nd !== null) {
+			var bt = document.createElement('button');
+			bt.setAttribute('class', "hidden");
+			bt.setAttribute('id', "buttonextra");
+			bt.innerHTML = "hide";
+	
+			pbuttons.replaceChild(bt, nd);
 		}
+		
+		var rs = document.getElementById("restartbutton");
+		if (rs !== null) rs.innerHTML = "Restart Game?";
 	}
-
-	document.getElementById("button5").innerHTML = "Restart Game?";
 }
 
 function sleep( millisecondsToWait ) //allow to delay flipping card to back face
