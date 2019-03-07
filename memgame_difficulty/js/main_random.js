@@ -31,8 +31,7 @@ var queenDiamonds = new Card("Diamonds", "Queen", "images/queen-of-diamonds.png"
 
 // There are 4 unique cards 
 // Matched cards example: kingHearts is paired with kingHearts
-// Meaning only 2 cards are generated per row, and placed twice each on random slots
-
+// Meaning only 2 cards are generated per row
 var allCards = [kingHearts, kingDiamonds, queenHearts, queenDiamonds];
 
 var cards = []; //holds the cards selected randomly
@@ -83,7 +82,7 @@ var levelUp = function(){
 		msg = msg.concat("\nWhat a feat! You are the Winner!")
 			
 		// end game sound 
-		audio = new Audio("images/homerun.mp3"); //done with max level
+		audio = new Audio("images/homerun.mp3"); //done with level20
 	}
 		
 	audio.play(); //applause
@@ -178,15 +177,20 @@ function processEndGame() {
 	var pbuttons = document.getElementById("buttons"); //parent
 	
 	if (pbuttons.hasChildNodes) {
-		for (var c=1; c<5; c++) //except 5
-		{
-			var idb = "button" + c;
-			var nd = document.getElementById(idb);
-			pbuttons.removeChild(nd);
+		
+		var nd = document.getElementById('shufflebutton'); //only shuffle button
+		if (nd !== null) {
+			var bt = document.createElement('button');
+			bt.setAttribute('class', "hidden");
+			bt.setAttribute('id', "buttonextra");
+			bt.innerHTML = "hide";
+	
+			pbuttons.replaceChild(bt, nd);
 		}
+		
+		var rs = document.getElementById("restartbutton");
+		if (rs !== null) rs.innerHTML = "Restart Game?";
 	}
-
-	document.getElementById("button5").innerHTML = "Restart Game?";
 }
 
 function sleep( millisecondsToWait ) //allow to delay flipping card to back face
@@ -374,8 +378,8 @@ function resetBoard() { //reset board, cards storage
 
 	var len = images.length;
 	//clear the card images display to allow for new combination
-	if (images.length>0) {
-		var pNode = images[0].parentNode;
+	if (len>0) {
+		//var pNode = images[0].parentNode;
 
 		for (var iid = 1; iid <= len; iid++) {
 			var imgCardId = "imgCardId" + iid;
