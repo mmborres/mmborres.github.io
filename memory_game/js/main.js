@@ -383,23 +383,24 @@ function playAgain() { //without reloading to allw to accumulate a higher score
 
 function resetBoard() { //reset board, cards storage
 
-	var images = document.body.getElementsByTagName("img");
-	//console.log("images" + images); //debug
-
-	//clear the card images display to allow for new combination
-	if (images.length>0) {
-		var pNode = images[0].parentNode;
-
-		for (var iid = 1; iid < 5; iid++) {
-			var imgCardId = "imgCardId" + iid;
-			var elem = document.getElementById(imgCardId);
-			var pNode = elem.parentNode;
-			//console.log(elem); //debug
-			pNode.removeChild(elem);
+	//start with the target parent, ID is known so use it
+	var pNode = document.getElementById("game-board");
+		
+	if (pNode!==null) {
+	    var len = pNode.childElementCount;
+		//console.log("Parent node is " + pNode.id  + ", with " + len + " images children"); //debug
+		
+		//clear the card images display to allow for new combination		
+		for (var iid = 1; iid < (len+1); iid++) { 
+			var imgCardId = "imgCardId" + iid; //ID is set up in createBoard()
+			var elem = document.getElementById(imgCardId); //target specific element
+			
+			if (pNode === elem.parentNode) { //verify parent
+				pNode.removeChild(elem); //target specific child
+			}
 		}
 	}
 	
-
 	//reset the cards storage
 	var ct = 0;
 
