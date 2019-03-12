@@ -377,8 +377,16 @@ function showScore() {
 }
 
 function playAgain() { //without reloading to allw to accumulate a higher score
-	resetBoard(); //clear board and cards storage
+	resetBoard2();
+	clearCards();
+	
+	//resetBoard(); //clear board and cards storage
 	createBoard(); //setup board
+}
+
+function resetBoard2() { //brute force version
+	var pNode = document.getElementById("game-board");
+	if (pNode!==null) pNode.innerHTML = "";
 }
 
 function resetBoard() { //reset board, cards storage
@@ -400,7 +408,11 @@ function resetBoard() { //reset board, cards storage
 			}
 		}
 	}
-	
+
+	clearCards();
+}
+
+function clearCards() {
 	//reset the cards storage
 	var ct = 0;
 
@@ -421,7 +433,7 @@ function resetBoard() { //reset board, cards storage
 
 	//console.log(cards); //debug
 	//console.log(cardsInPlay); //debug
-	//console.log(cardIds); //debug
+	//console.log(cardIds); //debug	
 }
 
 function restartGame() {
