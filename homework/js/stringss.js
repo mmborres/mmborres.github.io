@@ -194,8 +194,8 @@ const verbing = function (str) {
         //console.log("charAfterConstantAlsoLast=" + charAfterConstantAlsoLast);
 
         //(except x and w)
-        isExceptionXW = (charAfter==="x" || charAfter==="w" ||
-            charAfter==="X" || charAfter==="W");
+        isExceptionXW = (charAfter==="x" || charAfter==="w" || charAfter==="y"
+            || charAfter==="X" || charAfter==="W" || charAfter==="Y");
       }
 
       if (str.charAt(str.length-1)==="e") {
