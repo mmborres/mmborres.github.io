@@ -175,6 +175,7 @@ const verbing = function (str) {
       const ctVowel = countVowel(str);
       let charBeforeConstant = false;
       let charAfterConstantAlsoLast = false;
+      let isExceptionXW = true;
 
       if (ctVowel === 1) {
         const vowel = getVowel(str);
@@ -191,13 +192,17 @@ const verbing = function (str) {
           && ( (indexVowel+1)===(str.length-1) ) ;
         //console.log("charBeforeConstant=" + charBeforeConstant);
         //console.log("charAfterConstantAlsoLast=" + charAfterConstantAlsoLast);
+
+        //(except x and w)
+        isExceptionXW = (charAfter==="x" || charAfter==="w" ||
+            charAfter==="X" || charAfter==="W");
       }
 
       if (str.charAt(str.length-1)==="e") {
         newString = str.substring(0, str.length-1);
         //newString = newString.concat("ing");
       } else if ( ctVowel===1 && charBeforeConstant===true &&
-            charAfterConstantAlsoLast==true ) {
+            charAfterConstantAlsoLast==true && isExceptionXW===false ) {
               //check further
               //consonant-vowel-consonant
               newString = newString.concat(str.charAt(str.length-1));
