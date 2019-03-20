@@ -1,5 +1,4 @@
-
-
+// Homework by Mabeth Borres of SEI 31
 
 
 /*Define a function maxOfTwoNumbers that takes two numbers as arguments and
@@ -10,7 +9,14 @@ const maxOfTwoNumbers = function (num1, num2) {
   let gNum = (num1>num2) ? num1 : num2 ;
   const msg = `The greater number of ${num1} and ${num2} is ${gNum}.`
   console.log(msg);
-  return gNum;
+  return gNum; //function
+};
+
+const maxOfTwoNumbersHTML = function (num1, num2) {
+  let gNum = (num1>num2) ? num1 : num2 ;
+  const msg = `The greater number of ${num1} and ${num2} is ${gNum}.`
+  console.log(msg);
+  return msg;
 };
 
 maxOfTwoNumbers(5, 10);
@@ -22,7 +28,9 @@ returns the largest of them.*/
 const maxOfThree = function (num1, num2, num3) {
   let gNum = maxOfTwoNumbers( maxOfTwoNumbers(num1, num2), num3);
 
-  console.log("From maxOfThree " + gNum);
+  const msg = `The greater number of ${num1}, ${num2} and ${num3} is ${gNum}.`
+  console.log(msg);
+  return msg;
 };
 
 maxOfThree(12, 9, 1);
@@ -47,8 +55,9 @@ const isVowel = function(str) {
     //sorry not allowed
     return;
   }
-
-  console.log(`${str} is${isConsonant(str) ? " not" : ""} a vowel`);
+  const msg = `${str} is${isConsonant(str) ? " not" : ""} a vowel.`;
+  console.log(msg);
+  return msg;
 }
 
 isVowel("a");
@@ -96,10 +105,12 @@ multiplyArray([1,2,3,4]);
 For example, reverseString("jag testar") should return the string "ratset gaj".*/
 
 const reverseString = function (str) {
-  const newStr = str.split("").reverse().join("");//str.split().reverse();
+  const newStr = str.split("").reverse().join("");
   //console.log(str.split());
   //console.log(str.split().reverse());
   console.log(newStr);
+  
+  return newStr;
 };
 
 reverseString("jag testar");
@@ -112,22 +123,22 @@ const findLongestWord = function (array) {
   let longestWord = "";
 
   if (array instanceof Array) {
-    for (let i=0; i<array.length-1; i++) {
+	longestWord = array[0].trim();
+	let str1len = longestWord.length;
+        
+    for (let i=1; i<array.length; i++) {
+		
+        let str2len = array[i].trim().length;
 
-        let str1len = array[i].length;
-        let str2len = 0;
-
-        if ( i<array.length ) {
-          str2len = array[i+1].length;
-        }
-        if ( str1len > str2len ) {
-          longestWord = array[i];
-        }
+        if (str2len>str1len) {
+			longestWord = array[i];
+			str1len = longestWord.length;
+		}
     }
   }
 
   console.log(longestWord);
-  return longestWord;
+  return longestWord.length;
 }
 
 findLongestWord(["dgfsdgfgsdfugdsgfjsdf","hkfhsdkhfkjsd","ashdasdfhalsdfhaslhdkashdlasjfhashfkjsdhf","a"]);
@@ -141,8 +152,9 @@ const filterLongWords = function (array, num) {
 
   if (array instanceof Array) {
     for (let i=0; i<array.length; i++) {
-
-        if ( array[i].length > num ) {
+		console.log(array[i] + ", " + array[i].length + ", " + num);
+		let str = array[i].trim();
+        if ( str.length > num ) {
           newArray.push(array[i]);
         }
     }
@@ -157,3 +169,143 @@ const filterLongWords = function (array, num) {
 filterLongWords(["adghdnfksdf", "hds", "hfkdshfkshf", "hdksh"], 5);
 filterLongWords(["adghdnfksdf", "hds", "hfkdshfkshf", "hdksh"], 2);
 filterLongWords(["adghdnfksdf", "hds", "hfkdshfkshf", "hdksh", "fhsdhfksdhfhsdjfhsdkhf"], 6);
+
+
+const filterLongWordsHTML = function(array, num) {
+	let printArray = "[ ";
+	
+	let outpArray = filterLongWords(array, num);
+	
+	for (let i=0; i<outpArray.length; i++) {
+		printArray = printArray.concat(`"${outpArray[i].trim()}"`);
+        if(i<outpArray.length) {
+			printArray = printArray.concat(", ");
+		}
+    }
+	
+	printArray = printArray.concat(" ]");
+	
+	return printArray;
+};
+
+//////// HANDLE WEB PAGE
+
+
+const ans = "<b>ANSWER >> </b>";
+let printMsg = "";
+
+const handleMaxOfTwoNumbers = function() {
+  const num1 = document.getElementById("maxOfTwoNumbersValue1").value;
+  const num2 = document.getElementById("maxOfTwoNumbersValue2").value;
+  printMsg = maxOfTwoNumbersHTML(parseInt(num1), parseInt(num2));
+  document.getElementById("maxOfTwoNumbers").innerHTML = ans + printMsg;
+};
+
+const handleMaxOfThree = function() {
+  const num1 = document.getElementById("maxOfThreeValue1").value;
+  const num2 = document.getElementById("maxOfThreeValue2").value;
+  const num3 = document.getElementById("maxOfThreeValue3").value;
+  printMsg = maxOfThree(parseInt(num1), parseInt(num2), parseInt(num3));
+  document.getElementById("maxOfThree").innerHTML = ans + printMsg;
+};
+
+const handleIsVowel = function() {
+  const str = document.getElementById("isVowelValue").value;
+  printMsg = isVowel(str);
+  document.getElementById("isVowel").innerHTML = ans + printMsg;
+};
+
+const handleSumArray = function() {
+  const arraySum = [];
+  var elements = document.getElementsByName("values");
+  
+  for (let i=0; i<elements.length; i++) {
+	  console.log(elements[i].value + " " + elements[i].checked);
+	  
+	  if (elements[i].checked===true) {
+		  arraySum.push(parseInt(elements[i].value));
+	  }
+  }
+  
+  console.log(arraySum);
+  
+  printMsg = sumArray(arraySum);
+  
+  document.getElementById("sumArray").innerHTML = ans + " Sum of Array values is " + printMsg;
+};
+
+//sumArray() and multiplyArray
+
+const handleMultiplyArray = function() {
+  const arrayProd = [];
+  let elements = document.getElementsByName("values");
+  
+  for (let i=0; i<elements.length; i++) {
+	  //console.log(elements[i].value + " " + elements[i].checked);
+	  
+	  if (elements[i].checked===true) {
+		  arrayProd.push(parseInt(elements[i].value));
+	  }
+  }
+  
+  console.log(arrayProd);
+  
+  printMsg = multiplyArray(arrayProd);
+  
+  document.getElementById("multiplyArray").innerHTML = ans + " Product of Array values is " + printMsg;
+};
+
+
+const handleReverseString = function() {
+  const str = document.getElementById("reverseStringValue").value;
+  printMsg = reverseString(str);
+  document.getElementById("reverseString").innerHTML = ans + printMsg;
+};
+
+const handleFindLongestWord = function() {
+  const arrayProd = [];
+  let elements = document.getElementsByName("longWords");
+  
+  for (let i=0; i<elements.length; i++) {
+	  //console.log(elements[i].value + " " + elements[i].checked);
+	  
+	  if (elements[i].checked===true) {
+		  arrayProd.push(elements[i].value);
+	  }
+  }
+  
+  var elems = document.getElementsByName("findLongestWord");
+  
+  for (let i=0; i<elems.length; i++) {
+	  //console.log(elems[i].value);
+	  
+	  if (elems[i].checked!=="") {
+		  arrayProd.push(elems[i].value);
+	  }
+  }
+  
+  console.log(arrayProd);
+  
+  printMsg = findLongestWord(arrayProd);
+  
+  document.getElementById("findLongestWord").innerHTML = ans + printMsg;
+};
+
+const handleFilterLongWords = function() {
+	const arrayProd = [];
+  let elements = document.getElementsByName("filterLongWords");
+  
+  for (let i=0; i<elements.length; i++) {
+	  //console.log(elements[i].value + " " + elements[i].checked);
+	  
+	  if (elements[i].checked===true) {
+		  arrayProd.push(elements[i].value);
+	  }
+  }
+  
+  const num = document.getElementById("filterMin").value;
+  printMsg = filterLongWordsHTML(arrayProd, parseInt(num));
+  document.getElementById("filterLongWords").innerHTML = ans + printMsg;
+
+};
+

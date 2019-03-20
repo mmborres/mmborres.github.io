@@ -268,7 +268,7 @@ notBad('This dinner is bad!');
 notBad('I am not a hater of breaking bad.');
 
 
-////// Handle from Web percentage
+////// Handle from Web Page
 
 const ans = "<b>ANSWER >> </b>";
 let printMsg = "";

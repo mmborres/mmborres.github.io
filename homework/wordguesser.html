@@ -46,27 +46,28 @@
 		<a href="index.html">Homework List</a>
 	</nav>
 <main>
-<h2 class="gamepage">&hearts; WORD GUESSER &hearts;</h2>
+<h2 class="gamepage">&hearts; 6-LETTER+ WORD GUESSER &hearts;</h2>
 
 <!-- TEMPLATE -->
 
-<h2>Guesss the word: </h2>
   <div id="gameboard"></div>
-
-  <div><img src="smiley.gif" alt="Smiley face" height="42" width="42"></div>
 
   <div id="answerportion">
 	  <p>
-	  <h2>Enter a Letter: </h2>
+	  <h2>Try a Letter?</h2><br>
 	  <input type="text" name="guessValue" value="" id="guessValue" oninput="handleInputLetter()" maxlength="1">
 	  </p>
+	  
+	  <p id="hangmanparent"><img src="js/hm0.jpg" height="300" width="200" id="hangmanimage"></p>
 
 	  <p>
-	  <h2>Ready for the word? Answer here: </h2>
-	  <input type="text" name="guessWordValue" value="" id="guessWordValue" oninput="handleInputWord()">
+	  <h2>Guess the Word?</h2><br>
+	  <input type="text" name="guessWordValue" value="" id="guessWordValue">
+	  <input type="button" value="Solve" class="inputbutton" onclick="handleInputWord()">
 	  </p>
-
   </div>
+
+  <div id="playagain"></div>
 
 
 <script src="js/wordguesser.js"></script>

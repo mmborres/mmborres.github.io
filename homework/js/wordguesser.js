@@ -1,3 +1,5 @@
+// Homework by Mabeth Borres of SEI 31
+
 /*You'll create a simple word guessing game where the user gets infinite tries to guess the word
 (like Hangman without the hangman, or like Wheel of Fortune without the wheel and fortune).
 
@@ -17,14 +19,14 @@ Pretend you don't know the word, and call guessLetter multiple times with variou
 letters to check that your program works.
 
 
-///
+/// Wheel Of Fortune
 Start with a reward amount of $0
 Every time a letter is guessed, generate a random amount and reward the user
 if they found a letter (multiplying the reward if multiple letters found),
 otherwise subtract from their reward.
 When they guess the word, log their final reward amount.
 
-////
+////Hangman
 Keep track of all the guessed letters (right and wrong) and only
 let the user guess a letter once. If they guess a letter twice, do nothing.
 Keep track of the state of the hangman as a number (starting at 0),
@@ -34,29 +36,43 @@ inform the user that they lost and show a hangman on the log.
 */
 
 // Global arrays
-const wordsDeck = ["Awkward", "Bungler", "Croquet",
-"Dwarves", "Fervid","Fishhook", "Memento", "Mystify",
-"Oxygen", "Pajama", "Phlegm", "Gazebo", "Hyphen", "Zealous",
+const wordsDeck = ["Awkward", "Bungler", "Croquet", "gambling", "expression",
+"Dwarves", "Fervid","Fishhook", "Memento", "Mystify", "cuisine", "potter",
+"Oxygen", "Pajama", "Phlegm", "Gazebo", "Hyphen", "Zealous", "canteen",
+"bezazz", "Numbskull", "Ostracize", "Wildebeest", "Sphinx", "memory",
+"jazzbo", "pizzaz", "Rhythmic", "Zombie", "acidness", "operation", "functions", "variable",
+"buzzed", "puzzle", "abalone", "abandon", "abasers", "abashed",
+"adamant", "adapted", "adapter", "adaptor", "hacker", "programmer",
+"allots", "allows", "alloys", "allude", "allure", "function", "meetups", "linkedin",
+"greens", "greets", "glares", "glassy", "glazed", "javascript", "general", "assembly",
 "Zigzag"];
 
 let wordToGuess = ""; //contains the selected random word
 let guessedLetters = []; //letters guessed by the wordguesser
 let guessedCorrectLetters = [];
+let wrongmoves = 0;
+
 
 const handleInputWord = function() {
-  let word = document.getElementById("guessWordValue").value;
-  //console.log("Input by user: " + word);
-  if (word!=="") {
-    //ignore empty
-    word = word.toUpperCase();
-    if (word===wordToGuess) {
-      //console.log("equal");
-      processEndGame();
-      //fill up the whole board
-      fillUpBoard();
+	let word = document.getElementById("guessWordValue").value;
+    
+	//console.log("Input by user: " + word);
+	if (word!=="") {
+		//ignore empty
+		word = word.toUpperCase();
+		if (word===wordToGuess) {
+		//console.log("equal");
+		processWinner();
+		//fill up the whole board
+		fillUpBoard();
     } else {
-      //greet
-      alert("Sorry, wrong answer.")
+		//greet
+		alert("Sorry, wrong answer.");
+		wrongmoves += 2;
+	  
+		if(wrongmoves%2===0) {
+			updatehangman();
+		}
     }
   }
 }
@@ -89,7 +105,7 @@ const guessLetter = function(str) { //pass the letter
 
       if (checkIfWordComplete()===true) {
         //next level
-        processEndGame();
+        processWinner();
       }
 
     } else {
@@ -101,20 +117,137 @@ const guessLetter = function(str) { //pass the letter
     if (!guessedLetters.includes(str)) {
       alert("Sorry, NO Letter " + str + ". Try again.");
       guessedLetters.push(str);
+	  wrongmoves++;
+	  
+	  if(wrongmoves%2===0) {
+		  updatehangman();
+	  }
     } else {
       alert("Sorry, you already guessed Letter " + str + ". Try again.");
     }
   }
 };
 
-const processEndGame = function() {
-  alert("Congratulations! Word complete!");
+const addShuffle = function() {
+	//<button onclick="playAgain()" id="shufflebutton">Shuffle</button>
+	
+	let parent = document.getElementById("playagain"); //parent
+	
+	let bt = document.createElement('button');
+		bt.setAttribute('id', "shufflebutton");
+		bt.addEventListener('click', playAgain);
+		bt.innerHTML = "Play Again?";
+
+	let hbt = document.createElement('button');
+			hbt.setAttribute('class', "hidden");
+			hbt.setAttribute('id', "buttonextra");
+			hbt.innerHTML = "HIDDENHIDDENHIIDDDDEEEENNNNN";
+			
+	if (parent!==null) {
+		parent.appendChild(hbt);
+		parent.appendChild(bt);
+	}
+}
+
+const playAgain = function () {
+	document.getElementById('gameboard').innerHTML = "";
+	setUpWord();
+	updatehangman(); //0
+
+	let parent = document.getElementById("playagain"); //parent
+	if (parent!==null) {
+		let bt = document.getElementById("shufflebutton"); //shuffle
+		let hbt = document.getElementById("buttonextra"); //shuffle
+		parent.removeChild(hbt);
+		parent.removeChild(bt);
+	}
+}
+
+const processWinner = function() {
+  alert("Congratulations! All happy!");
+  
+  let parent = document.getElementById("hangmanparent"); //parent
+  
+  let oldelem = document.getElementById("hangmanimage");
+  
+  //<img src="js/hm0.jpg" height="300" width="200" id="hangmanimage">
+  var im = document.createElement('img');
+	im.setAttribute('src', "js/hmwinner.png");
+	im.setAttribute('id', "hangmanimage");
+	im.setAttribute('height', "300");
+	im.setAttribute('weight', "200");
+	
+  if (parent.hasChildNodes) {
+	  parent.replaceChild(im, oldelem);
+   }
+  
   //console.log("end game");
+  disableInput();
+  addShuffle();
+}; 
+
+const disableInput = function() {
   document.getElementById("guessValue").value = "";
   document.getElementById("guessValue").disabled = true;
   document.getElementById("guessWordValue").value = "";
   document.getElementById("guessWordValue").disabled = true;
-}; 
+}
+
+const enableInput = function() {
+  document.getElementById("guessValue").value = "";
+  document.getElementById("guessValue").disabled = false;
+  document.getElementById("guessWordValue").value = "";
+  document.getElementById("guessWordValue").disabled = false;
+}
+
+const processLoser = function() {
+	alert("Oh No. It must hurt.");
+  
+    var parent = document.getElementById("hangmanparent"); //parent
+  
+	let oldelem = document.getElementById("hangmanimage");
+  
+	//<img src="js/hm0.jpg" height="300" width="200" id="hangmanimage">
+	let im = document.createElement('img');
+		im.setAttribute('src', "js/hmloser.png");
+		im.setAttribute('id', "hangmanimage");
+		im.setAttribute('height', "300");
+		im.setAttribute('weight', "200");
+	
+	if (parent.hasChildNodes) {
+		parent.replaceChild(im, oldelem);
+	}
+  
+	//console.log("end game");
+	disableInput();
+	addShuffle();
+};
+
+const updatehangman = function() {
+	let stateNum = wrongmoves/2;
+	//console.log("hangman state " + stateNum);
+	
+	if (stateNum<11) {
+		let parent = document.getElementById("hangmanparent"); //parent
+  
+		let oldelem = document.getElementById("hangmanimage");
+  
+		//<img src="js/hm0.jpg" height="300" width="200" id="hangmanimage">
+		let im = document.createElement('img');
+		let imgid = "js/hm" + stateNum + ".jpg"
+			im.setAttribute('src', imgid);
+			im.setAttribute('id', "hangmanimage");
+			im.setAttribute('height', "300");
+			im.setAttribute('weight', "200");
+	
+		if (parent.hasChildNodes) {
+			parent.replaceChild(im, oldelem);
+		}
+	}
+	else {
+		processLoser();
+	}
+}
 
 
 const checkIfWordComplete = function () {
@@ -181,17 +314,20 @@ const clearStorage = function () {
   wordToGuess = ""; //contains the selected random word
   guessedLetters = []; //letters guessed by the wordguesser
   guessedCorrectLetters = [];
+  wrongmoves = 0;
 };
 
 const setUpWord = function() {
   clearStorage();
 
+  enableInput();
+  
   //setup word
   //random
   const indRandom = Math.floor(Math.random() * wordsDeck.length);
   wordToGuess = wordsDeck[indRandom].toUpperCase();
 
-  console.log(wordToGuess);
+  console.log("Secret Recipe is " + wordToGuess);
   //console.log(wordToGuess.length)
 
   for (let i = 1; i <= wordToGuess.length; i++) {
