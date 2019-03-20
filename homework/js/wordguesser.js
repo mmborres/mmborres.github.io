@@ -141,7 +141,7 @@ const addShuffle = function() {
 	let hbt = document.createElement('button');
 			hbt.setAttribute('class', "hidden");
 			hbt.setAttribute('id', "buttonextra");
-			hbt.innerHTML = "HIDDENHIDDENHIIDDDDEEEENNNNN";
+			hbt.innerHTML = "HIDDENHIDDENHIIDDDDEENNN";
 			
 	if (parent!==null) {
 		parent.appendChild(hbt);
@@ -155,12 +155,13 @@ const playAgain = function () {
 	updatehangman(); //0
 
 	let parent = document.getElementById("playagain"); //parent
-	if (parent!==null) {
+  parent.innerHTML = "";
+	/*if (parent!==null) {
 		let bt = document.getElementById("shufflebutton"); //shuffle
 		let hbt = document.getElementById("buttonextra"); //shuffle
 		parent.removeChild(hbt);
 		parent.removeChild(bt);
-	}
+	}*/
 }
 
 const processWinner = function() {
@@ -175,7 +176,7 @@ const processWinner = function() {
 	im.setAttribute('src', "js/hmwinner.png");
 	im.setAttribute('id', "hangmanimage");
 	im.setAttribute('height', "300");
-	im.setAttribute('weight', "200");
+	im.setAttribute('width', "200");
 	
   if (parent.hasChildNodes) {
 	  parent.replaceChild(im, oldelem);
@@ -212,7 +213,7 @@ const processLoser = function() {
 		im.setAttribute('src', "js/hmloser.png");
 		im.setAttribute('id', "hangmanimage");
 		im.setAttribute('height', "300");
-		im.setAttribute('weight', "200");
+		im.setAttribute('width', "200");
 	
 	if (parent.hasChildNodes) {
 		parent.replaceChild(im, oldelem);
@@ -238,7 +239,7 @@ const updatehangman = function() {
 			im.setAttribute('src', imgid);
 			im.setAttribute('id', "hangmanimage");
 			im.setAttribute('height', "300");
-			im.setAttribute('weight', "200");
+			im.setAttribute('width', "200");
 	
 		if (parent.hasChildNodes) {
 			parent.replaceChild(im, oldelem);
