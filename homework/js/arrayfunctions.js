@@ -178,9 +178,9 @@ const filterLongWordsHTML = function(array, num) {
 	
 	for (let i=0; i<outpArray.length; i++) {
 		printArray = printArray.concat(`"${outpArray[i].trim()}"`);
-        if(i<outpArray.length) {
-			printArray = printArray.concat(", ");
-		}
+        if(i<outpArray.length-1) {
+			     printArray = printArray.concat(", ");
+		    } 
     }
 	
 	printArray = printArray.concat(" ]");
