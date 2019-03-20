@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--  Homework by Mabeth Borres WDI March 2019 -->
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
+	<link href="../memgame_difficulty/css/style.css" rel="stylesheet" type="text/css">
+	<link href="../memgame_difficulty/images/memcardgame.ico" rel="shortcut icon" type="image/ico">
+	<title>&hearts; Homework at GA &hearts;</title>
+
+	<style>
+	p {
+		text-align:justify; font-size: 16px;
+	}
+
+	span.guessword {
+	  display: inline; /* the default for span */
+	  width: 100px;
+	  height: 100px;
+	  padding: 10px;
+	  border: 2px solid blue;
+	  background-color: lightblue;
+	  /*line-height: 50px;*/
+		font-size: 80px;
+	  color: lightblue;
+	}
+
+	span.answeredword {
+	  display: inline; /* the default for span */
+	  width: 100px;
+	  height: 100px;
+	  padding: 10px;
+	  border: 2px solid blue;
+	  background-color: lightblue;
+	  /*line-height: 50px;*/
+		font-size: 80px;
+	  color: black;
+	}
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>&diams;&hearts; Homework Page &hearts;&diams;</h1>
+	</header>
+	<nav>
+		<a href="index.html">Homework List</a>
+	</nav>
+<main>
+<h2 class="gamepage">&hearts; WORD GUESSER &hearts;</h2>
+
+<!-- TEMPLATE -->
+
+<h2>Guesss the word: </h2>
+  <div id="gameboard"></div>
+
+  <div><img src="smiley.gif" alt="Smiley face" height="42" width="42"></div>
+
+  <div id="answerportion">
+	  <p>
+	  <h2>Enter a Letter: </h2>
+	  <input type="text" name="guessValue" value="" id="guessValue" oninput="handleInputLetter()" maxlength="1">
+	  </p>
+
+	  <p>
+	  <h2>Ready for the word? Answer here: </h2>
+	  <input type="text" name="guessWordValue" value="" id="guessWordValue" oninput="handleInputWord()">
+	  </p>
+
+  </div>
+
+
+<script src="js/wordguesser.js"></script>
+<!-- TEMPLATE -->
+</main>
+
+<footer class="clearfix">
+	<span class="copyright">Copyright@2019 | <span class="name">Mabeth</span>@WDI</span>
+	<a href="index.html" class="afooter">Back to Homework</a>
+	<span class="message">Created with &hearts; by <span class="name">GA</span></span>
+</footer>
+
+</body>
+</html>
