@@ -1,3 +1,4 @@
+// Homework by Mabeth Borres of SEI 31
 
 /*Given the following a rectangle object like the one below, write the following functions:
 
@@ -42,7 +43,7 @@ const perimeter = function(rectangleA) {
 
 console.log("isSquare? " + isSquare(rectangleA));
 console.log("Area = " + area(rectangleA));
-console.log("Perimeter" + perimeter(rectangleA));
+console.log("Perimeter = " + perimeter(rectangleA));
 
 
 /*Given the following a triangle object like the one below, write the following functions:
@@ -88,16 +89,36 @@ const maxOfTwoNumbers = function (num1, num2) {
   return gNum; //function
 };
 
+const checkEqualNums = function (num1, num2) {
+	//console.log("equality");
+	if(parseInt(num1)===parseInt(num2)) {
+		//console.log("equal found")
+		return true;
+	}
+	return false;
+};
+
 const maxOfThree = function (num1, num2, num3) {
   let gNum = maxOfTwoNumbers( maxOfTwoNumbers(num1, num2), num3);
 
   const msg = `The greater number of ${num1}, ${num2} and ${num3} is ${gNum}.`
-  console.log(msg);
-  return msg;
+  //console.log(msg);
+  return gNum;
 };
 
 
 const isObtuse = function(trian) {
+	let isEqual = checkEqualNums( trian.sideA, trian.sideB );
+	if (isEqual===false) {
+		isEqual = checkEqualNums( trian.sideB, trian.sideC );
+	}
+	if (isEqual===false) {
+		isEqual = checkEqualNums( trian.sideA, trian.sideC );
+	}
+	if (isEqual===true) {
+		return false;
+	}
+	
 	// find biggest side
 	let maxSide = maxOfThree(trian.sideA, trian.sideB, trian.sideC);
 	let array3 = [trian.sideA, trian.sideB, trian.sideC];
@@ -109,9 +130,9 @@ const isObtuse = function(trian) {
 	for (let i=0; i<3; i++) {
 		if (maxSide === array3[i]) {
 			//indMax = i;
-			sideMax = maxSide*2;
+			sideMax = maxSide**2;
 		} else {
-			sideTwo += (2*array3[i]);
+			sideTwo += (array3[i]**2);
 		}
 	}
 
@@ -121,6 +142,7 @@ const isObtuse = function(trian) {
 	return false;
 };
 
+console.log("isObtuse? " + isObtuse(triangleA));
 
 /*if (this.a == this.b && this.b == this.c) {
     return "equilateral";
@@ -133,13 +155,17 @@ const isObtuse = function(trian) {
 
 const areaTriangle = function(trian) {
 	const s = (trian.sideA + trian.sideB + trian.sideC) / 2;
+	//console.log ("s=" + s)
 	// formula taken from
 	// https://www.mathsisfun.com/geometry/herons-formula.html
-	const area = Math.sqrt( s*(s-trian.sideA)*(s-trian.sideB)*(s-trian.sideC) );
-
+	const bf = s*(s-trian.sideA)*(s-trian.sideB)*(s-trian.sideC) ;
+	//console.log("bf=" + bf);
+	const area = Math.sqrt( bf );
+	
+	return area;
 };
 
-console.log("areaTriangle = " + areaTriangle(triangleA));
+console.log("areaTriangle = " + areaTriangle(triangleA).toFixed(2));
 
 
 
@@ -175,7 +201,7 @@ const cashRegister = function(cartForParty) {
 
 
 // Output
-console.log(cashRegister(cartForParty)); // 60.55
+console.log("Total in Cash Register = " + cashRegister(cartForParty)); // 60.55
 
 
 ////////////
@@ -239,9 +265,60 @@ const hasRepeated = function (str){
 
 //console.log("rep" + howManyRepeated("4444-4444-8888-4444"));
 
+const reverseString = function (str) {
+  const newStr = str.split("").reverse().join("");
+  //console.log(str.split());
+  //console.log(str.split().reverse());
+  //console.log(newStr);
+  
+  return newStr;
+};
+
+const processLuhn = function (str) {
+	//Drop the last digit
+	const lastDigit = parseInt(str.charAt(str.length-1));
+	//console.log("last=" + lastDigit);
+	let nStr = str.substring(0, str.length-1);
+	//console.log("luhn = " + nStr);
+	
+	//Reverse the digits
+	let revs = reverseString(nStr);
+	
+	//Multiply odd digits by 2
+	let strArr = revs.split('');
+	const len = strArr.length;
+	for (let i=0; i<len; i=i+2) {
+		let num = parseInt(strArr[i]);
+		strArr[i] = num*2;
+	}
+	//console.log("mult2=" + strArr);
+	
+	//Subtract 9 to numbers over 9:
+	for (let i=0; i<len; i++) {
+		let num = parseInt(strArr[i]);
+		if (num>9) { //more than 9
+			strArr[i] = num-9;
+		}
+	}
+	//console.log("9y=" + strArr);
+	
+	let sum = 0;
+	//Add all numbers:
+	for (let i=0; i<len; i++) {
+		let num = parseInt(strArr[i]);
+		sum += num;
+	}
+	//console.log("add=" + sum);
+	
+	//mod 10
+	if (sum%10===lastDigit) {
+		return true;
+	} 
+	return false;
+};
 
 const validateCreditCard = function(num) {
-	//remove -
+	let retValidate = true;
 	const newNumStr = num.split("-").join("");
 	const newNum = parseInt(newNumStr);
 	//console.log(newNum);
@@ -249,18 +326,18 @@ const validateCreditCard = function(num) {
 
 	// length is 16
 	if ( newNumStr.length !== 16 ) {
-		return false;
+		retValidate = false;
 	}
 
 	if (hasRepeated(newNumStr)===true) {
-		return false;
+		retValidate = false;
 	}
 
 	// valid numbers - last check
 	//console.log("integer = " + Number.isInteger(newNum));
 
 	if (Number.isInteger(newNum)===false) {
-		return false;
+		retValidate = false;
 	}
 	
 	// sum of all numbers
@@ -269,18 +346,22 @@ const validateCreditCard = function(num) {
 		summ += parseInt(newNumStr.charAt(i));
 	}
 	if (summ < 16) {
-		return false;
+		retValidate = false;
 	}
-
-
 
 	// final number must be even
 	const last = newNumStr.charAt(newNumStr.length-1);
 	if ( parseInt(last) % 2 !== 0  ) {
-		return false;
+		retValidate = false;
 	}
 
-	return true; //default
+	//try the Luhn if false
+	if (retValidate===false) {
+		retValidate = processLuhn(newNumStr);
+	}
+	
+	
+	return retValidate;
 };
 
 console.log("9999-9999-8888-0000 | " + validateCreditCard('9999-9999-8888-0000'));
@@ -293,11 +374,88 @@ console.log("1111-1111-1111-1110 | " + validateCreditCard('1111-1111-1111-1110')
 
 console.log("6666-6666-6666-6661 | " + validateCreditCard('6666-6666-6666-6661'));
 
+console.log("4556737586899855 | " + validateCreditCard('4556737586899855'));
 
+//console.log(processLuhn("4556737586899855"));
 
+function CreditCard(valid, number, errorMsg){
+	this.valid = valid;
+	this.number = number;
+	this.errorMsg = errorMsg;
+};
 
+	
+const validateCreditCardObj = function(num) {
+	let retValidate = true;
+	let errorMsg = "";
+	const newNumStr = num.split("-").join("");
+	const newNum = parseInt(newNumStr);
+	//console.log(newNum);
+	//console.log(newNumStr.length);
 
+	// length is 16
+	if ( newNumStr.length !== 16 ) {
+		retValidate = false;
+		errorMsg = "less than 16 in length"
+	}
 
+	if (hasRepeated(newNumStr)===true) {
+		retValidate = false;
+		errorMsg = "only one type of number";
+	}
+
+	// valid numbers - last check
+	//console.log("integer = " + Number.isInteger(newNum));
+
+	if (Number.isInteger(newNum)===false) {
+		retValidate = false;
+		errorMsg = "invalid characters";
+	}
+	
+	// sum of all numbers
+	let summ = 0;
+	for (let i=0; i<newNumStr.length; i++) {
+		summ += parseInt(newNumStr.charAt(i));
+	}
+	if (summ < 16) {
+		retValidate = false;
+		errorMsg = "sum less than 16"
+	}
+
+	// final number must be even
+	const last = newNumStr.charAt(newNumStr.length-1);
+	if ( parseInt(last) % 2 !== 0  ) {
+		retValidate = false;
+		errorMsg = "odd final number";
+	}
+
+	//try the Luhn if false
+	if (retValidate===false) {
+		retValidate = processLuhn(newNumStr);
+		
+		if (retValidate===false) {
+			errorMsg = "failed Luhn Algorithm test"
+		} else {
+			errorMsg = "passed Luhn Algorithm test"
+		}
+	}
+	
+	const cardObj = new CreditCard(retValidate, newNumStr, errorMsg);
+	console.log(cardObj);
+	return cardObj;
+};
+
+validateCreditCardObj('9999-9999-8888-0000');
+
+validateCreditCardObj('a923-3211-9c01-1112');
+
+validateCreditCardObj('4444-4444-4444-4444'); 
+
+validateCreditCardObj('1111-1111-1111-1110');
+
+validateCreditCardObj('6666-6666-6666-6661');
+
+validateCreditCardObj('4556737586899855');
 
 
 
