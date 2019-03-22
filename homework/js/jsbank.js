@@ -295,7 +295,177 @@ callStoryB();
 
 
 
+//////////////////////// WEB PAGE
+const populateWithdraw = function() {
+	let accountDropDown = document.getElementById("withdrawAccountList");
+	accountDropDown.innerHTML = ""; //start
+
+	for (let i=0; i<JSBank.accounts.length; i++) {
+		let bt = document.createElement('option');
+		bt.setAttribute('value', i);
+		//bt.setAttribute('text', JSBank.accounts[i].name);
+		bt.innerHTML = JSBank.accounts[i].name;
+		//console.log(bt);
+		accountDropDown.appendChild(bt);
+	}
+};
+
+populateWithdraw();
+
+
+const populateTransfer = function() {
+	let accountDropDown = document.getElementById("transferFROMAccountList");
+	accountDropDown.innerHTML = ""; //start
+
+	for (let i=0; i<JSBank.accounts.length; i++) {
+		let bt = document.createElement('option');
+		bt.setAttribute('value', i);
+		//bt.setAttribute('text', JSBank.accounts[i].name);
+		bt.innerHTML = JSBank.accounts[i].name;
+		//console.log(bt);
+		accountDropDown.appendChild(bt);
+	}
+
+
+	let accountDropDown1 = document.getElementById("transferTOAccountList");
+	accountDropDown1.innerHTML = ""; //start
+
+	for (let i=0; i<JSBank.accounts.length; i++) {
+		let bt = document.createElement('option');
+		bt.setAttribute('value', i);
+		//bt.setAttribute('text', JSBank.accounts[i].name);
+		bt.innerHTML = JSBank.accounts[i].name;
+		//console.log(bt);
+		accountDropDown1.appendChild(bt);
+	}
+};
+
+populateTransfer();
+
+
+const populateDeposit = function() {
+	let accountDropDown = document.getElementById("depositAccountList");
+	accountDropDown.innerHTML = ""; //start
+
+	for (let i=0; i<JSBank.accounts.length; i++) {
+		let bt = document.createElement('option');
+		bt.setAttribute('value', i);
+		//bt.setAttribute('text', JSBank.accounts[i].name);
+		bt.innerHTML = JSBank.accounts[i].name;
+		//console.log(bt);
+		accountDropDown.appendChild(bt);
+	}
+};
+
+populateDeposit();
+
+
+const populateBalance = function() {
+	let accountDropDown = document.getElementById("balanceAccountList");
+	accountDropDown.innerHTML = ""; //start
+
+	for (let i=0; i<JSBank.accounts.length; i++) {
+		let bt = document.createElement('option');
+		bt.setAttribute('value', i);
+		//bt.setAttribute('text', JSBank.accounts[i].name);
+		bt.innerHTML = JSBank.accounts[i].name;
+		//console.log(bt);
+		accountDropDown.appendChild(bt);
+	}
+};
+
+populateBalance();
+
+
+const findAccount = function (idValue) {
+
+	const sel = document.getElementById(idValue);
+	const idx = sel.options[sel.selectedIndex].value;
+
+	console.log("idx = " + idx);
+
+	return JSBank.accounts[idx];
+
+}
+
+
+const handleWithdraw = function() {
+  
+  const acctObj = findAccount("withdrawAccountList");
+
+  const amt = document.getElementById("withdrawamt").value;
+
+  const successWithdraw = acctObj.withdraw(parseInt(amt));
+
+  console.log("Transaction from Page: " + successWithdraw);
+  
+  if (successWithdraw===false) {
+  	alert("Transaction not allowed.");
+  }
+
+};
+
+const handleAddAccount = function() {
+  
+  const name = document.getElementById("acctname").value;
+  const initialdep = document.getElementById("initialdeposit").value;
+
+  const newAcct = new AccountObject(name, parseInt(initialdep));
+
+  if (!JSBank.accounts.includes(newAcct)) {
+  	JSBank.addAccount(newAcct);
+  } //else already in there
+
+
+  //populate all dropdown
+  populateBalance();
+  populateDeposit();
+  populateWithdraw();
+  populateTransfer();
+};
 
 
 
+const handleBalance = function() {
+  
+  const acctObj = findAccount("balanceAccountList");
+  const amtelem = document.getElementById("balance");
+  amtelem.setAttribute('value', acctObj.currentBalance);
+  
+};
+
+
+const handleDeposit = function() {
+  
+  const acctObj = findAccount("depositAccountList");
+
+  const amt = document.getElementById("depositamt").value;
+
+  acctObj.deposit(parseInt(amt));
+
+};
+
+
+const handleTransfer = function() {
+  
+  const acctFrom = findAccount("transferFROMAccountList");
+  const acctTo = findAccount("transferTOAccountList");
+
+  const amt = document.getElementById("transferamt").value;
+
+  if (acctFrom===acctTo) {
+  	alert("Cannot be the same account.")
+  } else {
+	JSBank.transfer(acctFrom, acctTo, parseInt(amt));
+  }
+};
+
+
+
+const handleTotalSum = function() {
+  
+  const amtelem = document.getElementById("totsum");
+  amtelem.setAttribute('value', JSBank.totalSum());
+  
+};
 

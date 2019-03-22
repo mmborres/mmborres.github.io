@@ -1,11 +1,124 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8"> <!-- helps in degree temperature symbol -->
-    <title></title>
+<!-- Homework by Mabeth Borres WDI March 2019 -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
+	<link href="../memgame_difficulty/css/style.css" rel="stylesheet" type="text/css">
+	<link href="../memgame_difficulty/images/memcardgame.ico" rel="shortcut icon" type="image/ico">
+	<title>&hearts; Homework at GA &hearts;</title>
+
+	<style>
+	p {text-align:justify; font-size: 16px;}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>&diams;&hearts; Homework Page &hearts;&diams;</h1>
+	</header>
+	<nav>
+		<a href="index.html">Homework List</a>
+	</nav>
+<main>
+<h2 class="gamepage">&hearts; Javascript Bank &hearts;</h2>
+
+<!-- TEMPLATE -->
+
+		<p>New Account<br>
+		
+		Name: <input type="text" name="acctname" value="" id="acctname">
+		<br>Initial Deposit: <input type="text" name="initialdeposit" value="" id="initialdeposit">
+		<input type="button" value="Add Account" class="inputbutton" onclick="handleAddAccount()">
+	  </p>
+		<p id="addAccount"></p>
+
+
+		<p>Check Balance
+		<br>
+		Name: <select id="balanceAccountList"></select>
+		<br>Balance: <input type="text" name="balance" value="" id="balance" disabled="true">
+		
+		<input type="button" value="Show" class="inputbutton" onclick="handleBalance()">
+	  </p>
+		<p id="deposit"></p>
+
+		<p>Deposit Money
+		<br>
+		Name: <select id="depositAccountList"></select>
+		<br>Amount: <input type="text" name="depositamt" value="" id="depositamt">
+		<input type="button" value="Deposit" class="inputbutton" onclick="handleDeposit()">
+	  </p>
+		<p id="deposit"></p>
+
+
+<!---
+Bank
+Account - name
+Initial deposit
+
+Deposit
+Dropdown, amount submit
+
+Withdraw
+Dropdo2n, amount submit
+
+Transfer
+Dropdwn from
+Dropdown to
+Amount
+
+Cannor be same acct, suggest deposit ir withdraw
+Value is index
+Text is name
+Add accct action repopulates all dropdown
+--->
+
+
+		<p>Withdraw Money
+		<br>
+		Name: <select id="withdrawAccountList"></select>
+		<br>Amount: <input type="text" name="withdrawamt" value="" id="withdrawamt">
+		<input type="button" value="Withdraw" class="inputbutton" onclick="handleWithdraw()">
+	  </p>
+		<p id="withdraw"></p>
+
+
+		<p>Transfer Money
+		<br>
+		From: <select id="transferFROMAccountList"></select>
+		<br>
+		To: <select id="transferTOAccountList"></select>
+		<br>Amount: <input type="text" name="transferamt" value="" id="transferamt">
+		<input type="button" value="Transfer" class="inputbutton" onclick="handleTransfer()">
+	  </p>
+		<p id="transfer"></p>
+
+
+
+		<p>Check Bank Profit (Authorized Access Only)
+		<br>
+		<input type="button" value="Show" class="inputbutton" onclick="handleTotalSum()">
+		<input type="text" name="totsum" value="" id="totsum" disabled="true">
+	  </p>
+		<p id="totsum"></p>
+
+
     <script src="js/jsbank.js"></script>
-  </head>
-  <body>
-    <p>Please check the JS console.</p>
-  </body>
+
+
+
+
+
+
+
+<!-- TEMPLATE -->
+</main>
+
+<footer class="clearfix">
+	<span class="copyright">Copyright@2019 | <span class="name">Mabeth</span>@WDI</span>
+	<a href="index.html" class="afooter">Back to Homework</a>
+	<span class="message">Created with &hearts; by <span class="name">GA</span></span>
+</footer>
+</body>
 </html>
