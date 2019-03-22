@@ -106,7 +106,7 @@ const planTrip = function (startline, startpt, destline, destpt) {
 		//console.log("No need to change at Union Square.");
 		console.log( startstops.length + " stops in total.");
 		
-		printMsg = `You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`;
+		printMsg = `You must travel through the following stops on the ${startline} line: <br>${startstops.join(", ")}.`;
 		
 		printMsg += "<br><br>";
 		
@@ -135,7 +135,7 @@ const planTrip = function (startline, startpt, destline, destpt) {
 		//// html output
 		
 		
-		printMsg = `You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`;
+		printMsg = `You must travel through the following stops on the ${startline} line: <br>${startstops.join(", ")}.`;
 		
 		printMsg += "<br><br>";
 		
@@ -143,7 +143,7 @@ const planTrip = function (startline, startpt, destline, destpt) {
 		
 		printMsg += "<br><br>";
 		
-		printMsg += `Your journey continues through the following stops: ${deststops.join(", ")}.`;
+		printMsg += `Your journey continues through the following stops:<br>${deststops.join(", ")}.`;
 		
 		printMsg += "<br><br>";
 		
