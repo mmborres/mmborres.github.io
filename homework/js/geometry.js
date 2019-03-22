@@ -189,7 +189,7 @@ const cashRegister = function(cartForParty) {
 	let total = 0;
 	//console.log(cRegKeys);
 
-	for (key of cRegKeys) {
+	for (let key of cRegKeys) {
 		//console.log(key);
 		//console.log(cartForParty[key]);
 
@@ -199,9 +199,25 @@ const cashRegister = function(cartForParty) {
 	return total;
 };
 
+const cashRegisterNew = function(cartForParty) {
+	const cRegKeys = Object.keys(cartForParty);
+	let total = 0;
+	console.log(cRegKeys);
+	console.log(cartForParty);
+
+	for (let key in cartForParty) {
+		//console.log(key);
+		//console.log(cartForParty[key]);
+
+		total += parseFloat(cartForParty[key]);
+	}
+
+	return total;
+};
 
 // Output
 console.log("Total in Cash Register = " + cashRegister(cartForParty)); // 60.55
+console.log("Total in Cash Register = " + cashRegisterNew(cartForParty)); // 60.55
 
 
 ////////////
