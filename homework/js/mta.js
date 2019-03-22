@@ -13,25 +13,26 @@ Tell the user the number of stops AND the stops IN ORDER that they will pass thr
 // subway lines
 //const LineN = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"];
 //const LineL = ["8th", "6th", "Union Square", "3rd", "1st"];
-//const Line6 = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"];
+//const Line6 = ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"];
 
+let printMsg = "";
 
-const LineN = {
+const lineN = {
   name: 'N',
   stops: ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"]
 };
 
-const LineL = {
+const lineL = {
   name: 'L',
   stops: ["8th", "6th", "Union Square", "3rd", "1st"]
 };
 
-const Line6 = {
+const line6 = {
   name: '6',
   stops: ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
 };
 
-const subway = [LineN, LineL, Line6] ;
+const subway = [lineN, lineL, line6] ;
 
 const findLine = function (line) {
 	let foundIndex = 0;
@@ -66,7 +67,7 @@ const printStops = function(stopsArray, indexStart, indexEnd) {
 		}
 	} else {
 		//if (indexStart > indexCenter) {
-		for (let y = (indexStart); y <= indexEnd; y++) {
+		for (let y = (indexStart+1); y <= indexEnd; y++) {
 			pArray.push(stopsArray[y]);
 		}
 	}
@@ -88,42 +89,202 @@ const planTrip = function (startline, startpt, destline, destpt) {
 
 	const sUSidx = sLine.stops.indexOf(center);
 
-
+	let startstops = "";
+	
 	//====== destination details
 
 	const dLine = findLine (destline);
+	const dIndex = dLine.stops.indexOf(destpt); 
 	
 
 	if (sLine===dLine) {
 		// if same line, no need to stop at Union Square
 		// one function call only
+		startstops = printStops(sLine.stops, sIndex, dIndex);
 		
+		console.log(`You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`);
+		//console.log("No need to change at Union Square.");
+		console.log( startstops.length + " stops in total.");
+		
+		printMsg = `You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`;
+		
+		printMsg += "<br><br>";
+		
+		printMsg += startstops.length + " stops in total.";
 	} else {
 
+		//console.log("dLine " + dLine.name);
+		//console.log("stops " + dLine.stops);
 
-	//console.log("dLine " + dLine.name);
-	//console.log("stops " + dLine.stops);
+		//console.log("station " + dIndex + "," + dLine.stops[dIndex] );
 
-	const dIndex = dLine.stops.indexOf(destpt); 
-	//console.log("station " + dIndex + "," + dLine.stops[dIndex] );
+		const dUSidx = dLine.stops.indexOf(center);
 
-	const dUSidx = dLine.stops.indexOf(center);
+		startstops = printStops(sLine.stops, sIndex, sUSidx);
+		let deststops = printStops(dLine.stops, dUSidx, dIndex);
 
-	let startstops = printStops(sLine.stops, sIndex, sUSidx);
-	let deststops = printStops(dLine.stops, dUSidx, dIndex);
+		console.log(`You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`);
 
-	console.log(`You must travel through the following stops on the ${startline} line: ${startstops}.`);
+		console.log("Change at Union Square, and hop on the " + destline + " line.");
 
-	console.log("Change at Union Square.");
-
-	console.log(`Your journey continues through the following stops: ${deststops}.`);
-	
-	console.log( (startstops.length + (deststops.length-1)) + " stops in total.");
+		console.log(`Your journey continues through the following stops: ${deststops.join(", ")}.`);
+		
+		console.log( (startstops.length + deststops.length) + " stops in total.");
+		
+		
+		//// html output
+		
+		
+		printMsg = `You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`;
+		
+		printMsg += "<br><br>";
+		
+		printMsg += "Change at Union Square, and hop on the " + destline + " line."
+		
+		printMsg += "<br><br>";
+		
+		printMsg += `Your journey continues through the following stops: ${deststops.join(", ")}.`;
+		
+		printMsg += "<br><br>";
+		
+		printMsg += (startstops.length + deststops.length) + " stops in total.";
 	}
 
+	
+	
 };
+
 
 planTrip('N', 'Times Square', '6', '33rd');
 planTrip('N', 'Times Square', 'N', '8th');
 
 
+/*
+planTrip('N', 'Times Square', '6', '33rd'); // This is only a suggested function name and signature.
+
+// console.log() shows output similar to this:
+// "You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square."
+// "Change at Union Square."
+// "Your journey continues through the following stops: 23rd, 28th, 33rd."
+// "7 stops in total."
+*/
+
+
+
+///////////////////////// Handle Web Page
+
+const populateStops = function(selectLineListID, index) {
+	let stationsList = document.getElementById(selectLineListID);
+	stationsList.innerHTML = ""; //start
+	
+	let lineSelected = subway[index];
+
+	for (let i=0; i<lineSelected.stops.length; i++) {
+		let bt = document.createElement('option');
+		bt.setAttribute('value', i);
+		bt.innerHTML = lineSelected.stops[i];
+		stationsList.appendChild(bt);
+	}
+	stationsList.options[0].selected = true; //default
+};
+
+const updateStartStations = function() {
+	//startLinesList
+	//startLineStationsList
+	
+	const sel = document.getElementById("startLinesList");
+	const idx = sel.options[sel.selectedIndex].value;
+	
+	populateStops("startLineStationsList", idx);
+};
+
+const updateDestStations = function() {
+	//destLinesList
+	//destLineStationsList
+	
+	const sel = document.getElementById("destLinesList");
+	const idx = sel.options[sel.selectedIndex].value;
+	
+	populateStops("destLineStationsList", idx);
+};
+
+const populateStartLinesList = function() {
+	let startLinesList = document.getElementById("startLinesList");
+	startLinesList.innerHTML = ""; //start
+
+	for (let i=0; i<subway.length; i++) {
+		let bt = document.createElement('option');
+		bt.setAttribute('value', i);
+		bt.innerHTML = subway[i].name;
+		startLinesList.appendChild(bt);
+	}
+};
+
+populateStartLinesList();
+
+const populateDestLinesList = function() {
+	let destLinesList = document.getElementById("destLinesList");
+	destLinesList.innerHTML = ""; //start
+
+	for (let i=0; i<subway.length; i++) {
+		let bt = document.createElement('option');
+		bt.setAttribute('value', i);
+		bt.innerHTML = subway[i].name;
+		destLinesList.appendChild(bt);
+	}
+};
+
+populateDestLinesList();
+
+const populateStartStations = function() {
+	//startLinesList
+	//startLineStationsList	
+
+	populateStops("startLineStationsList", 0);
+};
+
+populateStartStations();
+
+const populateDestStations = function() {
+	//destLinesList
+	//destLineStationsList
+
+	populateStops("destLineStationsList", 0);
+};
+
+populateDestStations();
+
+const handlePlanTrip = function() {
+	//startLinesList
+	//startLineStationsList
+	
+	const selStartLine = document.getElementById("startLinesList");
+	const selStartLineidx = selStartLine.options[selStartLine.selectedIndex].value;
+
+	const selStartStations = document.getElementById("startLineStationsList");
+	const selStartStationsidx = selStartStations.options[selStartStations.selectedIndex].value;
+	
+	const startline = subway[selStartLineidx].name;
+	const startpt = subway[selStartLineidx].stops[selStartStationsidx];
+	//console.log(startline);
+	//console.log(startpt);
+
+	//destLinesList
+	//destLineStationsList
+
+	const selDestLine = document.getElementById("destLinesList");
+	const selDestLineidx = selDestLine.options[selDestLine.selectedIndex].value;
+
+	const selDestStations = document.getElementById("destLineStationsList");
+	const selDestStationsidx = selDestStations.options[selDestStations.selectedIndex].value;
+	
+	const destline = subway[selDestLineidx].name;
+	const destpt = subway[selDestLineidx].stops[selDestStationsidx];
+	
+	if (startline===destline && startpt===destpt) {
+		alert("Pick different stations as starting and destination points.");
+	} else {
+		planTrip(startline, startpt, destline, destpt);
+		document.getElementById("itinerarydisplay").innerHTML = printMsg;
+	}
+};

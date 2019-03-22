@@ -461,11 +461,25 @@ const handleTransfer = function() {
 };
 
 
+function sleep( millisecondsToWait ) //allow to delay flipping card to back face
+{
+	var now = new Date().getTime();
+	while ( new Date().getTime() < now + millisecondsToWait )
+	{
+		/* do nothing; this will exit once it reaches the time limit */
+	}
+}
+
 
 const handleTotalSum = function() {
   
   const amtelem = document.getElementById("totsum");
   amtelem.setAttribute('value', JSBank.totalSum());
+  
+  //delay for sometime then it disappears
+  //value="confidential info only"
+  //sleep(10000);
+  //amtelem.setAttribute('value', "test");
   
 };
 

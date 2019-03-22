@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Homework by Mabeth Borres WDI March 2019 -->
+<!-- Homework by Mabeth Borres SEI March 2019 -->
 <html>
 <head>
 	<meta charset="utf-8">
@@ -10,7 +10,10 @@
 
 	<style>
 	p {text-align:justify; font-size: 16px;}
-	
+	div { 	margin-left: 150px;
+			/*margin-right: 100px;*/
+			padding: 0px; 
+	}	
 	</style>
 </head>
 <body>
@@ -21,27 +24,25 @@
 		<a href="index.html">Homework List</a>
 	</nav>
 <main>
-<h2 class="gamepage">&hearts; Geometry, Cash Register and Credit Card &hearts;</h2>
+<h2 class="gamepage">&hearts; MTA - Week 1 &hearts;</h2>
 
 <!-- TEMPLATE -->
 
 
-<p>Page loading soon. Meantime, check out the JS console.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="js/geometry.js"></script>
+		<div><p>Planning Your Trip</p></div>
+		
+		<div><p>Select Starting Line: <select id="startLinesList" onchange="updateStartStations()"></select>&nbsp;&nbsp;&nbsp;Station: <select id="startLineStationsList"></select>
+		</p></div>
+		
+		<div><p>Select Destination Line: <select id="destLinesList" onchange="updateDestStations()"></select>&nbsp;&nbsp;&nbsp;Station: <select id="destLineStationsList"></select>
+		</p></div>
+		
+		<div><p><input type="button" value="View Itinerary" class="inputbutton" onclick="handlePlanTrip()">
+		</p></div>
+		
+		<div><p id="itinerarydisplay"></p></div>
+		
+    <script src="js/mta.js"></script>
 
 	<!-- TEMPLATE -->
 </main>
