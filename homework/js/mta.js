@@ -104,13 +104,13 @@ const planTrip = function (startline, startpt, destline, destpt) {
 		
 		console.log(`You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`);
 		//console.log("No need to change at Union Square.");
-		console.log( startstops.length + " stops in total.");
+		console.log( startstops.length + " stop" + (startstops.length>1 ? "s" : "") + " in total.");
 		
-		printMsg = `You must travel through the following stops on the ${startline} line: <br>${startstops.join(", ")}.`;
+		printMsg += `You must travel through the following stops on the ${startline} line: <br>${startstops.join(", ")}.`;
 		
 		printMsg += "<br><br>";
 		
-		printMsg += startstops.length + " stops in total.";
+		printMsg += startstops.length + " stop" + (startstops.length>1 ? "s" : "") + " in total.";
 	} else {
 
 		//console.log("dLine " + dLine.name);
@@ -122,32 +122,45 @@ const planTrip = function (startline, startpt, destline, destpt) {
 
 		startstops = printStops(sLine.stops, sIndex, sUSidx);
 		let deststops = printStops(dLine.stops, dUSidx, dIndex);
-
-		console.log(`You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`);
-
-		console.log("Change at Union Square, and hop on the " + destline + " line.");
-
-		console.log(`Your journey continues through the following stops: ${deststops.join(", ")}.`);
 		
-		console.log( (startstops.length + deststops.length) + " stops in total.");
+		const stopCount = startstops.length + deststops.length;
+
+		if (startstops.length>0) {
+			console.log(`You must travel through the following stops on the ${startline} line: ${startstops.join(", ")}.`);
+		}
 		
+		const hopon = "Hop on the " + destline + " line.";
+		
+		if (destpt!==center) {
+			console.log("Change at Union Square. " + (deststops.length>0 ? hopon : ""));
+		}
+		
+		if (deststops.length>0) {
+			console.log(`Your journey continues through the following stops: ${deststops.join(", ")}.`);
+		}
+		
+		console.log( stopCount + " stop" + (stopCount>1 ? "s" : "") + " in total.");
 		
 		//// html output
 		
+		if (startstops.length>0) {
+			printMsg += `You must travel through the following stops on the ${startline} line: <br>${startstops.join(", ")}.`;
+			printMsg += "<br><br>";
+		}
 		
-		printMsg = `You must travel through the following stops on the ${startline} line: <br>${startstops.join(", ")}.`;
+		if (destpt!==center) { printMsg += "Change at Union Square. "; }
 		
-		printMsg += "<br><br>";
+		printMsg += (deststops.length>0) ? hopon : "";
 		
-		printMsg += "Change at Union Square, and hop on the " + destline + " line."
+		if (deststops.length>0) {
+			printMsg += "<br><br>";
+			
+			printMsg += `Your journey continues through the following stops:<br>${deststops.join(", ")}.`;
+			
+			printMsg += "<br><br>";
+		}
 		
-		printMsg += "<br><br>";
-		
-		printMsg += `Your journey continues through the following stops:<br>${deststops.join(", ")}.`;
-		
-		printMsg += "<br><br>";
-		
-		printMsg += (startstops.length + deststops.length) + " stops in total.";
+		printMsg += stopCount + " stop" + (stopCount>1 ? "s" : "") + " in total.";
 	}
 
 	
@@ -258,6 +271,8 @@ const handlePlanTrip = function() {
 	//startLinesList
 	//startLineStationsList
 	
+	printMsg = "";
+	
 	const selStartLine = document.getElementById("startLinesList");
 	const selStartLineidx = selStartLine.options[selStartLine.selectedIndex].value;
 
@@ -281,9 +296,14 @@ const handlePlanTrip = function() {
 	const destline = subway[selDestLineidx].name;
 	const destpt = subway[selDestLineidx].stops[selDestStationsidx];
 	
+	//console.log(destpt);
+	//console.log(startpt==="Union Square");
+	
 	if (startline===destline && startpt===destpt) {
 		alert("Pick different stations as starting and destination points.");
-	} else {
+	} else if (startpt===destpt && destpt===center) {
+		alert("You don't need to travel, you're on the same station.");
+	}	else {
 		planTrip(startline, startpt, destline, destpt);
 		document.getElementById("itinerarydisplay").innerHTML = printMsg;
 	}
