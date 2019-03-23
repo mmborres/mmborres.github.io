@@ -1,3 +1,4 @@
+// Homework by Mabeth Borres of SEI 31
 
 /*There are 3 subway lines:
 The N line has the following stops: Times Square, 34th, 28th, 23rd, Union Square, and 8th
@@ -7,8 +8,6 @@ All 3 subway lines intersect at Union Square, but there are no other intersectio
 	this means the 28th stop on the N line is different than the 28th street stop on the 6 line, 
 	so you'll have to differentiate this when you name your stops in the arrays.)
 Tell the user the number of stops AND the stops IN ORDER that they will pass through or change at.*/
-
-
 
 // subway lines
 //const LineN = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"];
@@ -61,12 +60,12 @@ const printStops = function(stopsArray, indexStart, indexEnd) {
 	//console.log("" + indexEnd);
 
 	let pArray = [];
+	//handle different directions when traversing the array, it could be forward or backward
 	if (indexStart > indexEnd) {
 		for (let y = (indexStart-1); y >= indexEnd; y--) {
 			pArray.push(stopsArray[y]);
 		}
 	} else {
-		//if (indexStart > indexCenter) {
 		for (let y = (indexStart+1); y <= indexEnd; y++) {
 			pArray.push(stopsArray[y]);
 		}
@@ -76,6 +75,21 @@ const printStops = function(stopsArray, indexStart, indexEnd) {
 }
 
 const planTrip = function (startline, startpt, destline, destpt) {
+
+	// Handled in the web page better:
+	
+	if (startline===destline && startpt===destpt) {
+		printMsg = "Pick different stations as starting and destination points.";
+		console.log(printMsg);
+		return;
+	} else if (startpt===destpt && destpt===center) {
+		//alert("You don't need to travel, you're on the same station.");
+		printMsg = "You don't need to travel, you're on the same station: " + center;
+		console.log(printMsg);
+		return;
+	}
+
+	////
 
 	//====== startingpt details
 
@@ -168,8 +182,20 @@ const planTrip = function (startline, startpt, destline, destpt) {
 };
 
 
+console.log("TESTING: planTrip('N', 'Times Square', '6', '33rd');");
 planTrip('N', 'Times Square', '6', '33rd');
+console.log("TESTING: planTrip('N', 'Times Square', 'N', '8th');");
 planTrip('N', 'Times Square', 'N', '8th');
+console.log("TESTING: planTrip('L', 'Union Square', 'N', 'Union Square');");
+planTrip('L', 'Union Square', 'N', 'Union Square');
+console.log("TESTING: planTrip('N', '8th', 'N', '8th');");
+planTrip('N', '8th', 'N', '8th');
+
+console.log("TESTING: planTrip('6', 'Union Square', 'N', '8th');");
+planTrip('6', 'Union Square', 'N', '8th');
+
+console.log("TESTING: planTrip('N', '8th', 'L', 'Union Square');");
+planTrip('6', 'Grand Central', 'L', 'Union Square');
 
 
 /*
@@ -300,11 +326,15 @@ const handlePlanTrip = function() {
 	//console.log(startpt==="Union Square");
 	
 	if (startline===destline && startpt===destpt) {
-		alert("Pick different stations as starting and destination points.");
+		//alert("Pick different stations as starting and destination points.");
+		printMsg = "Pick different stations as starting and destination points.";
 	} else if (startpt===destpt && destpt===center) {
-		alert("You don't need to travel, you're on the same station.");
+		//alert("You don't need to travel, you're on the same station.");
+		printMsg = "You don't need to travel, you're on the same station: " + center;
 	}	else {
 		planTrip(startline, startpt, destline, destpt);
-		document.getElementById("itinerarydisplay").innerHTML = printMsg;
+		//document.getElementById("itinerarydisplay").innerHTML = printMsg;
 	}
+	
+	document.getElementById("itinerarydisplay").innerHTML = printMsg;
 };
