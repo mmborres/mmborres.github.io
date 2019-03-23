@@ -194,7 +194,7 @@ planTrip('N', '8th', 'N', '8th');
 console.log("TESTING: planTrip('6', 'Union Square', 'N', '8th');");
 planTrip('6', 'Union Square', 'N', '8th');
 
-console.log("TESTING: planTrip('N', '8th', 'L', 'Union Square');");
+console.log("TESTING: planTrip('6', 'Grand Central', 'L', 'Union Square');");
 planTrip('6', 'Grand Central', 'L', 'Union Square');
 
 
