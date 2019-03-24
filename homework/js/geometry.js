@@ -155,11 +155,11 @@ console.log("isObtuse? " + isObtuse(triangleA));
 
 const areaTriangle = function(trian) {
 	const s = (trian.sideA + trian.sideB + trian.sideC) / 2;
-	console.log ("s=" + s)
+	//console.log ("s=" + s)
 	// formula taken from
 	// https://www.mathsisfun.com/geometry/herons-formula.html
 	const bf = s*(s-trian.sideA)*(s-trian.sideB)*(s-trian.sideC) ;
-	console.log("bf=" + bf);
+	//console.log("bf=" + bf);
 	const area = Math.sqrt( bf );
 	
 	return area;
@@ -392,7 +392,7 @@ console.log("6666-6666-6666-6661 | " + validateCreditCard('6666-6666-6666-6661')
 
 console.log("4556737586899855 | " + validateCreditCard('4556737586899855'));
 
-console.log("Testing Luhn Algorithm on 4556737586899855" + processLuhn("4556737586899855"));
+console.log("Testing Luhn Algorithm on 4556737586899855 | " + processLuhn("4556737586899855"));
 
 function CreditCard(valid, number, errorMsg){
 	this.valid = valid;

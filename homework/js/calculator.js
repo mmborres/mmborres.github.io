@@ -88,7 +88,7 @@ const superFunction = function(num) {
 
 superFunction(3);
 
-/////// Handle from Web percentage
+/////// Handle from Web Page
 
 const ans = "<b>ANSWER >> </b>";
 
