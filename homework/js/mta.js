@@ -103,7 +103,7 @@ const planTrip = function (startline, startpt, destline, destpt) {
 
 	const sUSidx = sLine.stops.indexOf(center);
 
-	let startstops = "";
+	let startstops = [];
 	
 	//====== destination details
 

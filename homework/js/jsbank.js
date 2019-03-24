@@ -55,6 +55,20 @@ const account4 = new AccountObject ("Jon Snow", 10);
 const account5 = new AccountObject ("Benedict C", 100);
 const account6 = new AccountObject ("Apple C", 500);
 
+//check for uniqueness of name
+const isDuplicateName = function(BankObject, AccountObject) {
+	let retVal = false;
+	for (let i=0; i<BankObject.accounts.length; i++) {
+		if (AccountObject.name===BankObject.accounts[i].name) {
+			//duplicae found
+			retVal = true;
+			break;
+		}
+	}
+	
+	return retVal;
+};
+
 //Bank object
 function BankObject(name) {
 	this.name = name;
@@ -69,9 +83,15 @@ function BankObject(name) {
 		return totSum;
 	};
 	this.addAccount = function(AccountObject) {
-		console.log(`Account of ${AccountObject.name} added to bank with initial amount of ${AccountObject.currentBalance}.`);
-		this.accounts.push(AccountObject);
-		return true;
+		if (isDuplicateName(this, AccountObject)===false) {
+			console.log(`Account of ${AccountObject.name} added to bank with initial amount of ${AccountObject.currentBalance}.`);
+			this.accounts.push(AccountObject);
+			return true;
+		} else {
+			console.log("Name already exists: " + AccountObject.name);
+			return false;
+		}
+		
 	};
 	this.transfer = function(AccountObjectFrom, AccountObjectTo, amount) {
 		console.log(`To transfer ${amount} from account of ${AccountObjectFrom.name} to ${AccountObjectTo.name}.`);
@@ -382,82 +402,92 @@ const findAccount = function (idValue) {
 	const sel = document.getElementById(idValue);
 	const idx = sel.options[sel.selectedIndex].value;
 
-	console.log("idx = " + idx);
-
+	//console.log("idx = " + idx);
 	return JSBank.accounts[idx];
-
 }
 
 
 const handleWithdraw = function() {
-  
-  const acctObj = findAccount("withdrawAccountList");
 
-  const amt = document.getElementById("withdrawamt").value;
+	const acctObj = findAccount("withdrawAccountList");
+	const amt = document.getElementById("withdrawamt").value;
+	
+	if (amt==="") {
+		return; //cannot be empty
+	}
 
-  const successWithdraw = acctObj.withdraw(parseInt(amt));
+	const successWithdraw = acctObj.withdraw(parseInt(amt));
 
-  console.log("Transaction from Page: " + successWithdraw);
-  
-  if (successWithdraw===false) {
-  	alert("Transaction not allowed.");
-  }
-
+	console.log("Transaction from Page: " + successWithdraw);
+	if (successWithdraw===false) {
+		alert("Transaction not allowed.");
+	}
 };
 
 const handleAddAccount = function() {
   
-  const name = document.getElementById("acctname").value;
-  const initialdep = document.getElementById("initialdeposit").value;
+	const name = document.getElementById("acctname").value;
+	const initialdep = document.getElementById("initialdeposit").value;
 
-  const newAcct = new AccountObject(name, parseInt(initialdep));
+  	if (name==="" || initialdep==="") {
+		return; //cannot be empty
+	}
+  
+	const newAcct = new AccountObject(name, parseInt(initialdep));
 
-  if (!JSBank.accounts.includes(newAcct)) {
-  	JSBank.addAccount(newAcct);
-  } //else already in there
+	if (isDuplicateName(JSBank,newAcct)===false) {
+		JSBank.addAccount(newAcct);
+	} else { //else already in there
+		alert("Name already exists: " + name);
+	}
 
-
-  //populate all dropdown
-  populateBalance();
-  populateDeposit();
-  populateWithdraw();
-  populateTransfer();
+	//populate all dropdown
+	populateBalance();
+	populateDeposit();
+	populateWithdraw();
+	populateTransfer();
 };
 
 
 
 const handleBalance = function() {
   
-  const acctObj = findAccount("balanceAccountList");
-  const amtelem = document.getElementById("balance");
-  amtelem.setAttribute('value', acctObj.currentBalance);
+	const acctObj = findAccount("balanceAccountList");
+	const amtelem = document.getElementById("balance");
+	amtelem.setAttribute('value', acctObj.currentBalance);
   
 };
 
 
 const handleDeposit = function() {
   
-  const acctObj = findAccount("depositAccountList");
+	const acctObj = findAccount("depositAccountList");
+	const amt = document.getElementById("depositamt").value;
 
-  const amt = document.getElementById("depositamt").value;
-
-  acctObj.deposit(parseInt(amt));
-
+	if (amt==="") {
+		return; //cannot be empty
+	}
+	
+	acctObj.deposit(parseInt(amt));
 };
 
 
 const handleTransfer = function() {
   
-  const acctFrom = findAccount("transferFROMAccountList");
-  const acctTo = findAccount("transferTOAccountList");
+	const acctFrom = findAccount("transferFROMAccountList");
+	const acctTo = findAccount("transferTOAccountList");
 
-  const amt = document.getElementById("transferamt").value;
+	const amt = document.getElementById("transferamt").value;
 
-  if (acctFrom===acctTo) {
-  	alert("Cannot be the same account.")
-  } else {
-	JSBank.transfer(acctFrom, acctTo, parseInt(amt));
-  }
+	if (amt==="") {
+		return; //cannot be empty
+	}
+	
+	if (acctFrom===acctTo) {
+		alert("Cannot be the same account.")
+	} else {
+		JSBank.transfer(acctFrom, acctTo, parseInt(amt));
+	}
 };
 
 
@@ -473,13 +503,12 @@ function sleep( millisecondsToWait ) //allow to delay flipping card to back face
 
 const handleTotalSum = function() {
   
-  const amtelem = document.getElementById("totsum");
-  amtelem.setAttribute('value', JSBank.totalSum());
+	const amtelem = document.getElementById("totsum");
+	amtelem.setAttribute('value', JSBank.totalSum());
   
-  //delay for sometime then it disappears
-  //value="confidential info only"
-  //sleep(10000);
-  //amtelem.setAttribute('value', "test");
-  
+	//delay for sometime then it disappears
+	//value="confidential info only"
+	//sleep(10000);
+	//amtelem.setAttribute('value', "test");
 };
 

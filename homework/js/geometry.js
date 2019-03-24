@@ -33,7 +33,7 @@ const isSquare = function(rectangleA) {
 	return rectangleA.length===rectangleA.width;
 };
 
-const area = function(rectangleA) {
+const areaR = function(rectangleA) {
 	return rectangleA.length * rectangleA.width; 
 };
 
@@ -42,7 +42,7 @@ const perimeter = function(rectangleA) {
 };
 
 console.log("isSquare? " + isSquare(rectangleA));
-console.log("Area = " + area(rectangleA));
+console.log("Area = " + areaR(rectangleA));
 console.log("Perimeter = " + perimeter(rectangleA));
 
 
@@ -155,11 +155,11 @@ console.log("isObtuse? " + isObtuse(triangleA));
 
 const areaTriangle = function(trian) {
 	const s = (trian.sideA + trian.sideB + trian.sideC) / 2;
-	//console.log ("s=" + s)
+	console.log ("s=" + s)
 	// formula taken from
 	// https://www.mathsisfun.com/geometry/herons-formula.html
 	const bf = s*(s-trian.sideA)*(s-trian.sideB)*(s-trian.sideC) ;
-	//console.log("bf=" + bf);
+	console.log("bf=" + bf);
 	const area = Math.sqrt( bf );
 	
 	return area;
@@ -372,9 +372,9 @@ const validateCreditCard = function(num) {
 	}
 
 	//try the Luhn if false
-	if (retValidate===false) {
-		retValidate = processLuhn(newNumStr);
-	}
+	//if (retValidate===false) {
+	//	retValidate = processLuhn(newNumStr);
+	//}
 	
 	
 	return retValidate;
@@ -392,7 +392,7 @@ console.log("6666-6666-6666-6661 | " + validateCreditCard('6666-6666-6666-6661')
 
 console.log("4556737586899855 | " + validateCreditCard('4556737586899855'));
 
-//console.log(processLuhn("4556737586899855"));
+console.log("Testing Luhn Algorithm on 4556737586899855" + processLuhn("4556737586899855"));
 
 function CreditCard(valid, number, errorMsg){
 	this.valid = valid;
@@ -446,7 +446,7 @@ const validateCreditCardObj = function(num) {
 	}
 
 	//try the Luhn if false
-	if (retValidate===false) {
+	/*if (retValidate===false) {
 		retValidate = processLuhn(newNumStr);
 		
 		if (retValidate===false) {
@@ -454,7 +454,7 @@ const validateCreditCardObj = function(num) {
 		} else {
 			errorMsg = "passed Luhn Algorithm test"
 		}
-	}
+	}*/
 	
 	const cardObj = new CreditCard(retValidate, newNumStr, errorMsg);
 	console.log(cardObj);
@@ -471,10 +471,155 @@ validateCreditCardObj('1111-1111-1111-1110');
 
 validateCreditCardObj('6666-6666-6666-6661');
 
-validateCreditCardObj('4556737586899855');
+//validateCreditCardObj('4556737586899855');
 
 
 
 
+//// Handle Web Page
+
+const ans = "<b>ANSWER >> </b>";
+let printMsg = "";
+
+const handleIsSquare = function() {
+	const num1 = document.getElementById("isSquareValue1").value;
+	const num2 = document.getElementById("isSquareValue2").value;
+	
+	if (num1==="" || num2==="") {
+		return; //cannot be empty
+	} else if ( Number.isInteger(parseInt(num1))===false 
+		|| Number.isInteger(parseInt(num2))===false ) {
+		document.getElementById("isSquare").innerHTML = "";
+		document.getElementById("area").innerHTML = "";
+		document.getElementById("perimeter").innerHTML = "";
+		return;
+	}
+	rectangleA.length = parseInt(num1);
+	rectangleA.width = parseInt(num2);
+	
+	printMsg = isSquare(rectangleA); 
+	document.getElementById("isSquare").innerHTML = ans + "iSquare() is " + printMsg;
+	
+	printMsg = areaR(rectangleA);
+	document.getElementById("area").innerHTML = ans + "Area is " + printMsg;
+	
+	printMsg = perimeter(rectangleA);
+	document.getElementById("perimeter").innerHTML = ans + "Perimeter is " + printMsg;
+	
+};
 
 
+const handleTriangle = function() {
+	const num1 = document.getElementById("triangleSide1").value;
+	const num2 = document.getElementById("triangleSide2").value;
+	const num3 = document.getElementById("triangleSide3").value;
+	
+	if (num1==="" || num2==="" || num3==="") {
+		return; //cannot be empty
+	} else if ( Number.isInteger(parseInt(num1))===false 
+		|| Number.isInteger(parseInt(num2))===false
+		|| Number.isInteger(parseInt(num3))===false) {
+		document.getElementById("isEquilateral").innerHTML = "";
+		document.getElementById("isIsosceles").innerHTML = "";
+		document.getElementById("area").innerHTML = "";
+		document.getElementById("isObtuse").innerHTML = "";
+		return;
+	}
+	triangleA.sideA = parseInt(num1);
+	triangleA.sideB = parseInt(num2);
+	triangleA.sideC = parseInt(num3);
+	
+	printMsg = isEquilateral(triangleA); 
+	document.getElementById("isEquilateral").innerHTML = ans + "isEquilateral() is " + printMsg;
+	
+	printMsg = isIsosceles(triangleA);
+	document.getElementById("isIsosceles").innerHTML = ans + "isIsosceles() is " + printMsg;
+	
+	printMsg = areaTriangle(triangleA);
+	document.getElementById("areaTriangle").innerHTML = ans + "area() is " + printMsg;
+	
+	printMsg = isObtuse(triangleA);
+	document.getElementById("isObtuse").innerHTML = ans + "isObtuse() is " + printMsg;
+	
+};
+
+const isFloat = function (numFloat) {
+	return (numFloat%1 !== 0);
+};
+
+
+const handleCashRegister = function() {
+	
+	const banana = document.getElementById("banana").value;
+	const handkerchief = document.getElementById("handkerchief").value;
+	const Tshirt = document.getElementById("tshirt").value;
+	const apple = document.getElementById("apple").value;
+	const nalgene = document.getElementById("nalgene").value;
+	const proteinShake = document.getElementById("proteinShake").value;
+	
+	/*console.log( banana + "," + handkerchief + "," + Tshirt + "," + proteinShake + "," + nalgene + "," + apple);
+	
+	console.log( Number.isInteger(parseInt(banana)) );
+	console.log( isFloat(parseFloat(banana)));
+	
+	console.log( Number.isInteger(parseInt(handkerchief)) );
+	console.log( isFloat(parseFloat(handkerchief)));
+	
+	console.log( Number.isInteger(parseInt(Tshirt)) );
+	console.log( isFloat(parseFloat(Tshirt)));
+	
+	console.log( Number.isInteger(parseInt(proteinShake)) );
+	console.log( isFloat(parseFloat(proteinShake)));
+	
+	console.log( Number.isInteger(parseInt(nalgene)) );
+	console.log( isFloat(parseFloat(nalgene)));
+	
+	console.log( Number.isInteger(parseInt(apple)) );
+	console.log( isFloat(parseFloat(apple)));*/
+	
+	if (banana==="" || handkerchief==="" || Tshirt==="" || proteinShake==="" || nalgene==="" || apple==="") {
+		return; //cannot be empty
+	} else if ( Number.isInteger(parseInt(banana))===false || isFloat(parseFloat(banana))===false
+		|| Number.isInteger(parseInt(handkerchief))===false || isFloat(parseFloat(handkerchief))===false
+		|| Number.isInteger(parseInt(Tshirt))===false || isFloat(parseFloat(Tshirt))===false
+		|| Number.isInteger(parseInt(apple))===false || isFloat(parseFloat(apple))===false
+		|| Number.isInteger(parseInt(nalgene))===false || isFloat(parseFloat(nalgene))===false
+		|| Number.isInteger(parseInt(proteinShake))===false || isFloat(parseFloat(proteinShake))===false ) {
+			
+		document.getElementById("cashRegister").innerHTML = "";
+		return;
+	}
+	
+	cartForParty.banana = parseFloat(banana);
+	cartForParty.handkerchief = parseFloat(handkerchief);
+	cartForParty.Tshirt = parseFloat(Tshirt);
+	cartForParty.apple = parseFloat(apple);
+	cartForParty.nalgene = parseFloat(nalgene);
+	cartForParty.proteinShake = parseFloat(proteinShake);
+
+	printMsg = cashRegisterNew(cartForParty);
+	document.getElementById("cashRegister").innerHTML = ans + "Total Price is " + printMsg;
+};
+
+
+const handleValidateCreditCard = function() {
+	const num = document.getElementById("creditCardValue").value;
+	
+	if (num==="") {
+		return; //cannot be empty
+	}
+	
+	printMsg = validateCreditCard(num);
+	document.getElementById("validateCreditCard").innerHTML = ans + "validateCreditCard() returns " + printMsg;
+};
+
+const handleLuhnAlgorithm = function() {
+	const num = document.getElementById("creditCardValue").value;
+	
+	if (num==="") {
+		return; //cannot be empty
+	}
+	
+	printMsg = processLuhn(num);
+	document.getElementById("luhnAlgorithm").innerHTML = ans + "Using Luhn Algorithm, validateCreditCard() returns " + printMsg;
+}
