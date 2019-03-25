@@ -6,6 +6,7 @@ Developer @GA in NYC
 */
 
 body {
+  /*background: url('../images/background.jpg') top repeat-x, url('../images/bg_body.jpg') bottom repeat-x;*/
   background-image: url('../images/background.jpg');
   background-repeat: repeat-x;
   background-attachment: fixed;
@@ -17,9 +18,31 @@ body {
 
 div {
   padding: 100;
-  margin: auto;
+  margin: auto;<div>
 
 }
+
+.elogo {
+	align: center;
+	/*display: fixed;*/
+	padding-left: 500;
+	margin: auto;
+}
+
+
+
+.imglogo {
+	padding-left: 200;
+	align: center;
+}
+
+.eeelogo {
+	align: center;
+	/*display: fixed;*/
+	padding-left: 500;
+	margin: auto;
+}
+
 
 .cardcontent {
 	display: flex;
@@ -66,12 +89,35 @@ div {
 	line-height: 18px;
 	align-items: center;
 	justify-content: space-around;
-	font-size: 18px;
+	font-size: 20px;
 	text-align: justify;
 	padding-right: 20px;
 }
 .pinner {
-	padding: 10px;
-	padding-left: 20px;
+	padding: 0px;
+	padding-left: 0px;
+	font-size: 12px;
+	padding-top: 0px;
 }
 
+table, tr {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 5px;
+	vertical-align: top;
+}
+
+.readme {
+	text-decoration: none;
+	color: red;
+}
