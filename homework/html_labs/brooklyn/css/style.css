@@ -12,13 +12,12 @@ Link Hover Color = #20222a
 */
 
 body {
-  font-size: 18px;
-  line-height: 17px;
-  font-family: "Times New Roman", serif;
-  color: #656565;
-  padding: 100;
-  margin: auto;
-
+	font-size: 12px;
+	line-height: 17px;
+	font-family: "Times New Roman", serif;
+	color: #656565;
+	padding: 100;
+	margin: 0 auto;
 }
 
 
@@ -28,13 +27,19 @@ body {
 }
 
 .imgs {
-  display:inline-block;
-  /*width: 100px;*/
-  padding: 10px 0px;
-  margin: auto;
-  /*border: 5px solid;*/
+	display:inline-block;
+	/*width: 100px;*/
+	padding: 10px 0px;
+	margin: auto;
+	/*border: 5px solid;*/
+	width: 950px;
 }
 
 .little {
-  border: 4px solid;
+	border: 4px solid;
+}
+
+.readme {
+	text-decoration: none;
+	color: blue;
 }

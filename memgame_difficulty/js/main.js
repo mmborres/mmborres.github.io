@@ -288,23 +288,28 @@ var backCard = function(){
 };
 
 function getCustom(){
-	var x = window.location.href;
-	//console.log("form: " + x); //debug
+	
+	try {
+			var x = window.location.href;
+			//console.log("form: " + x); //debug
 
-  	if (x.includes("index.html?")) {
-  		var customvals = x.split("?")[1];
-  		//console.log(customvals); //debug
+			if (x.includes("index.html?")) {
+				var customvals = x.split("?")[1];
+				//console.log(customvals); //debug
 
-  		if (customvals.includes("=")) {
-  			var gameLevel = parseInt(customvals.split("=")[1]);
-			//console.log(gameLevel); //debug
+				if (customvals.includes("=")) {
+					var gameLevel = parseInt(customvals.split("=")[1]);
+					//console.log(gameLevel); //debug
 
-			if ( gameLevel>=1 && gameLevel<=5 ) {
-				// accepted
-				maxLevel = gameLevel;
-			} 
+					if ( gameLevel>=1 && gameLevel<=5 ) {
+						// accepted
+						maxLevel = gameLevel;
+					} 
+				}
+			}
+		} catch (err) {
+			console.log (err.message);
 		}
-  	}
 }
 
 var createBoard = function(){

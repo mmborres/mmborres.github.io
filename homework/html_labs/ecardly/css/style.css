@@ -21,6 +21,10 @@ div {
 
 }
 
+.cardcontent {
+	display: flex;
+}
+
 #container {
   padding: 100;
 	width: 950px;
@@ -51,3 +55,23 @@ div {
 .clear {
 	clear: both;
 }
+
+.innershadow {
+   -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+   /*display:inline-block;
+	display: block;*/
+	display: flex;
+	line-height: 18px;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 18px;
+	text-align: justify;
+	padding-right: 20px;
+}
+.pinner {
+	padding: 10px;
+	padding-left: 20px;
+}
+
