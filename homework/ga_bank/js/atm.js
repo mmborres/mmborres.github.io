@@ -20,8 +20,8 @@ const account = {
 		} else {
 			$('#checking-balance').removeClass("zero");
 		}
-		$('#checking-balance').html("$" + account.checking);
-		$('#savings-balance').html("$" + account.savings);
+		$('#checking-balance').html("$" + ( (Number.isInteger(account.checking)===true) ? account.checking : account.checking.toFixed(2) ) );
+		$('#savings-balance').html("$" + ( (Number.isInteger(account.savings)===true) ? account.savings : account.savings.toFixed(2) ) );
 	},
 
 	withdraw: function(amount, savingsOrChecking) {
