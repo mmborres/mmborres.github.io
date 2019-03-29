@@ -33,9 +33,8 @@ const account = {
 			return false; 
 		} else {
 			if (tempBal-amount<0) { // one account can't handle it, apply overdraft
-				const bal = this[savingsOrChecking];
-				const remainder = amount - bal;
-				this[savingsOrChecking] -= bal; // account is now zero
+				const remainder = amount - tempBal;
+				this[savingsOrChecking] -= tempBal; // account is now zero
 				if (savingsOrChecking==="checking") {
 					this["savings"] -= remainder;
 				} else {
