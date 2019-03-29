@@ -59,22 +59,22 @@ const account = {
 
 const checkingDeposit = function() {
 	const amount = $('#checking-amount').val();
-	account.deposit(Number(amount), "checking");
+	if ( isNaN(amount)===false ) { account.deposit(Number(amount), "checking"); }
 };
 
 const savingsDeposit = function() {
 	const amount = $('#savings-amount').val();
-	account.deposit(Number(amount), "savings");
+	if ( isNaN(amount)===false ) { account.deposit(Number(amount), "savings"); }
 };
 
 const savingsWithdraw = function() {
 	const amount = $('#savings-amount').val();
-	account.withdraw(Number(amount), "savings");
+	if ( isNaN(amount)===false ) { account.withdraw(Number(amount), "savings"); }
 };
 
 const checkingWithdraw = function() {
 	const amount = $('#checking-amount').val();
-	account.withdraw(Number(amount), "checking");
+	if ( isNaN(amount)===false ) { account.withdraw(Number(amount), "checking"); }
 };
 
 const startBank = function() {
