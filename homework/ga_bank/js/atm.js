@@ -18,7 +18,7 @@ const account = {
 		if (this["checking"] === 0) {
 			$('#checking-balance').addClass("zero");
 		} else {
-		$('#checking-balance').removeClass("zero");
+			$('#checking-balance').removeClass("zero");
 		}
 		$('#checking-balance').html("$" + account.checking);
 		$('#savings-balance').html("$" + account.savings);
@@ -30,20 +30,15 @@ const account = {
 		const total = this.savings + this.checking;
 		if (total-amount < 0) { //two accts together, still not enough money
 			$('#result').html("Transaction not allowed. Insufficient funds.");
-			return false; //ignore
+			return false; 
 		} else {
 			if (tempBal-amount<0) { // one account can't handle it, apply overdraft
-				// handle overdraft protection
+				const bal = this[savingsOrChecking];
+				const remainder = amount - bal;
+				this[savingsOrChecking] -= bal; // account is now zero
 				if (savingsOrChecking==="checking") {
-					//current transaction first
-					const bal = this[savingsOrChecking];
-					const remainder = amount - bal;
-					this[savingsOrChecking] -= bal; // account is now zero
 					this["savings"] -= remainder;
 				} else {
-					const bal = this[savingsOrChecking];
-					const remainder = amount - bal;
-					this[savingsOrChecking] -= bal; // account is now zero
 					this["checking"] -= remainder;
 				}
 				$('#result').html("Overdraft Protection applied.");
