@@ -1,6 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
-@import url(http://fonts.googleapis.com/css?family=Ruluko);
-@import url('https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps');
+/*@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(http://fonts.googleapis.com/css?family=Ruluko);*/
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script:400,700');
+@import url('https://fonts.googleapis.com/css?family=Ruluko');
 
 #content {
   margin: 0 auto;
