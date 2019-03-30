@@ -36,9 +36,9 @@ const account = {
 				const remainder = amount - tempBal;
 				this[savingsOrChecking] -= tempBal; // account is now zero
 				if (savingsOrChecking==="checking") {
-					this["savings"] -= remainder;
+					this.savings -= remainder;
 				} else {
-					this["checking"] -= remainder;
+					this.checking -= remainder;
 				}
 				$('#printMsg').html("Overdraft Protection applied.");
 			} else {
