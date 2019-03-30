@@ -3,19 +3,19 @@ const account = {
 	checking: 100, //starting money
 
 	deposit: function(amount, savingsOrChecking) {
-		$('#result').html("");
+		$('#printMsg').html("");
 		this[savingsOrChecking] += amount;
-		this.displayAccounts();
+		this.displayBalances();
 		return true;
 	},
 
-	displayAccounts: function() {
-		if (this["savings"] === 0) {
+	displayBalances: function() {
+		if (this.savings === 0) {
 			$('#savings-balance').addClass("zero");
 		} else {
 			$('#savings-balance').removeClass("zero");
 		}
-		if (this["checking"] === 0) {
+		if (this.checking === 0) {
 			$('#checking-balance').addClass("zero");
 		} else {
 			$('#checking-balance').removeClass("zero");
@@ -25,11 +25,11 @@ const account = {
 	},
 
 	withdraw: function(amount, savingsOrChecking) {
-		$('#result').html("");
+		$('#printMsg').html("");
 		const tempBal = this[savingsOrChecking];
 		const total = this.savings + this.checking;
 		if (total-amount < 0) { //two accts together, still not enough money
-			$('#result').html("Transaction not allowed. Insufficient funds.");
+			$('#printMsg').html("Transaction not allowed. Insufficient funds.");
 			return false; 
 		} else {
 			if (tempBal-amount<0) { // one account can't handle it, apply overdraft
@@ -40,12 +40,12 @@ const account = {
 				} else {
 					this["checking"] -= remainder;
 				}
-				$('#result').html("Overdraft Protection applied.");
+				$('#printMsg').html("Overdraft Protection applied.");
 			} else {
 				//one account can handle it, proceed transaction
 				this[savingsOrChecking] -= amount;
 			}
-			this.displayAccounts();
+			this.displayBalances();
 			return true; //success
 		}
 	}
@@ -73,7 +73,7 @@ const checkingWithdraw = function() {
 
 const startBank = function() {
 	//display balances
-	account.displayAccounts();
+	account.displayBalances();
 
 	//transactions
 	$('#checking-deposit').on('click', checkingDeposit);
