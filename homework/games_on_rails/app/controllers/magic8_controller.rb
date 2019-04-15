@@ -5,31 +5,12 @@ class Magic8Controller < ApplicationController
 
     def result
 
-        @title = params[:booktitle]
+        @question = params[:question]
 
-        url = "https://www.googleapis.com/books/v1/volumes?q=title:#{@title}"
-    
-        @info = HTTParty.get url
-    
-        redirect to('/') if @info.nil?
-        
-        newTitle = @title.capitalize
-        if @title.include?(" ")
-            newTitle = ""
-            arr = @title.split(" ")
-            arr.each do |part|
-                newTitle += part.capitalize + " "
-            end
-            newTitle = newTitle.chop
-        end
-    
-        @lookup = newTitle
-        firstbookfound = @info["items"][0]["volumeInfo"]
-        @title = firstbookfound["title"]
-        @bookcover = firstbookfound["imageLinks"]["thumbnail"]
-        @authors = firstbookfound["authors"][0]
-        @publishedDate = firstbookfound["publishedDate"]
-        @description = firstbookfound["description"]
+        answers = ["It is certain.","It is decidedly so.","Without a doubt.","Yes - definitely.","You may rely on it.","As I see it, yes.","Most likely.","Outlook good.","Yes.","Signs point to yes.","Reply hazy, try again.","Ask again later.","Better not tell you now.","Cannot predict now.","Concentrate and ask again.","Don't count on it.","My reply is no.","My sources say no.","Outlook not so good.","Very doubtful."]
+        ran = rand answers.length
+
+        @answer = answers[ran]
 
         render :result
     end

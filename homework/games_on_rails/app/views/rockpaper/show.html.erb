@@ -1,12 +1,37 @@
-<h1>Show Stocks</h1>
+<h1>Rock, Paper, Scissors</h1>
 
-<p>
-    <form action="/stocksresults">
+<p><br>
+    <form action="/rockpaper/result">
+    <table>
+    <tr>
+    <td><label>Computer made a move.</label></td>
+    <td align="center">
     <label>
-    Stock Symbol:
-    <input type="search" name="companyname" placeholder="GOOG" required>
+    What's your move?
+    <br><br>
+
+        <input type="radio" id="rock" name="move" value="rock" checked>
+        <label for="rock">Rock</label>
+
+    <br><br>
+
+        <input type="radio" id="paper" name="move" value="paper">
+        <label for="paper">Paper</label>
+
+    <br><br>
+
+        <input type="radio" id="scissors" name="move" value="scissors">
+        <label for="scissors">Scissors</label>
+
+
     </label>
-    
-    <button>Lookup!</button>
+    </td>
+    </tr>
+
+    <tr><td colspan="2">
+    <br><br>
+    <button>Play!</button>
+    </td></tr>
+    </table>
     </form>
 </p>

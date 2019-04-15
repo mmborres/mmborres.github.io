@@ -5,7 +5,7 @@
 
 body {
   /*https://media.giphy.com/media/d3MKb2hCZaNH63zq/giphy.gif*/
-  background-image: url("https://media.giphy.com/media/3osxYeLtSKwjXs8zU4/giphy.gif");
+  background-image: url("https://media.giphy.com/media/3og0IUia0TYpBHNNTy/giphy.gif");
   
   /* Image is centered vertically and horizontally at all times */
   background-position: top center;
@@ -21,95 +21,84 @@ body {
   background-size: cover;
 }
 
-/* For mobile devices */
-@media only screen and (max-width: 767px) {
-  body {
-    /* The file size of this background image is 93% smaller
-     * to improve page load speed on mobile internet connections */
-    background-image: url("../img/books.jpeg");
-  }
+h1, h2 {
+  color: aliceblue;
+}
+
+label {
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+nav a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div a {
+padding-left: 10px;
+padding-right: 10px;
 }
 
 
-nav {
-    text-align: center;
-    font-weight: bold;
-    vertical-align: text-bottom;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #290505;
-    color: #ccc;
-    padding: 1em;
-  }
-  
-  nav a {
-    color: #ccc;
-    text-decoration: none;
-    vertical-align: text-bottom;
-  }
-  
-  h1 {
-    text-align: center;
-    background-color: #290505;
-    color: #ccc;
-    padding: 1em;
-    font-family: 'Luckiest Guy', cursive;
-  }
-    
-  div {
-      text-align: center;
-  }
-  
-  main {
-    display: inline-block;
-    text-align: center;
-  }
-  
-  main img {
-    display: inline block;
-    margin: auto;
-  }
-  
-  img {
-    border: 5px solid #290505;
-    border-radius: 4px;
-  }
+a {
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  label, p, h2 {
-    text-align: center;
-    background-color: #290505;
-    color: #ccc;
-    padding: 1em;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-  }
+img {
+  width: 400px;
+  height: 400px;
 
-  button {
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 1px;
-    background-color: #290505;
-    color: #ccc;
-    padding: 1em;
-  }
+  max-width: 100%;
+  border: 5px solid #00bcd4;
+}
 
-  /** CLASSES **/
+button {
+background-color: #2a99a5;
+color: white;
+font-family: 'Raleway', sans-serif;
+font-size: 15px;
+border-radius: 0.5em;
+}
+
+p {
+  text-align: center;
+}
+
+table {
+  align-content: center;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.ptabitem {
+padding-left: 200px;
+}
+
+.tabitem {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
 .container {
-    text-align: center;
-    max-width: 960px; /* common value, responsive design */
-    margin: 0 auto;
-  
-    padding: 1em; /*space inside the box*/
-     /*space outside the box*/
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-}
-  
-.pClass {
-    text-align: justify;
+text-align: center;
+max-width: 960px; /* common value, responsive design */
+margin: 0 auto;
+
+padding: 1em; /*space inside the box*/
+ /*space outside the box*/
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
+background-color: #2b3135d6;
 }
 
-.h2title {
-    font-size: 30px;
+.pLabel {
+background-color: #b2ebf2;
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
 }

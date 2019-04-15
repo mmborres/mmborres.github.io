@@ -1,19 +1,38 @@
-class SecretNumController < ApplicationController
+class SecretnumController < ApplicationController
+    @@secretnumber = 1;
+    @@guessedcorrect = true;
+
     def show
+
+        if (@@guessedcorrect)
+            @@secretnumber = rand 1..100
+        end
+
+        @secret = @@secretnumber
+
         render :show
     end
 
     def result
-#binding.pry
-        @stocklookup = params[:companyname]
-
-        #if @stocklookup.empty?==false
-    
-        @info = StockQuote::Stock.quote @stocklookup
-    
-        redirect to('/') if @info.nil?
         
-        @result = @info.close
+        guessed = params[:number].to_i
+
+        if guessed > @@secretnumber
+            @result = "lower. Sorry."
+            @@guessedcorrect = false
+        end
+
+        if guessed < @@secretnumber
+            @result = "higher. Sorry."
+            @@guessedcorrect = false
+        end
+
+        if guessed == @@secretnumber
+            @result = "correctly guessed. Congratulations."
+            @@guessedcorrect = true
+        end
+
+        @secret = @@secretnumber
 
         render :result
     end

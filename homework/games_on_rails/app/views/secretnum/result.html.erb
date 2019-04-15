@@ -1,6 +1,13 @@
-<p>
-<%= @stocklookup %> last traded at
- <strong>
-$<%= @result %>
-</strong>
+<h1>Secret Number Is?</h1>
+
+<p class="pLabel"><br>
+Secret Number is <%= @result %>
+<br>
+
+<br>
+<form action="/secretnum/">    
+    <button>Play Again?</button>
+</form>
+
 </p>
+<br>

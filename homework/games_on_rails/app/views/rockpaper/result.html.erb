@@ -1,6 +1,14 @@
-<p>
-<%= @stocklookup %> last traded at
- <strong>
-$<%= @result %>
-</strong>
+<h1>Rock, Paper, Scissors</h1>
+
+<p class="pLabel"><br>
+<b>Computer: "<%= @curplay %>"  VS.  You: "<%= @move %>"
+<br><br><br>
+Result: <%= @result %></b>
+<br>&nbsp;
+<br>
 </p>
+
+<br>
+<form action="/rockpaper/">    
+    <button>Play Again?</button>
+</form>

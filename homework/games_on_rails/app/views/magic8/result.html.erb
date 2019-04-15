@@ -1,7 +1,14 @@
-<h2 class="h2title">Lookup: "<%= @lookup %>"</h2>
-<h2 class="h2title">Title Found: "<%= @title %>"</h2>
-<p><img src="<%= @bookcover %>"></p>
-<p>Author: <%= @authors %></p>
-<p>Published: <%= @publishedDate %></p>
-<!--p>Description:</p-->
-<p class="pClass">Description: <br><%= @description %></p>
+<h1>Dr. Mike's Magic 8 Ball</h1>
+
+
+<p class="pLabel">Question:
+<br><%= @question %>
+
+<br><br>Dr. Mike's Magic 8 Ball says:
+<br><%= @answer %>
+
+<br><br>&nbsp;<br>
+<form action="/magic8/">    
+    <button>Ask Again?</button>
+</form>
+</p>

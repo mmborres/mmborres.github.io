@@ -1,0 +1,1574 @@
+Started GET "/" for ::1 at 2019-04-15 23:21:33 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 191ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8" for ::1 at 2019-04-15 23:21:38 +1000
+Processing by Magic8Controller#show as HTML
+  Rendering magic8/show.html.erb within layouts/application
+  Rendered magic8/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/result?question=How%27s+the+weather+today%3F" for ::1 at 2019-04-15 23:21:56 +1000
+Processing by Magic8Controller#result as HTML
+  Parameters: {"question"=>"How's the weather today?"}
+  Rendering magic8/result.html.erb within layouts/application
+  Rendered magic8/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/" for ::1 at 2019-04-15 23:22:01 +1000
+Processing by Magic8Controller#show as HTML
+  Rendering magic8/show.html.erb within layouts/application
+  Rendered magic8/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/result?question=Test" for ::1 at 2019-04-15 23:22:21 +1000
+Processing by Magic8Controller#result as HTML
+  Parameters: {"question"=>"Test"}
+  Rendering magic8/result.html.erb within layouts/application
+  Rendered magic8/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/" for ::1 at 2019-04-15 23:22:25 +1000
+Processing by Magic8Controller#show as HTML
+  Rendering magic8/show.html.erb within layouts/application
+  Rendered magic8/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/" for ::1 at 2019-04-15 23:25:42 +1000
+Processing by Magic8Controller#show as HTML
+  Rendering magic8/show.html.erb within layouts/application
+  Rendered magic8/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-15 23:36:55 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:36:57 +1000
+  
+LoadError (Unable to autoload constant SecretnumController, expected /Users/mabethborres/Documents/GitHub/mmborres.github.io/homework/games_on_rails/app/controllers/secretnum_controller.rb to define it):
+  
+activesupport (5.2.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+bootsnap (1.4.3) lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `block in load_missing_constant'
+bootsnap (1.4.3) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.4.3) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/secretnum" for ::1 at 2019-04-15 23:37:26 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:37:52 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:38:15 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=6" for ::1 at 2019-04-15 23:38:22 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"6"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:38:24 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:41:28 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=89" for ::1 at 2019-04-15 23:41:34 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"89"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=89" for ::1 at 2019-04-15 23:42:04 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"89"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:14 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:19 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-15 23:42:30 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:32 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:47 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:47 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:48 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:48 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:48 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:42:48 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-15 23:43:03 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-15 23:43:05 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=7" for ::1 at 2019-04-15 23:43:14 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"7"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:43:17 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:43:39 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=8" for ::1 at 2019-04-15 23:43:43 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"8"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:43:47 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=89" for ::1 at 2019-04-15 23:43:52 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"89"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:43:55 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=45" for ::1 at 2019-04-15 23:44:00 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"45"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:44:03 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=56" for ::1 at 2019-04-15 23:44:07 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"56"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:44:11 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=62" for ::1 at 2019-04-15 23:47:18 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"62"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:47:20 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=90" for ::1 at 2019-04-15 23:47:25 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"90"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:47:26 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=50" for ::1 at 2019-04-15 23:47:32 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"50"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:47:33 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=45" for ::1 at 2019-04-15 23:47:36 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"45"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:47:38 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=30" for ::1 at 2019-04-15 23:47:42 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"30"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:47:43 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=1" for ::1 at 2019-04-15 23:47:46 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"1"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:47:48 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=2" for ::1 at 2019-04-15 23:47:53 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"2"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:47:54 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:56:24 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-15 23:56:38 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-15 23:56:42 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-15 23:56:46 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-15 23:56:53 +1000
+  
+LoadError (Unable to autoload constant RockpaperController, expected /Users/mabethborres/Documents/GitHub/mmborres.github.io/homework/games_on_rails/app/controllers/rockpaper_controller.rb to define it):
+  
+activesupport (5.2.3) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+bootsnap (1.4.3) lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `block in load_missing_constant'
+bootsnap (1.4.3) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.4.3) lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+activesupport (5.2.3) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.3) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.3) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.3) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rockpaper" for ::1 at 2019-04-15 23:57:21 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-15 23:58:06 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:00:38 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:01:23 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:01:59 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:02:27 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:12:39 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=rock" for ::1 at 2019-04-16 00:12:42 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"rock"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:12:48 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:12:51 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:12:53 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:12:56 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:14:10 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized class variable @@currentplay in RockpaperController):
+  
+app/controllers/rockpaper_controller.rb:19:in `result'
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:15:20 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:15:23 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:15:24 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:15:29 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:16:07 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:16:36 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:16:38 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:16:41 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:16:45 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=rock" for ::1 at 2019-04-16 00:16:47 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"rock"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:16:49 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:16:51 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:16:54 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:16:56 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:17:00 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:21:48 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:23:20 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:23:22 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:25:33 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:27:03 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:27:32 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:29:13 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:31:06 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:31:43 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:32:12 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:33:00 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:33:43 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8" for ::1 at 2019-04-16 00:33:47 +1000
+Processing by Magic8Controller#show as HTML
+  Rendering magic8/show.html.erb within layouts/application
+  Rendered magic8/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8" for ::1 at 2019-04-16 00:34:26 +1000
+Processing by Magic8Controller#show as HTML
+  Rendering magic8/show.html.erb within layouts/application
+  Rendered magic8/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8" for ::1 at 2019-04-16 00:35:45 +1000
+Processing by Magic8Controller#show as HTML
+  Rendering magic8/show.html.erb within layouts/application
+  Rendered magic8/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8" for ::1 at 2019-04-16 00:35:57 +1000
+Processing by Magic8Controller#show as HTML
+  Rendering magic8/show.html.erb within layouts/application
+  Rendered magic8/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/result?question=Yo" for ::1 at 2019-04-16 00:36:08 +1000
+Processing by Magic8Controller#result as HTML
+  Parameters: {"question"=>"Yo"}
+  Rendering magic8/result.html.erb within layouts/application
+  Rendered magic8/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/result?question=Yo" for ::1 at 2019-04-16 00:37:02 +1000
+Processing by Magic8Controller#result as HTML
+  Parameters: {"question"=>"Yo"}
+  Rendering magic8/result.html.erb within layouts/application
+  Rendered magic8/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/result?question=Yo" for ::1 at 2019-04-16 00:38:06 +1000
+Processing by Magic8Controller#result as HTML
+  Parameters: {"question"=>"Yo"}
+  Rendering magic8/result.html.erb within layouts/application
+  Rendered magic8/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/result?question=Yo" for ::1 at 2019-04-16 00:38:53 +1000
+Processing by Magic8Controller#result as HTML
+  Parameters: {"question"=>"Yo"}
+  Rendering magic8/result.html.erb within layouts/application
+  Rendered magic8/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic8/result?question=Yo" for ::1 at 2019-04-16 00:39:31 +1000
+Processing by Magic8Controller#result as HTML
+  Parameters: {"question"=>"Yo"}
+  Rendering magic8/result.html.erb within layouts/application
+  Rendered magic8/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:39:38 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-16 00:39:39 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-16 00:40:51 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=1" for ::1 at 2019-04-16 00:41:01 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"1"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:41:25 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:42:16 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=1" for ::1 at 2019-04-16 00:42:22 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"1"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=1" for ::1 at 2019-04-16 00:42:35 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"1"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:42:41 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=90" for ::1 at 2019-04-16 00:42:45 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"90"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:42:46 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=56" for ::1 at 2019-04-16 00:42:50 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"56"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:42:51 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=40" for ::1 at 2019-04-16 00:42:54 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"40"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:42:55 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=1" for ::1 at 2019-04-16 00:42:58 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"1"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:42:59 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=30" for ::1 at 2019-04-16 00:43:01 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"30"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:43:03 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=40" for ::1 at 2019-04-16 00:43:06 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"40"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:43:07 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=35" for ::1 at 2019-04-16 00:43:10 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"35"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:43:11 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=36" for ::1 at 2019-04-16 00:43:15 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"36"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:43:16 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=38" for ::1 at 2019-04-16 00:43:19 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"38"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:43:20 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=39" for ::1 at 2019-04-16 00:43:24 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"39"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:43:29 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=90" for ::1 at 2019-04-16 00:43:32 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"90"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:43:33 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=56" for ::1 at 2019-04-16 00:43:35 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"56"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:43:36 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=80" for ::1 at 2019-04-16 00:43:39 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"80"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:43:46 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:43:47 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:20 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:21 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:21 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:22 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:22 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:22 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:42 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:43 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:43 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:44:43 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:45:29 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:45:50 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:46:20 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:46:44 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:47:24 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:48:03 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:48:19 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:48:30 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:49:27 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:49:42 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:49:43 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:49:43 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:49:43 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:49:58 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:50:16 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:50:27 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:50:30 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:50:33 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:50:35 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:50:39 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum" for ::1 at 2019-04-16 00:51:43 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=90" for ::1 at 2019-04-16 00:51:47 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"90"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:51:52 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=45" for ::1 at 2019-04-16 00:51:58 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"45"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:51:59 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=78" for ::1 at 2019-04-16 00:52:01 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"78"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:52:03 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=65" for ::1 at 2019-04-16 00:52:06 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"65"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:52:07 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=70" for ::1 at 2019-04-16 00:52:10 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"70"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:52:11 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=69" for ::1 at 2019-04-16 00:52:14 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"69"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:52:15 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=67" for ::1 at 2019-04-16 00:52:18 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"67"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/" for ::1 at 2019-04-16 00:52:19 +1000
+Processing by SecretnumController#show as HTML
+  Rendering secretnum/show.html.erb within layouts/application
+  Rendered secretnum/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secretnum/result?number=68" for ::1 at 2019-04-16 00:52:22 +1000
+Processing by SecretnumController#result as HTML
+  Parameters: {"number"=>"68"}
+  Rendering secretnum/result.html.erb within layouts/application
+  Rendered secretnum/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:52:38 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper" for ::1 at 2019-04-16 00:52:40 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:52:44 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:52:56 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=scissors" for ::1 at 2019-04-16 00:52:59 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"scissors"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/" for ::1 at 2019-04-16 00:53:01 +1000
+Processing by RockpaperController#show as HTML
+  Rendering rockpaper/show.html.erb within layouts/application
+  Rendered rockpaper/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rockpaper/result?move=paper" for ::1 at 2019-04-16 00:53:03 +1000
+Processing by RockpaperController#result as HTML
+  Parameters: {"move"=>"paper"}
+  Rendering rockpaper/result.html.erb within layouts/application
+  Rendered rockpaper/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-16 00:53:11 +1000
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+

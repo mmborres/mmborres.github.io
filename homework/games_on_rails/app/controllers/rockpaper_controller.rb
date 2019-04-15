@@ -1,19 +1,46 @@
-class SecretNumController < ApplicationController
+class RockpaperController < ApplicationController
+    @@playoptions = ["rock", "paper", "scissors"]
+    @@currentplay = @@playoptions[0]
+
     def show
+
+        ran = rand 0...3
+        @@currentplay = @@playoptions[ran]
+
         render :show
     end
 
     def result
-#binding.pry
-        @stocklookup = params[:companyname]
 
-        #if @stocklookup.empty?==false
-    
-        @info = StockQuote::Stock.quote @stocklookup
-    
-        redirect to('/') if @info.nil?
+        @move = params[:move].to_s
+
+        @result = "It's a Draw!"
+
+        if @@currentplay == "rock" && @move == "paper"
+            @result = "You won."
+        end
         
-        @result = @info.close
+        if @@currentplay == "rock" && @move == "scissors"
+            @result = "You lost."
+        end
+
+        if @@currentplay == "paper" && @move == "rock"
+            @result = "You lost."
+        end
+        
+        if @@currentplay == "paper" && @move == "scissors"
+            @result = "You won."
+        end
+
+        if @@currentplay == "scissors" && @move == "paper"
+            @result = "You lost."
+        end
+        
+        if @@currentplay == "scissors" && @move == "rock"
+            @result = "You won."
+        end
+
+        @curplay = @@currentplay.to_s
 
         render :result
     end
