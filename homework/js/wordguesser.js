@@ -147,7 +147,7 @@ const addShuffle = function() {
 		parent.appendChild(hbt);
 		parent.appendChild(bt);
 	}
-}
+};
 
 const playAgain = function () {
 	document.getElementById('gameboard').innerHTML = "";
@@ -162,7 +162,7 @@ const playAgain = function () {
 		parent.removeChild(hbt);
 		parent.removeChild(bt);
 	}*/
-}
+};
 
 const processWinner = function() {
   alert("Congratulations! All happy!");
@@ -307,7 +307,6 @@ const showLetter = function(str) {
       document.getElementById(idb).innerHTML = str;
     }
   }
-
 };
 
 const drawHangman = function() {
