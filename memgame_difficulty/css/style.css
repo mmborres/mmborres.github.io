@@ -106,9 +106,9 @@ footer {
 	font-size: 14px;
 	letter-spacing: .08em;
 	font-weight: 500;
-	position: absolute;
+	/*position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100%;*/
 }
 
 input[type=text] {
