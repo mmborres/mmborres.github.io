@@ -8,6 +8,4 @@ Memory Card Game 2 Versions:
 
   2) Difficulty levels: https://mmborres.github.io/memgame_difficulty/
 
-Selenium Automated Tests for Memory Card Game, also available.
-
-
+# SELENIUM Tests 
