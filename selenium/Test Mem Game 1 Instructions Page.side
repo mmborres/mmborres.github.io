@@ -10,7 +10,7 @@
       "id": "47c8e885-4a75-4100-b110-b14de53d2870",
       "comment": "",
       "command": "open",
-      "target": "/index.html",
+      "target": "/prework.html",
       "targets": [],
       "value": ""
     }, {
@@ -59,10 +59,17 @@
       ],
       "value": "Meaning, alert messages WILL NOT be displayed."
     }, {
+      "id": "63b04bfb-f45f-42fd-9ec1-6ba3b8d5fcae",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//*[@id=\"alertText\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "049a01ad-80b1-42e2-a55a-50ad839cfb04",
       "comment": "",
       "command": "assertText",
-      "target": "//*[@id=\"alertText\"]",
+      "target": "xpath=//*[@id=\"alertText\"]",
       "targets": [],
       "value": "Meaning, alert messages WILL NOT be displayed."
     }, {
@@ -79,10 +86,17 @@
       ],
       "value": "Meaning, alert messages WILL be displayed."
     }, {
+      "id": "d739ffcc-45df-4273-9b3e-b6a2b21b4a34",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//*[@id=\"alertText\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "a19a4ed8-ceb0-4e20-9e15-389b3675d97d",
       "comment": "",
       "command": "assertText",
-      "target": "//*[@id=\"alertText\"]",
+      "target": "xpath=//*[@id=\"alertText\"]",
       "targets": [
         ["id=alertYes", "id"],
         ["name=alert", "name"],

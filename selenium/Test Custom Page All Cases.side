@@ -1,0 +1,254 @@
+{
+  "id": "e32236b0-dc76-4122-bef8-820427c8442a",
+  "version": "2.0",
+  "name": "Test Custom Page",
+  "url": "https://mmborres.github.io",
+  "tests": [{
+    "id": "96685d1f-ee6e-44a5-84dd-f72373d6d786",
+    "name": "Test All Cases",
+    "commands": [{
+      "id": "ce0270fd-ade9-4e98-8a24-ab3908411d7a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c9f870c-a2f0-462e-bcc9-ccdb431a24f6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1383x807",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83481586-41e9-478e-8e23-186a4e129d5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Pre-work')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'prework.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70531e6d-b7aa-4843-8937-74d65ba125af",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Memory Game Level-Up",
+      "targets": [
+        ["linkText=Memory Game Level-Up", "linkText"],
+        ["css=.gameinfo:nth-child(5) > .contactdetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Memory Game Level-Up')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'memgame_difficulty/index.html')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Memory Game Level-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46440a29-070f-41b9-b0d8-f51ce66b4301",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4)",
+      "targets": [
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'custom.html')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8540c60-d3f7-4604-9799-2ffedc5a8190",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91a9041b-77a9-4ed8-bb72-e5e1c418d4ff",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "2889407b-cafb-46f1-9a51-4541822d5277",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ff4b19c-1e2d-4b85-9bc9-83fe437d6f43",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9a73a56-79b6-484c-8f92-8a82f608f751",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6708af98-9063-4f60-a807-d34a9fc3c2e4",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-1"
+    }, {
+      "id": "e244d2fc-7f1f-4c7f-935d-c72a53ccd6ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5bb81e1-4cb8-4a5c-9841-6c115b6e7e50",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game must be a positive number.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e465eb5-a86c-4599-909b-9982a3b39b54",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a2f007c-7bc9-4188-9049-656aa055976d",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "9"
+    }, {
+      "id": "ee64904c-1227-4852-88e2-6c2894c18c4b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "008df756-2f3a-4e61-b6e4-1550aa8f5903",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Number of Levels in the Game cannot be greater than 5, the Maximum level.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9d8c83f-5b8d-4cd4-824d-3acffb11a0cd",
+      "comment": "",
+      "command": "click",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20c60c1e-84e4-4cf6-9188-7f85a264801e",
+      "comment": "",
+      "command": "type",
+      "target": "id=gameLevel",
+      "targets": [
+        ["id=gameLevel", "id"],
+        ["name=gameLevel", "name"],
+        ["css=#gameLevel", "css:finder"],
+        ["xpath=//input[@id='gameLevel']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "ba448211-1f2a-4f35-ae25-22eb01b4b2a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputbutton",
+      "targets": [
+        ["css=.inputbutton", "css:finder"],
+        ["xpath=//input[@value='Ready? Game On!']", "xpath:attributes"],
+        ["xpath=//form[@id='formcustom']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c21d87f8-2dad-450f-9e87-3190ecb0a51c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["96685d1f-ee6e-44a5-84dd-f72373d6d786"]
+  }],
+  "urls": ["https://mmborres.github.io/"],
+  "plugins": []
+}

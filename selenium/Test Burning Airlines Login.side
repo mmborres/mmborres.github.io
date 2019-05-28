@@ -1,0 +1,202 @@
+{
+  "id": "53f457b2-4167-4da2-872a-dede5dd49c47",
+  "version": "2.0",
+  "name": "Test Burning Airlines Login",
+  "url": "https://mmborres.github.io",
+  "tests": [{
+    "id": "e1ca13af-4c09-40b5-b7e5-ee1fb4c40acb",
+    "name": "BA Login - Home - Logout",
+    "commands": [{
+      "id": "9ba8b8b6-22ad-4de3-a555-3b2126459b6a",
+      "comment": "",
+      "command": "open",
+      "target": "/burning_airlines_client/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e177609b-3fc4-454e-8e95-9698768d8d5d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1183x953",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbf8c2f1-754b-4e56-91d7-87d04a41c3f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(1)",
+      "targets": [
+        ["css=.form-group:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/header/form/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2de60cf8-e7a9-4242-8d41-e726a229f7b2",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/header/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "101.9375,21.36456298828125"
+    }, {
+      "id": "6c657886-0c19-4d98-b0b4-4570b98011be",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/header/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "101.9375,21.36456298828125"
+    }, {
+      "id": "3bc1783d-0ca0-4e1c-b243-bafe5ed706fe",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/header/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "101.9375,21.36456298828125"
+    }, {
+      "id": "ebc3b4cb-3915-49c2-8f15-bd81fc6faa69",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/header/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "886c88d9-d4dc-4ed4-a2fc-fb6e0785a391",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/header/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "yianni@ga.co"
+    }, {
+      "id": "6fd2f45d-f6d5-48c9-82c7-8720657e4fc4",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/header/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2fdfaa7-914d-46e9-988c-c090b509f5fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/header/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "chicken"
+    }, {
+      "id": "15266160-37ea-4af4-a5aa-e09c89ec9a02",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/header/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a103092e-ed89-4700-b19e-bbe6f21caa9d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All Flights",
+      "targets": [
+        ["linkText=All Flights", "linkText"],
+        ["css=p:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'All Flights')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/flights')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'All Flights')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "166d1f96-9502-4758-90e2-ea9b84e96e7e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Back to Home",
+      "targets": [
+        ["linkText=Back to Home", "linkText"],
+        ["css=p > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Back to Home')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/home')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Back to Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "175abf0c-2f94-4e3c-8292-0e5832c4e163",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=p:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/p[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#/logout')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1029a0c9-3a03-4efc-b540-ec1215cb2fdf",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ff3c24dd-793e-49f8-876d-dbca0a5543d1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e1ca13af-4c09-40b5-b7e5-ee1fb4c40acb"]
+  }],
+  "urls": ["https://mmborres.github.io/"],
+  "plugins": []
+}

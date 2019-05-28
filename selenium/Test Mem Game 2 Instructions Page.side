@@ -10,7 +10,7 @@
       "id": "47c8e885-4a75-4100-b110-b14de53d2870",
       "comment": "",
       "command": "open",
-      "target": "/index.html",
+      "target": "/prework.html",
       "targets": [],
       "value": ""
     }, {
@@ -62,7 +62,7 @@
       "id": "049a01ad-80b1-42e2-a55a-50ad839cfb04",
       "comment": "",
       "command": "assertText",
-      "target": "//*[@id=\"alertText\"]",
+      "target": "xpath=//*[@id=\"alertText\"]",
       "targets": [],
       "value": "Meaning, alert messages WILL NOT be displayed."
     }, {
@@ -82,7 +82,7 @@
       "id": "a19a4ed8-ceb0-4e20-9e15-389b3675d97d",
       "comment": "",
       "command": "assertText",
-      "target": "//*[@id=\"alertText\"]",
+      "target": "xpath=//*[@id=\"alertText\"]",
       "targets": [
         ["id=alertYes", "id"],
         ["name=alert", "name"],
