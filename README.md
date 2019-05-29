@@ -2,7 +2,7 @@
 
 WDI Pre-work at GA by Mabeth Borres
 
-Memory Card Game 2 Versions:
+Memory Card Game 2 Versions - LIVE Demo:
 
   1) Points-based: [Memory Game Score Top Up](https://mmborres.github.io/memory_game/)
 
