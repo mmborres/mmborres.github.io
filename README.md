@@ -12,6 +12,8 @@ Memory Card Game 2 Versions - LIVE Demo:
 
 Selenium Tests in IDE and WebDriver versions created for the GA project, and presented demos on Selenium IDE and Selenium 2/ WebDriver in the GA Software Engineering Immersive 31 class.
 
+[Selenium Preso at GA](https://github.com/mmborres/mmborres.github.io/blob/master/Selenium.pdf)
+
 [Selenium IDE Test Scripts](https://github.com/mmborres/mmborres.github.io/tree/master/selenium)
 
 [Selenium WebDriver Java TestNG Codes](https://github.com/mmborres/mmborres.github.io/tree/master/selenium/webdriver-java/package_automation.testNG.TestMemGame1_CustomPage)
